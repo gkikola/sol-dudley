@@ -173,3 +173,27 @@ $q = 2$.
   find infinitely many solutions. For example, $x = -33$ and $y = 40$
   is a third solution.
 \end{solution}
+
+\Problem7 Prove that if $a\mid b$ and $b\mid a$, then $a = b$ or
+$a = -b$.
+\begin{proof}
+  There are integers $x$ and $y$ such that $ax = b$ and $by =
+  a$. Substituting $ax$ for $b$ in the second equation gives $axy = a$
+  or $xy = 1$. But the only integers having a multiplicative inverse
+  are $1$ and $-1$. So either $x = y = 1$ in which case $a = b$, or
+  else $x = y = -1$ in which case $a = -b$.
+\end{proof}
+
+\Problem8 Prove that if $a\mid b$ and $a > 0$, then $(a,b) = a$.
+\begin{proof}
+  Since $a$ divides itself and $b$, we must have $a \mid (a,b)$ by
+  Corollary~2. But we also know that $(a,b)\mid a$ by definition. By
+  the previous problem, it follows that either $(a,b) = a$ or
+  $(a,b) = -a$. But $a > 0$, so we must have $(a,b) = a$.
+\end{proof}
+
+\Problem9 Prove that $((a,b), b) = (a,b)$.
+\begin{proof}
+  Let $d = (a,b)$. Then $d\mid b$ by definition, and $d > 0$. So we
+  may apply the previous problem to establish that $(d,b) = d$.
+\end{proof}
