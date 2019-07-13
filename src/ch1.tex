@@ -1,0 +1,53 @@
+\chapter{Integers}
+
+\Exercise1 Which integers divide zero?
+\begin{solution}
+  Every integer divides $0$. For, if $k$ is any integer, then $0k = 0$
+  so that $k\mid0$.
+\end{solution}
+
+\Exercise2 Show that if $a\mid b$ and $b\mid c$ then, $a\mid c$.
+\begin{proof}
+  Let $a\mid b$ and $b\mid c$. Then there are integers $m$ and $n$
+  such that $am = b$ and $bn = c$. But then $a(mn) = (am)n = bn =
+  c$. Since $mn$ is an integer, we have $a\mid c$.
+\end{proof}
+
+\Exercise3 Prove that if $d\mid a$ then $d\mid ca$ for any integer $c$.
+\begin{proof}
+  Again, by definition we can find an integer $n$ such that $dn =
+  a$. But then $cdn = ca$. Since $cn$ is an integer, it follows that
+  $d\mid ca$.
+\end{proof}
+
+\Exercise4 What are $(4,14)$, $(5,15)$, and $(6,16)$?
+\begin{solution}
+  By inspection, $(4,14) = 2$, $(5,15) = 5$, and $(6,16) = 2$.
+\end{solution}
+
+\Exercise5 What is $(n,1)$, where $n$ is any positive integer? What is
+$(n,0)$?
+\begin{solution}
+  We have $(n,1) = 1$ since there is no integer greater than $1$ which
+  divides $1$. We also have $(n,0) = n$ since no integer larger than
+  $n$ can divide $n$, and $n$ certainly divides itself and $0$.
+\end{solution}
+
+\Exercise6 If $d$ is a positive integer, what is $(d, nd)$?
+\begin{solution}
+  $(d,nd) = d$ since $d$ is a common divisor ($d\mid nd$ by Lemma~2)
+  and there can be no greater divisor of $d$.
+\end{solution}
+
+\Exercise7 What are $q$ and $r$ if $a = 75$ and $b = 24$? If $a = 75$
+and $b = 25$?
+\begin{solution}
+  We have
+  \begin{equation*}
+    75 = 3(24) + 3
+    \quad\text{and}\quad
+    75 = 3(25) + 0.
+  \end{equation*}
+  So $q = 3$ and $r = 3$ in the first case, and $q = 3$ and $r = 0$ in
+  the second.
+\end{solution}
