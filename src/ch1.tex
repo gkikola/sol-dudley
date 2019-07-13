@@ -214,3 +214,76 @@ $a = -b$.
     and $(4,6) = 2$.
   \end{solution}
 \end{enumerate}
+
+\Problem{11}
+\begin{enumerate}
+\item Prove that $(k, n + k) = 1$ if and only if $(k,n) = 1$.
+  \begin{proof}
+    Suppose $(k, n + k) = 1$ and set $d = (k,n)$. Since $d$ divides
+    $k$ and $n$, $d$ also divides their sum $n + k$. Hence $d$ is a
+    common divisor of $k$ and $n + k$, so $d = 1$.
+
+    Conversely, suppose $(k,n) = 1$ and put $d = (k, n + k)$. Again,
+    $d\mid k$ and $d\mid n+k$, so $d$ divides their difference
+    $n$. Therefore $d$ is a common divisor of $k$ and $n$, so $d = 1$.
+  \end{proof}
+\item Is it true that $(k, n+k) = d$ if and only if $(k,n) = d$?
+  \begin{solution}
+    Yes. Using the same reasoning as above, we can see that $c$ is a
+    common divisor of $k$ and $n + k$ if and only if it is a common
+    divisor of $k$ and $n$. It follows that $(k, n+k) = (k,n)$.
+  \end{solution}
+\end{enumerate}
+
+\Problem{12} Prove: If $a\mid b$ and $c\mid d$, then $ac\mid bd$.
+\begin{proof}
+  There are integers $m$ and $n$ such that $am = b$ and $cn =
+  d$. Therefore $bd = (am)(cn) = mn(ac)$, so $ac \mid bd$.
+\end{proof}
+
+\Problem{13} Prove: If $d\mid a$ and $d\mid b$, then $d^2\mid ab$.
+\begin{proof}
+  This is a special case of the previous problem.
+\end{proof}
+
+\Problem{14} Prove: If $c\mid ab$ and $(c,a) = d$, then $c\mid db$.
+\begin{proof}
+  Find integers $x$ and $y$ with $cx + ay = d$. Multiplying by $b$
+  then gives
+  \begin{equation*}
+    cxb + ayb = db.
+  \end{equation*}
+  Since $c$ divides the left-hand side, it must divide the right-hand
+  side. Therefore $c\mid db$.
+\end{proof}
+
+\Problem{15}
+\begin{enumerate}
+\item If $x^2 + ax + b = 0$ has an integer root, show that it divides
+  $b$.
+  \begin{proof}
+    We are assuming that $a$ and $b$ are integers. Let the polynomial
+    have the integer root $c$. Then
+    \begin{equation*}
+      b = -c^2 - ac = c(-c - a),
+    \end{equation*}
+    and we see that $c\mid b$ since $-c - a$ is an integer.
+  \end{proof}
+\item If $x^2 + ax + b = 0$ has a rational root, show that it is in
+  fact an integer.
+  \begin{proof}
+    Let the root be $c/d$ where $c$ and $d$ are relatively prime
+    integers with $d$ nonzero. Then
+    \begin{equation*}
+      \frac{c^2}{d^2} + \frac{ac}d + b = 0.
+    \end{equation*}
+    Multiplying through by $d^2$ then gives
+    \begin{equation*}
+      c^2 + acd + bd^2 = 0
+    \end{equation*}
+    or $c^2 = -d(ac + bd)$. We see that $d\mid c^2$. Since
+    $(c,d) = 1$, we have by Corollary~1 that $d\mid c$ as well. But
+    then $(c,d) = d$, so we must have $d = 1$. Therefore the rational
+    number $c/d$ is actually just the integer $c$.
+  \end{proof}
+\end{enumerate}
