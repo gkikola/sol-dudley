@@ -1,7 +1,10 @@
-% Make section for exercise number
-\newcommand{\Exercise}[1]{\setcounter{section}{#1}%
-  \addtocounter{section}{-1}%
-  \section{Exercise #1}}
+% Make section for exercise and problem numbers
+\newcommand{\Exercise}[1]{\setcounter{subsection}{#1}%
+  \addtocounter{subsection}{-1}%
+  \subsection{Exercise #1}}
+\newcommand{\Problem}[1]{\setcounter{subsection}{#1}%
+  \addtocounter{subsection}{-1}%
+  \subsection{Problem #1}}
 
 % Theorem environments
 \newtheorem*{thm} {Theorem}
