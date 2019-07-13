@@ -51,3 +51,30 @@ and $b = 25$?
   So $q = 3$ and $r = 3$ in the first case, and $q = 3$ and $r = 0$ in
   the second.
 \end{solution}
+
+\Exercise8 Verify that Lemma~3 is true when $a = 16$, $b = 6$, and
+$q = 2$.
+\begin{solution}
+  Since $16 = 6\cdot2 + 4$, we have $r = 4$. And since
+  $(16,6) = 2 = (6,4)$, the lemma is true for this case.
+\end{solution}
+
+\Exercise9 Calculate $(343, 280)$ and $(578, 442)$.
+\begin{solution}
+  Following the Euclidean Algorithm, we have
+  \begin{align*}
+    343 &= 280\cdot1 + 63 \\
+    280 &= 63\cdot4 + 28 \\
+    63 &= 28\cdot2 + 7 \\
+    28 &= 7\cdot4.
+  \end{align*}
+  Therefore $(343, 280) = 7$.
+
+  For the second pair,
+  \begin{align*}
+    578 &= 442\cdot1 + 136 \\
+    442 &= 136\cdot3 + 34 \\
+    136 &= 34\cdot4,
+  \end{align*}
+  so $(578,442) = 34$.
+\end{solution}
