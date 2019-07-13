@@ -140,3 +140,36 @@ $q = 2$.
   therefore $d = 1$. Using the same reasoning for $b$ and $c$, we see
   that $(N,a) = (N,b) = (N,c) = 1$.
 \end{proof}
+
+\Problem6 Find two different solutions of $299x + 247y = 13$.
+\begin{solution}
+  The Euclidean Algorithm produces
+  \begin{align*}
+    299 &= 247\cdot1 + 52 \\
+    247 &= 52\cdot4 + 39 \\
+    52 &= 39\cdot1 + 13 \\
+    39 &= 13\cdot3.
+  \end{align*}
+  Now, working backwards using substitution gives
+  \begin{align*}
+    13 &= 52 - 39 = 52 - (247 - 4\cdot52) \\
+       &= 5\cdot52 - 247 = 5(299 - 247) - 247 \\
+       &= 5\cdot299 - 6\cdot247.
+  \end{align*}
+  This gives one solution.
+
+  Since $299 = 23\cdot13$ and $247 = 19\cdot13$, subtracting $19$ from
+  $x$ and adding $23$ to $y$ will keep the equation
+  balanced. The reason this works is because
+  \begin{align*}
+    299(x - 19) + 247(y + 23)
+    &= 299x + 247y - 19\cdot299 + 23\cdot247 \\
+    &= 299x + 247y - 19\cdot23\cdot13 + 23\cdot19\cdot13 \\
+    &= 299x + 247y = 13.
+  \end{align*}
+  Therefore a second solution is given by $x = -14$ and $y = 17$.
+
+  Note that we can continue this indefinitely (in both directions) to
+  find infinitely many solutions. For example, $x = -33$ and $y = 40$
+  is a third solution.
+\end{solution}
