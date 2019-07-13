@@ -197,3 +197,20 @@ $a = -b$.
   Let $d = (a,b)$. Then $d\mid b$ by definition, and $d > 0$. So we
   may apply the previous problem to establish that $(d,b) = d$.
 \end{proof}
+
+\Problem{10}
+\begin{enumerate}
+\item Prove that $(n, n + 1) = 1$ for all $n > 0$.
+  \begin{proof}
+    Fix an $n>0$ and put $d = (n, n+1)$. Then $d$ divides both $n+1$
+    and $n$, so by Lemma~2, $d$ also divides their difference
+    $(n + 1) - n = 1$. Since $d\mid1$ and $d > 0$, we must have
+    $d = 1$.
+  \end{proof}
+\item If $n > 0$, what can $(n, n+2)$ be?
+  \begin{solution}
+    Again, if $d = (n, n+2)$, then $d$ must divide $(n+2) - n =
+    2$. Thus $d$ must be either $1$ or $2$. For example, $(3,5) = 1$
+    and $(4,6) = 2$.
+  \end{solution}
+\end{enumerate}
