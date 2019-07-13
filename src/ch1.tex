@@ -110,3 +110,33 @@ $q = 2$.
   The procedure is the same as before, so we omit the details. We have
   $(3141,1592) = 1$ and $(10001, 100083) = 73$.
 \end{solution}
+
+\Problem3 Find $x$ and $y$ such that $314x + 159y = 1$.
+\begin{solution}
+  We applied the Euclidean algorithm to $314$ and $159$ in the first
+  problem. Working through those equations in reverse order, we find
+  \begin{align*}
+    1 &= 4 - 3 = 4 - (155 - 4\cdot38) \\
+      &= -1\cdot155 + 39\cdot4 = -1\cdot155 + 39(159 - 155) \\
+      &= -40\cdot155 + 39\cdot159 = -40(314 - 159) + 39\cdot159 \\
+      &= -40\cdot314 + 79\cdot159.
+  \end{align*}
+  So $x = -40$ and $y = 79$ is one solution.
+\end{solution}
+
+\Problem4 Find $x$ and $y$ such that $4144x + 7696y = 592$.
+\begin{solution}
+  We proceed as in the previous problem.
+  \begin{align*}
+    592 &= 4144 - 3552 = 4144 - (7696 - 4144) \\
+        &= 2\cdot4144 - 7696,
+  \end{align*}
+  so $x = 2$ and $y = -1$ is one possibility.
+\end{solution}
+
+\Problem5 If $N = abc + 1$, prove that $(N,a) = (N,b) = (N,c) = 1$.
+\begin{proof}
+  Let $d = (N,a)$. Since $1 = N - abc$, it follows that $d\mid1$, and
+  therefore $d = 1$. Using the same reasoning for $b$ and $c$, we see
+  that $(N,a) = (N,b) = (N,c) = 1$.
+\end{proof}
