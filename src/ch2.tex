@@ -133,3 +133,31 @@ are alternately prime and composite. Show that he was wrong.
   Since $511$ is not prime, we see that Tartaglia's conjecture was
   not correct.
 \end{proof}
+
+\Problem4
+\begin{enumerate}
+\item DeBouvelles (1509) claimed that one or both of $6n + 1$ and
+  $6n - 1$ are primes for all $n\geq1$. Show that he was wrong.
+  \begin{proof}
+    For $n = 20$, we have $6n + 1 = 121 = 11^2$ and
+    $6n - 1 = 119 = 7\cdot17$. Therefore DeBouvelles's claim is not
+    correct.
+  \end{proof}
+\item Show that there are infinitely many $n$ such that both $6n-1$
+  and $6n+1$ are composite.
+  \begin{proof}
+    Suppose there are finitely many $n$ with both $6n - 1$ and
+    $6n + 1$ composite. Let them be $n_1, n_2, \dots, n_k$.
+
+    Now let $n = (6n_k + 9)!$, where $!$ denotes the factorial
+    function (i.e., $n! = 1\cdot2\cdot3\cdots(n-1)\cdot n$). Now the
+    integers $n+2, n+3, \dots, n+9$ are all composite, since for any
+    $m$ with $2\leq m\leq 9$, we clearly have $m \mid n + m$. So we
+    have found a sequence of $8$ consecutive composite numbers. Now
+    these numbers must include a pair of the form $6t - 1$ and
+    $6t + 1$. But both of these are composite, and $t > n_k$. This is
+    a contradiction, since $n_k$ was supposed to be the largest such
+    value. Therefore there are infinitely many $n$ with both $6n-1$
+    and $6n+1$ composite.
+  \end{proof}
+\end{enumerate}
