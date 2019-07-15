@@ -47,3 +47,31 @@ is $5$?
   $72 = 8\cdot9 = 2^3\cdot3^2$ and
   $480 = 48\cdot10 = 16\cdot3\cdot10 = 2^5\cdot3\cdot5$.
 \end{solution}
+
+\Exercise4 Which members of the set less than $100$ are not prome?
+\begin{solution}
+  The set being referenced in the question is the set
+  \begin{equation*}
+    A = \{4n+1\mid n = 0, 1, 2, \dots\},
+  \end{equation*}
+  where $k\in A$ is considered ``prome'' if it has no divisors in $A$
+  other than $1$ and itself.
+
+  Since $100^{1/2} = 10$, we only need to look for divisors less than
+  or equal to $10$. The only such members of $A$ are $1$, $5$, and
+  $9$. So any nonprome member of $A$ less than $100$ must be a
+  multiple of $5$ or $9$. These numbers are
+  \begin{equation*}
+    25, 45, 65, 81, 85. \qedhere
+  \end{equation*}
+\end{solution}
+
+\Exercise5 What is the prime-power decomposition of $7950$?
+\begin{solution}
+  $7950$ is divisible by $50 = 2\cdot5^2$, so dividing by $50$ gives
+  $159$. $159$ is divisible by $3$, so divide by $3$ to get
+  $53$. Since $53$ is prime we are done. Therefore
+  \begin{equation*}
+    7950 = 2\cdot3\cdot5^2\cdot53. \qedhere
+  \end{equation*}
+\end{solution}
