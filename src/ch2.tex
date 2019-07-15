@@ -75,3 +75,44 @@ is $5$?
     7950 = 2\cdot3\cdot5^2\cdot53. \qedhere
   \end{equation*}
 \end{solution}
+
+\section{Problems}
+
+\Problem1 Find the prime-power decompositions of $1234$, $34560$, and
+$111111$.
+\begin{solution}
+  First, $1234$ is divisible by $2$, so we write $1234 =
+  2\cdot617$. Now $617$ is not divisible by $2$ or $5$. Using the
+  table in Appendix~C, we see that $617$ is prime. Therefore
+  $1234 = 2\cdot617$ is the prime factorization.
+
+  For $34560$, first we divide by all factors of $2$ and $5$ to get
+  $34560 = 2^8\cdot5\cdot27$. Now $27$ factors as $3^3$ so this gives
+  \begin{equation*}
+    34560 = 2^8\cdot3^3\cdot5.
+  \end{equation*}
+
+  Finally, $111111$ is too big for the table, but by trying small
+  possible divisors we can see that it is divisible by $3$, with
+  $111111 = 3\cdot37037$. And $37037$ is divisible by $7$:
+  $37037 = 7\cdot5291$. Now we may make use of the table to determine
+  that $5291$ is divisible by $11$. $5291/11 = 481$, which is
+  divisible by $13$. $481/13 = 37$, and $37$ is prime. So
+  \begin{equation*}
+    111111 = 3\cdot7\cdot11\cdot13\cdot37.\qedhere
+  \end{equation*}
+\end{solution}
+
+\Problem2 Find the prime-power decompositions of $2345$, $45670$, and
+$999999999999$.
+\begin{solution}
+  Proceeding in the same manner as in the previous problem, we find
+  \begin{align*}
+    2345 &= 5\cdot7\cdot67, \\
+    45670 &= 2\cdot5\cdot4567, \\
+    \intertext{and}
+    999999999999
+         &= 3^3\cdot7\cdot11\cdot13\cdot37\cdot101\cdot9901.
+           \qedhere
+  \end{align*}
+\end{solution}
