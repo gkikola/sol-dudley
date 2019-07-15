@@ -116,3 +116,20 @@ $999999999999$.
            \qedhere
   \end{align*}
 \end{solution}
+
+\Problem3 Tartaglia (1556) claimed that the sums
+\begin{equation*}
+  1 + 2 + 4, \quad 1 + 2 + 4 + 8, \quad 1 + 2 + 4 + 8 + 16,\quad\cdots
+\end{equation*}
+are alternately prime and composite. Show that he was wrong.
+\begin{proof}
+  Looking at the partial sums having an odd number of terms, we find
+  \begin{align*}
+    1 + 2 + 4 &= 7 \\
+    1 + 2 + 4 + 8 + 16 &= 31 \\
+    1 + 2 + 4 + 8 + 16 + 32 + 64 &= 127 \\
+    1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 &= 511 = 7\cdot73.
+  \end{align*}
+  Since $511$ is not prime, we see that Tartaglia's conjecture was
+  not correct.
+\end{proof}
