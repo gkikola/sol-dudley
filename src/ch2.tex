@@ -161,3 +161,38 @@ are alternately prime and composite. Show that he was wrong.
     and $6n+1$ composite.
   \end{proof}
 \end{enumerate}
+
+\Problem5 Prove that if $n$ is a square, then each exponent in its
+prime-power decomposition is even.
+\begin{proof}
+  Let $n>1$ be a square and write $n = k^2$ for some integer
+  $k>1$. Let the prime-power decomposition of $k$ be
+  \begin{equation*}
+    k = p_1^{e_1}p_2^{e_2}\cdots p_r^{e_r}.
+  \end{equation*}
+  Then
+  \begin{align*}
+    n &= (p_1^{e_1}p_2^{e_2}\cdots p_r^{e_r})^2 \\
+      &= (p_1^{e_1})^2(p_2^{e_2})^2\cdots(p_r^{e_r})^2 \\
+      &= p_1^{2e_1}p_2^{2e_2}\cdots p_r^{2e_r}.
+  \end{align*}
+  Since this prime-power decomposition must be unique (up to
+  reordering), we see that every exponent in the prime-power
+  decomposition of $n$ is even.
+\end{proof}
+
+\Problem6 Prove that if each exponent in the prime-power decomposition
+of $n$ is even, then $n$ is a square.
+\begin{proof}
+  Suppose every exponent in the prime-power decomposition of $n$ is
+  even. Then each exponent $e_i$ in the decomposition has the form
+  $e_i = 2f_i$ for some integer $f_i$. Then $n$ can be written
+  \begin{align*}
+    n &= p_1^{2f_1}p_2^{2f_2}\cdots p_r^{2f_r} \\
+      &= (p_1^{f_1})^2(p_2^{f_2})^2\cdots(p_r^{f_r})^2 \\
+      &= (p_1^{f_1}p_2^{f_2}\cdots p_r^{f_r})^2 \\
+      &= k^2,
+  \end{align*}
+  where $k = p_1^{f_1}\cdots p_r^{f_r}$, and we see that $n$ is a
+  square.
+\end{proof}
