@@ -224,3 +224,15 @@ simultaneously a square and a fifth power.
   and $n+1$. Then $p$ also divides their difference, $(n+1) - n =
   1$. So we would have $p\mid1$, which is clearly absurd.
 \end{solution}
+
+\Problem{10} Prove that $n(n+1)$ is never a square for $n>0$.
+\begin{proof}
+  Suppose $n(n+1) = k^2$ for some integer $k>0$. Then $n^2+n = k^2$
+  which gives $k^2 - n^2 = n$. Factoring the left-hand side then gives
+  \begin{equation*}
+    (k+n)(k-n) = n.
+  \end{equation*}
+  So in particular, $k+n\mid n$. But this is impossible, since
+  $k+n > n > 0$. This contradiction shows that $n(n+1)$ is not a
+  square.
+\end{proof}
