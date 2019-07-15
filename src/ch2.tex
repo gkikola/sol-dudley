@@ -236,3 +236,29 @@ simultaneously a square and a fifth power.
   $k+n > n > 0$. This contradiction shows that $n(n+1)$ is not a
   square.
 \end{proof}
+
+\Problem{11}
+\begin{enumerate}
+\item Verify that $2^5\cdot9^2 = 2592$.
+  \begin{solution}
+    Direct computation gives $2^5\cdot9^2 = 32\cdot81 = 2592$.
+  \end{solution}
+\item Is $2^5\cdot a^b = 25ab$ possible for other $a, b$? (Here $25ab$
+  denotes the digits of $2^5\cdot a^b$ and not a product.)
+  \begin{solution}
+    Suppose it is possible, and let $a$ and $b$ be single-digit
+    integers, $0\leq a,b\leq 9$, so that
+    \begin{equation*}
+      2^5\cdot a^b = 2500 + 10a + b.
+    \end{equation*}
+    Note that
+    \begin{equation*}
+      78 < a^b = \frac{2500 + 10a + b}{32} < 82.
+    \end{equation*}
+    So the only possibilities for $a^b$ are $79$, $80$, and $81$. But
+    $79$ is prime, and $80 = 2^4\cdot5$, so neither of these are
+    perfect powers. Therefore $a^b = 81$ and we see that either
+    $a = 3, b = 4$ or $a = 9, b = 2$. Since $32\cdot81 = 2592$, only
+    the second combination works.
+  \end{solution}
+\end{enumerate}
