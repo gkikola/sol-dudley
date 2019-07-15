@@ -1,0 +1,49 @@
+\chapter{Unique Factorization}
+
+\section{Exercises}
+
+\Exercise1 How many even primes are there? How many whose last digit
+is $5$?
+\begin{solution}
+  If a prime $p$ is even then by definition $2\mid p$. Therefore the
+  only prime that is even is $2$ itself. Similarly, any positive
+  integer that ends in a $5$ (written in base $10$) must be divisible
+  by $5$ (this is due to the fact that our base, $10$, is itself
+  divisible by $5$). And the only prime divisible by $5$ is $5$
+  itself.
+\end{solution}
+
+\Exercise2 Construct a proof of Lemma~$2$ using induction.
+\begin{solution}
+  Lemma~$2$ says that every positive integer greater than $1$ can be
+  written as a product of primes. $2$ is a prime and is a product of
+  itself, so the base case is satisfied. Now suppose there is an
+  integer $n>1$ such that every integer $k$ with $1<k\leq n$ can be
+  written as a product of primes. We must show that $n+1$ can be
+  written as such a product.
+
+  If $n+1$ is prime, then we are done, it is already a product of
+  primes. If not, then $n+1$ is composite, and we may write $n+1 = st$
+  where $s$ and $t$ are each integers with $1<s,t<n+1$. By the
+  inductive hypothesis, $s$ and $t$ can each be written as a product
+  of primes,
+  \begin{equation*}
+    s = p_1p_2\cdots p_i,
+    \quad\text{and}\quad
+    t = q_1q_2\cdots q_j,
+  \end{equation*}
+  where each $p_k$ and $q_k$ are prime (not necessarily
+  distinct). Then
+  \begin{equation*}
+    n+1 = st = p_1p_2\cdots p_iq_1q_2\cdots q_j,
+  \end{equation*}
+  and we have written $n+1$ as a product of primes, completing the
+  inductive step. It follows by induction that all integers $n>1$ can
+  be written as a product of primes.
+\end{solution}
+
+\Exercise3 Write prime decompositions for $72$ and $480$.
+\begin{solution}
+  $72 = 8\cdot9 = 2^3\cdot3^2$ and
+  $480 = 48\cdot10 = 16\cdot3\cdot10 = 2^5\cdot3\cdot5$.
+\end{solution}
