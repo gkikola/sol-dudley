@@ -262,3 +262,20 @@ simultaneously a square and a fifth power.
     the second combination works.
   \end{solution}
 \end{enumerate}
+
+\Problem{12} Let $p$ be the least prime factor of $n$, where $n$ is
+composite. Prove that if $p > n^{1/3}$, then $n/p$ is prime.
+\begin{proof}
+  Let $p$ and $n$ be as stated, and suppose $n/p$ is composite, so
+  that $n/p = ab$, where $a,b > 1$. Then $n = abp$. And since
+  $p > n^{1/3}$, we have
+  \begin{equation*}
+    n = abp < p^3,
+    \quad\text{which implies}\quad
+    ab < p^2.
+  \end{equation*}
+  It follows that one of $a,b$ must be less than $p$. Since $a,b > 1$
+  we see that one of $a$ or $b$ must contain a prime factor $q$
+  smaller than $p$. But then $q\mid n$, which contradicts the fact
+  that $p$ is the smallest prime divisor. Therefore $n/p$ is prime.
+\end{proof}
