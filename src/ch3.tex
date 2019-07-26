@@ -1,0 +1,66 @@
+\chapter{Linear Diophantine Equations}
+
+\section{Exercises}
+
+\Exercise1 The equation $2x + 4y = 5$ has no solutions in
+integers. Why not?
+\begin{solution}
+  If $x$ and $y$ are integers such that $2x + 4y = 5$, then
+  $2(x + 2y) = 5$ and we see that $2\mid5$, which is clearly absurd.
+\end{solution}
+
+\Exercise2 Find by inspection a solution of $x + 5y = 10$ and use it
+to write five other solutions.
+\begin{solution}
+  Certainly $x = 0$ and $y = 2$ works, so by Lemma~1 we also have the
+  solutions
+  \begin{equation*}
+    x = 5t \quad\text{and}\quad y = 2 - t
+  \end{equation*}
+  for any integer $t$. Five such solutions, written as ordered pairs,
+  are $(-10,4)$, $(-5,3)$, $(5,1)$, $(10,0)$, and $(15,-1)$.
+\end{solution}
+
+\Exercise3 Which of the following linear diophantine equations is
+impossible? (We will say that a diophantine equation is {\em
+  impossible} if it has no solutions).
+\begin{enumerate}
+\item $14x + 34y = 90$.
+  \begin{solution}
+    Since $(14,34) = 2$ and $2\mid90$, it follows by Lemma~2 that this
+    equation has at least one solution.
+  \end{solution}
+\item $14x + 35y = 91$.
+  \begin{solution}
+    $(14,35) = 7$ and $7\mid91$, so this equation has a solution.
+  \end{solution}
+\item $14x + 36y = 93$.
+  \begin{solution}
+    This time, $(14,36) = 2$ but $2\nmid93$, so this equation is
+    impossible.
+  \end{solution}
+\end{enumerate}
+
+\Exercise4 Find all solutions of $2x + 6y = 20$.
+\begin{solution}
+  Dividing by $2$ gives $x + 3y = 10$. A particular solution is given
+  by $(x_0,y_0) = (10,0)$, so by Lemma~3 all solutions have the form
+  \begin{equation*}
+    x = 10 + 3t \quad\text{and}\quad y = -t
+  \end{equation*}
+  where $t$ is an integer.
+\end{solution}
+
+\Exercise5 Find all the solutions of $2x + 6y = 18$ in {\em positive}
+integers.
+\begin{solution}
+  In the text, the general solution was found to be
+  \begin{equation*}
+    x = 9 + 3t \quad\text{and}\quad y = -t,
+  \end{equation*}
+  for $t$ an integer. If $x$ is to be positive, then $9 + 3t > 0$ and,
+  solving for $t$, we get $t > -3$. On the other hand, if $y > 0$ then
+  $t < 0$. So we have $-3 < t < 0$ and we see that the only solutions
+  are given by $t = -2$ and $t = -1$. These solutions are,
+  respectively, $(3,2)$ and $(6,1)$.
+\end{solution}
