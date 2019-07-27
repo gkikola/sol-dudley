@@ -161,3 +161,27 @@ $3x - 4y = 0$, and $7x + 15y = 51$.
   leads to the general solution $(15t,1-7t)$. However, there is no
   integer value of $t$ which makes both $x$ and $y$ positive.
 \end{solution}
+
+\Problem5 Find all the positive solutions in integers of
+\begin{align*}
+  x + y + z &= 31, \\
+  x + 2y + 3z &= 41.
+\end{align*}
+\begin{solution}
+  Subtracting the first equation from the second gives
+  \begin{equation*}
+    y + 2z = 10.
+  \end{equation*}
+  This equation has the particular solution $(y,z) = (0,5)$ which
+  leads to the general solution $(2t,5-t)$. Taking $y,z>0$ we find
+  that the only relevant solutions are $(2,4)$, $(4,3)$, $(6,2)$, and
+  $(8,1)$. Substituting these into either of the original equations
+  allows us to find the corresponding values for $x$. The four
+  solutions are
+  \begin{gather*}
+    x = 25,\quad y = 2,\quad\text{and}\quad z = 4; \\
+    x = 24,\quad y = 4,\quad\text{and}\quad z = 3; \\
+    x = 23,\quad y = 6,\quad\text{and}\quad z = 2; \\
+    x = 22,\quad y = 8,\quad\text{and}\quad z = 1. \qedhere
+  \end{gather*}
+\end{solution}
