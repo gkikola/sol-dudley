@@ -302,3 +302,33 @@ did each merchant have, and how much was in the purse?
   $x$, $3x$, $5x$, and $15x$ units of currency, for an integer
   $x$. Any positive value for $x$ will produce a valid solution.
 \end{solution}
+
+\Problem{10} A man cashes a check for $d$ dollars and $c$ cents at a
+bank. Assume that the teller by mistake gives the man $c$ dollars and
+$d$ cents. Assume that the man does not notice the error until he has
+spent $23$ cents. Assume further that he then notices that he has $2d$
+dollars and $2c$ cents. Assume still further that he asks you what
+amount the check was for. Assuming that you can accept all the
+assumptions, what is the answer?
+\begin{solution}
+  Let the check be for $T$ cents. The man starts with $c$ dollars and
+  $d$ cents. After spending $23$ cents, he has $2d$ dollars and $2c$
+  cents. This gives
+  \begin{align*}
+    100d + c &= T, \\
+    100c + d - 23 &= 100(2d) + 2c,
+  \end{align*}
+  or, rearranging,
+  \begin{align*}
+    c + 100d &= T, \\
+    98c - 199d &= 23.
+  \end{align*}
+  By inspection, a particular solution to $98c - 199d = 23$ is
+  $c = 51$ and $d = 25$. The general solution is then
+  \begin{equation*}
+    c = 51 + 199t \quad\text{and}\quad d = 25 + 98t.
+  \end{equation*}
+  We know $0\leq c<100$ so the only possible value for $t$ is $t =
+  0$. Therefore the check was written for $T = 25\cdot100 + 51 = 2551$
+  cents or $\$25.51$.
+\end{solution}
