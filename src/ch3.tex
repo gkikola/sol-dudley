@@ -266,3 +266,39 @@ how many of each?
   $t = 1$. Therefore, there are $8$ sophomores, $15$ juniors, and $3$
   seniors.
 \end{solution}
+
+\Problem9 The following problem first appeared in an Indian book
+written around $850$ AD. Three merchants found a purse along the
+way. One of them said, ``If I secure this purse, I shall become twice
+as rich as both of you with your money on hand.'' Then the second
+said, ``I shall become thrice as rich as both of you.'' The third man
+said, ``I shall become five times as rich as both of you.'' How much
+did each merchant have, and how much was in the purse?
+\begin{solution}
+  Let the three merchants each have $x$, $y$, and $z$ units of
+  currency, respectively, and let $w$ be the amount of money in the
+  purse. We have the following system of equations.
+  \begin{align*}
+    x + w &= 2(y + z), \\
+    y + w &= 3(x + z), \\
+    z + w &= 5(x + y).
+  \end{align*}
+  Rearranging and simplifying then gives
+  \begin{align*}
+    x - 2y - 2z + w &= 0, \\
+    -3x + y - 3z + w &= 0, \\
+    -5x -5y + z + w &= 0.
+  \end{align*}
+  Solving these simultaneously, we find that the system reduces to
+  \begin{align*}
+    15x - w &= 0, \\
+    5y - w &= 0, \\
+    3z - w &= 0.
+  \end{align*}
+  So the purse has $15$ times as much money as the first merchant, the
+  second merchant has $3$ times as much money as the first merchant,
+  and the third merchant has $5$ times as much money as the first
+  merchant. So the three merchants and the purse have, respectively,
+  $x$, $3x$, $5x$, and $15x$ units of currency, for an integer
+  $x$. Any positive value for $x$ will produce a valid solution.
+\end{solution}
