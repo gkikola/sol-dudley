@@ -185,3 +185,29 @@ $3x - 4y = 0$, and $7x + 15y = 51$.
     x = 22,\quad y = 8,\quad\text{and}\quad z = 1. \qedhere
   \end{gather*}
 \end{solution}
+
+\Problem6 Find the five different ways a collection of $100$
+coins---pennies, dimes, and quarters---can be worth exactly $\$4.99$.
+\begin{solution}
+  Let $x$ be the number of pennies, $y$ the number of dimes, and $z$
+  the number of quarters. Since there are $100$ coins, whose total
+  value is $\$4.99$, we have the two equations
+  \begin{align*}
+    x + y + z &= 100 \\
+    x + 10y + 25z &= 499.
+  \end{align*}
+
+  Subtracting the first equation from the second gives
+  $9y + 24z = 399$. Dividing this equation by $3$ then gives
+  $3y + 8z = 133$. By inspection, a particular solution is $y = 7$ and
+  $z = 14$. This gives the general solution $y = 7 + 8t$ and
+  $z = 14 - 3t$. We find the positive solutions to be
+  \begin{align*}
+    t &= 0\colon\quad x = 79, \quad y = 7, \quad\text{and}\quad z = 14; \\
+    t &= 1\colon\quad x = 74, \quad y = 15, \quad\text{and}\quad z = 11; \\
+    t &= 2\colon\quad x = 69, \quad y = 23, \quad\text{and}\quad z = 8; \\
+    t &= 3\colon\quad x = 64, \quad y = 31, \quad\text{and}\quad z = 5; \\
+    t &= 4\colon\quad x = 59, \quad y = 39, \quad\text{and}\quad z = 2.
+  \end{align*}
+  These are the only five solutions in the positive integers.
+\end{solution}
