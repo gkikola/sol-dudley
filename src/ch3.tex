@@ -235,3 +235,34 @@ he buy?
   with $a = 9$. Therefore, the man bought $9$ apples at $9$ cents
   each, and $3$ oranges at $6$ cents each.
 \end{solution}
+
+\Problem8 The enrollment in a number theory class consists of
+sophomores, juniors, and backward seniors. If each sophomore
+contributes $\$1.25$, each junior $\$.90$, and each senior $\$.50$,
+the instructor will have a fund of $\$25$. There are $26$ students;
+how many of each?
+\begin{solution}
+  Let $x$ be the number of sophomores, $y$ the number of juniors, and
+  $z$ the number of seniors. Then we have the following system of
+  equations:
+  \begin{align}
+    \label{eq:lin-dioph-eq:student-counts}
+    x + y + z &= 26, \\
+    \label{eq:lin-dioph-eq:student-costs}
+    125x + 90y + 50z &= 2500.
+  \end{align}
+  Multiplying \eqref{eq:lin-dioph-eq:student-counts} by $50$ and
+  subtracting from \eqref{eq:lin-dioph-eq:student-costs} gives the
+  equation
+  \begin{equation*}
+    75x + 40y = 1200.
+  \end{equation*}
+  Dividing by $5$ gives $15x + 8y = 240$. A particular solution is
+  $(0,30)$, so we have the general solution
+  \begin{equation*}
+    x = 8t \quad\text{and}\quad y = 30 - 15t.
+  \end{equation*}
+  If $x$ and $y$ are to be positive, we see that $0 < t < 2$, so that
+  $t = 1$. Therefore, there are $8$ sophomores, $15$ juniors, and $3$
+  seniors.
+\end{solution}
