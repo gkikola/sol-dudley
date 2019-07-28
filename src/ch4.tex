@@ -87,3 +87,33 @@ $a + c\equiv b + d\pmod m$.
   \end{equation*}
   and we see that $a + c\equiv b + d\pmod m$.
 \end{proof}
+
+\Exercise{10} Construct a like example for modulus $10$ to show that
+$ab\equiv ac\pmod m$ and $a\not\equiv0\pmod m$ do not together imply
+$b\equiv c\pmod m$.
+\begin{solution}
+  We have $5\cdot2\equiv5\cdot4\pmod{10}$ and $5\not\equiv0\pmod{10}$,
+  but $2\not\equiv4\pmod{10}$.
+\end{solution}
+
+\Exercise{11} What values of $x$ satisfy
+\begin{enumerate}
+\item $2x\equiv4\pmod7$?
+  \begin{solution}
+    Since $(2,7) = 1$, we are allowed (by Theorem~4) to cancel a
+    factor of $2$ on each side to get $x\equiv2\pmod7$.
+  \end{solution}
+\item $2x\equiv1\pmod7$?
+  \begin{solution}
+    Since $1\equiv8\pmod7$, we can again cancel a factor of $2$ to get
+    $x\equiv4\pmod7$.
+  \end{solution}
+\end{enumerate}
+
+\Exercise{12} Which $x$ will satisfy $2x\equiv4\pmod6$?
+\begin{solution}
+  We have $(2,6) = 2$. Applying Theorem~5, we get
+  \begin{equation*}
+    x\equiv2\pmod3. \qedhere
+  \end{equation*}
+\end{solution}
