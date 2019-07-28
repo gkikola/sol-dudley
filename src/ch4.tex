@@ -52,3 +52,38 @@ $31$, $37$, and $41$ congruent?
   This is immediate from the definition of congruence, since $p\mid a$
   if and only if $p\mid(a-0)$.
 \end{proof}
+
+\Exercise6 Prove that $a\equiv a\pmod{m}$ for all integers $a$.
+\begin{proof}
+  Since any positive integer $m$ must divide $0$, we have
+  $m\mid(a - a)$ so that $a\equiv a\pmod{m}$.
+\end{proof}
+
+\Exercise7 Prove that for all integers $a$ and $b$, if
+$a\equiv b\pmod{m}$, then $b\equiv a\pmod{m}$.
+\begin{proof}
+  If $a\equiv b\pmod{m}$ then $a - b = km$ for some integer $k$. Then
+  we also have $b - a = (-k)m$ so that $b\equiv a\pmod{m}$.
+\end{proof}
+
+\Exercise8 Prove that for integers $a$, $b$, and $c$, if
+$a\equiv b\pmod m$ and $b\equiv c\pmod m$, then $a\equiv c\pmod m$.
+\begin{proof}
+  By definition, there are integers $s$ and $t$ with $a - b = sm$ and
+  $b - c = tm$. So
+  \begin{equation*}
+    a - c = (a - b) + (b - c) = sm + tm = (s + t)m,
+  \end{equation*}
+  hence $m\mid(a - c)$.
+\end{proof}
+
+\Exercise9 Prove that for integers $a$, $b$, $c$, and $d$, if
+$a\equiv b\pmod m$ and $c\equiv d\pmod m$, then
+$a + c\equiv b + d\pmod m$.
+\begin{proof}
+  We have $a = b + sm$ and $c = d + tm$ for integers $s$ and $t$. So
+  \begin{equation*}
+    a + c = (b + sm) + (d + tm) = (b + d) + (s + t)m,
+  \end{equation*}
+  and we see that $a + c\equiv b + d\pmod m$.
+\end{proof}
