@@ -221,3 +221,35 @@ correct. Find the missing digit without doing the multiplication.
   \end{equation*}
   So $2+k\equiv8\pmod9$ and we see that $k$ must be $6$.
 \end{solution}
+
+\Problem{12} Show that no square has as its last digit, $2$, $3$, $7$,
+or $8$.
+\begin{proof}
+  Let $n$ be any nonnegative integer. Modulo $10$, there are only $10$
+  possible least residues for $n$, so we may simply square each of
+  them and reduce:
+  \begin{align*}
+    n\equiv0\pmod{10}\quad&\Rightarrow\quad n^2\equiv0\pmod{10}, \\
+    n\equiv1\pmod{10}\quad&\Rightarrow\quad n^2\equiv1\pmod{10}, \\
+    n\equiv2\pmod{10}\quad&\Rightarrow\quad n^2\equiv4\pmod{10}, \\
+    n\equiv3\pmod{10}\quad&\Rightarrow\quad n^2\equiv9\pmod{10}, \\
+    n\equiv4\pmod{10}\quad&\Rightarrow\quad n^2\equiv6\pmod{10}, \\
+    n\equiv5\pmod{10}\quad&\Rightarrow\quad n^2\equiv5\pmod{10}, \\
+    n\equiv6\pmod{10}\quad&\Rightarrow\quad n^2\equiv6\pmod{10}, \\
+    n\equiv7\pmod{10}\quad&\Rightarrow\quad n^2\equiv9\pmod{10}, \\
+    n\equiv8\pmod{10}\quad&\Rightarrow\quad n^2\equiv4\pmod{10}, \\
+    n\equiv9\pmod{10}\quad&\Rightarrow\quad n^2\equiv1\pmod{10}.
+  \end{align*}
+  We see in each case that $n^2$ can only have $0$, $1$, $4$, $5$,
+  $6$, or $9$ as its last digit.
+\end{proof}
+
+\Problem{13} What can the last digit of a fourth power be?
+\begin{solution}
+  We simply raise each least residue (mod $10$) to the fourth power,
+  similar to what we did in the previous problem. Modulo $10$, we have
+  $0^4 = 0$, $1^4 = 1$, $2^4 = 16\equiv6$, $3^4 = 81\equiv1$, and so
+  on. After going through all the digits, we can see that the only
+  possibilities for the last digit of a fourth power are $0$, $1$,
+  $5$, or $6$.
+\end{solution}
