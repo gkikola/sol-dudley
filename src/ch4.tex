@@ -193,3 +193,16 @@ $1$ or $5$ (mod $6$).
   which is again impossible. The only possibilities are $p\equiv1$ or
   $5\pmod6$.
 \end{solution}
+
+\Problem{10} What can primes (except $2$, $3$, or $5$) be congruent to
+(mod $30$)?
+\begin{solution}
+  Let $p$ be a prime greater than $5$ and let $k$ be a nonnegative
+  integer less than $30$. If $p\equiv k\pmod{30}$ then $p = 30n + k$
+  for some integer $n$. From this we see that $p$ cannot be prime
+  (larger than $5$) unless $(30,k) = 1$ (since the factors of $30$ are
+  $2$, $3$, and $5$, and primes larger than $5$ cannot be divisible by
+  these numbers). So the possible values for $k$ are those that are
+  relatively prime to $30$, namely $1$, $7$, $11$, $13$, $17$, $19$,
+  $23$, or $29$.
+\end{solution}
