@@ -1,0 +1,54 @@
+\chapter{Congruences}
+
+\section{Exercises}
+
+\Exercise1 True or false? $91\equiv0\pmod7$.
+$3 + 5 + 7 \equiv 5\pmod{10}$. $-2\equiv2\pmod8$. $11^2\equiv1\pmod3$.
+\begin{solution}
+  Only the third congruence is false.
+
+  Since $91 = 7\cdot13$ we have $7\mid(91-0)$ so that
+  $91\equiv0\pmod7$.
+
+  $3 + 5 + 7 = 15$ and $10\mid(15-5)$ so $3 + 5 + 7 \equiv 5\pmod{10}$.
+
+  It is not true that $-2\equiv2\pmod8$, since $8\nmid-4$.
+
+  And since $3\mid(121 - 1)$, we indeed have $11^2\equiv1\pmod3$.
+\end{solution}
+
+\Exercise2 Complete the proof that $a\equiv b\pmod m$ if and only if
+there is an integer $k$ such that $a = b + km$.
+\begin{solution}
+  In the text, Dudley proves the left-to-right implication. So we need
+  to show the converse. Suppose that $a = b + km$ for some integer
+  $k$. Then $a - b = km$ and we have by the definition of divisibility
+  that $m\mid(a - b)$. Therefore $a\equiv b\pmod{m}$.
+\end{solution}
+
+\Exercise3 To what least residue (mod $11$) is each of $23$, $29$,
+$31$, $37$, and $41$ congruent?
+\begin{solution}
+  We have
+  \begin{align*}
+    23 &\equiv 1\pmod{11}, \\
+    29 &\equiv 7\pmod{11}, \\
+    31 &\equiv 9\pmod{11}, \\
+    37 &\equiv 4\pmod{11}, \\
+    \intertext{and}
+    41 &\equiv 8\pmod{11}. \qedhere
+  \end{align*}
+\end{solution}
+
+\Exercise4 Say ``$n$ is odd'' in three other ways.
+\begin{solution}
+  From the theorems in the text, $n$ is odd if and only
+  $n\equiv1\pmod2$, if and only if $n = 2k + 1$ for some integer $k$,
+  if and only if $n$ has remainder $1$ when divided by $2$.
+\end{solution}
+
+\Exercise5 Prove that $p\mid a$ if and only if $a\equiv0\pmod{p}$.
+\begin{proof}
+  This is immediate from the definition of congruence, since $p\mid a$
+  if and only if $p\mid(a-0)$.
+\end{proof}
