@@ -206,3 +206,18 @@ $1$ or $5$ (mod $6$).
   relatively prime to $30$, namely $1$, $7$, $11$, $13$, $17$, $19$,
   $23$, or $29$.
 \end{solution}
+
+\Problem{11} In the multiplication $31415\cdot92653 = 2910\;93995$,
+one digit in the product is missing and all the others are
+correct. Find the missing digit without doing the multiplication.
+\begin{solution}
+  By repeatedly summing the digits, we see that
+  \begin{equation*}
+    31415\cdot92653\equiv14\cdot25\equiv5\cdot7\equiv35\equiv8\pmod9.
+  \end{equation*}
+  Using $k$ in place of the missing digit in the product, we have
+  \begin{equation*}
+    2910k93995 \equiv 47+k\equiv 11+k\equiv2+k\pmod9.
+  \end{equation*}
+  So $2+k\equiv8\pmod9$ and we see that $k$ must be $6$.
+\end{solution}
