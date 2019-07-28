@@ -171,3 +171,25 @@ $4$)?
     6k+5\equiv6\cdot1+5\equiv11\equiv3\pmod4. \qedhere
   \end{equation*}
 \end{solution}
+
+\Problem8 Show that every prime (except $2$) is congruent to $1$ or
+$3$ (mod $4$).
+\begin{solution}
+  Let $p$ be a prime bigger than $2$. Since no prime (other than $2$)
+  is divisible by $2$, we cannot have $p = 4k$ or $p = 4k + 2$ for an
+  integer $k$. So $4\nmid p$ and $4\nmid(p-2)$. Therefore
+  $p\not\equiv0\pmod4$ and $p\not\equiv2\pmod4$. The only remaining
+  possibilities are $p\equiv1$ or $3\pmod4$.
+\end{solution}
+
+\Problem9 Show that every prime (except $2$ or $3$) is congruent to
+$1$ or $5$ (mod $6$).
+\begin{solution}
+  Let $p$ be a prime larger than $3$. If $p\equiv0\pmod6$, then
+  $6\mid p$ which is impossible. If $p\equiv2\pmod6$ then
+  $p = 6k + 2 = 2(3k + 1)$ for an integer $k$, which is impossible. If
+  $p\equiv3\pmod6$ then $p = 6k + 3 = 3(2k + 1)$, which is
+  impossible. And if $p\equiv4\pmod6$ then $p = 6k + 4 = 2(3k + 2)$,
+  which is again impossible. The only possibilities are $p\equiv1$ or
+  $5\pmod6$.
+\end{solution}
