@@ -288,3 +288,48 @@ never divisible by $5$.
   then $(n+1)^3-n^3$ is not divisible by $5$. But $n$ must be
   congruent to one of these, so we have checked every case.
 \end{proof}
+
+\Problem{16} Show that
+\begin{multline}
+  \label{eq:congruences:digits-mod-11}
+  d_k10^k + d_{k-1}10^{k-1} + \cdots + d_110 + d_0 \\
+  \equiv d_0 - d_1 + d_2 - d_3 + \cdots + (-1)^kd_k\pmod{11}
+\end{multline}
+and deduce a test for divisibility by $11$.
+\begin{solution}
+  Since $10\equiv-1\pmod{11}$, it follows that $10^n\equiv1\pmod{11}$
+  when $n$ is even and $10^n\equiv-1\pmod{11}$ when $n$ is odd. So any
+  positive integer is congruent (mod $11$) to the sum of its digits
+  but with alternating signs. Therefore
+  \eqref{eq:congruences:digits-mod-11} holds.
+
+  To test for divisibility by $11$, simply find the sum of every other
+  digit, and subtract the sum of the remaining digits. Then this
+  difference is divisible by $11$ if and only if the original number
+  is as well.
+
+  For example, 37,536,760,679 is divisible by $11$ since
+  \begin{equation*}
+    3 + 5 + 6 + 6 + 6 + 9 = 35,
+  \end{equation*}
+  \begin{equation*}
+    7 + 3 + 7 + 0 + 7 = 24,
+  \end{equation*}
+  and $35 - 24 = 11$ is divisible by $11$.
+\end{solution}
+
+\Problem{17} $A$ says, ``27,182,818,284,590,452 is divisible by
+$11$.'' $B$ says, ``No, it isn't.'' Who is right?
+\begin{solution}
+  We may simply use the divisibility rule found in the previous
+  problem. The cross-digit sums are
+  \begin{equation*}
+    2 + 1 + 2 + 1 + 2 + 4 + 9 + 4 + 2 = 27
+  \end{equation*}
+  and
+  \begin{equation*}
+    7 + 8 + 8 + 8 + 8 + 5 + 0 + 5 = 49.
+  \end{equation*}
+  Since $49 - 27 = 22$ and $11\mid22$, we see that the original number
+  is divisible by $11$. Therefore $A$'s assertion is correct.
+\end{solution}
