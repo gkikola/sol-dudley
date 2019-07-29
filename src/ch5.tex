@@ -1,0 +1,38 @@
+\chapter{Linear Congruences}
+
+\section{Exercises}
+
+\Exercise1 Construct congruences modulo $12$ with no solutions, just
+one solution, and more than one solution.
+\begin{solution}
+  The congruence $3x\equiv4\pmod{12}$ has no solution since $3x$ is
+  always congruent to $0$, $3$, $6$, or $9$ (mod $12$) and never
+  $4$. The congruence $5x\equiv2\pmod{12}$ has one solution, $x =
+  10$. The congruence $2x\equiv4\pmod{12}$ has two solutions, $x = 2$
+  and $x = 8$.
+\end{solution}
+
+\Exercise2 Which congruences have no solutions?
+\label{exercise:lin-cong:which-congruences-have-solutions}
+\begin{enumerate}
+\item $3x\equiv1\pmod{10}$,
+\item $4x\equiv1\pmod{10}$,
+\item $5x\equiv1\pmod{10}$,
+\item $6x\equiv1\pmod{10}$,
+\item $7x\equiv1\pmod{10}$.
+\end{enumerate}
+\begin{solution}
+  Since $3\cdot7 = 21\equiv1\pmod{10}$, both of the congruences
+  $3x\equiv1$ and $7x\equiv1\pmod{10}$ have a solution.
+
+  The other three congruences do not have solutions.
+\end{solution}
+
+\Exercise3 After
+Exercise~\ref{exercise:lin-cong:which-congruences-have-solutions}, can
+you guess a criterion for telling when a congruence has no solutions?
+\begin{solution}
+  A necessary and sufficient condition that a congruence
+  $ax\equiv b\pmod{m}$ has no solutions is that $(a,m)$ does not
+  divide $b$. This will be proven in Lemma~1 in the text.
+\end{solution}
