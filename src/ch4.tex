@@ -289,7 +289,9 @@ never divisible by $5$.
   congruent to one of these, so we have checked every case.
 \end{proof}
 
-\Problem{16} Show that
+\Problem{16}
+\label{problem:congruences:11-divisibility}
+Show that
 \begin{multline}
   \label{eq:congruences:digits-mod-11}
   d_k10^k + d_{k-1}10^{k-1} + \cdots + d_110 + d_0 \\
@@ -333,3 +335,22 @@ $11$.'' $B$ says, ``No, it isn't.'' Who is right?
   Since $49 - 27 = 22$ and $11\mid22$, we see that the original number
   is divisible by $11$. Therefore $A$'s assertion is correct.
 \end{solution}
+
+\Problem{18} A {\em palindrome} is a number that reads the same
+backward as forward. Examples are $22$, $1331$, and $935686539$.
+\begin{enumerate}
+\item Prove that every four-digit palindrome is divisible by $11$.
+  \begin{proof}
+    Let $n$ be a four-digit palindrome having decimal representation
+    $abba$, where $a$ and $b$ represent digits. By the divisibility
+    test established in
+    Problem~\ref{problem:congruences:11-divisibility}, $n$ must be
+    congruent to $a - b + b - a = 0$ (mod $11$). Therefore $11\mid n$.
+  \end{proof}
+\item What about six-digit palindromes?
+  \begin{proof}
+    The previous proof is easily adapted to this case. In fact, any
+    palindrome with an even number of digits will be divisible by
+    $11$.
+  \end{proof}
+\end{enumerate}
