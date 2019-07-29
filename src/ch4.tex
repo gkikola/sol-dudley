@@ -348,9 +348,56 @@ backward as forward. Examples are $22$, $1331$, and $935686539$.
     congruent to $a - b + b - a = 0$ (mod $11$). Therefore $11\mid n$.
   \end{proof}
 \item What about six-digit palindromes?
-  \begin{proof}
+  \begin{solution}
     The previous proof is easily adapted to this case. In fact, any
     palindrome with an even number of digits will be divisible by
     $11$.
-  \end{proof}
+  \end{solution}
 \end{enumerate}
+
+\Problem{19} Show that if $n\equiv4\pmod9$, then $n$ cannot be written
+as the sum of three cubes.
+\begin{proof}
+  By cubing each integer from $0$ to $8$, we see that the only
+  possible least residues for cubes are $0$, $1$, or $8$. Suppose we
+  can select three numbers from $0$, $1$, and $8$ such that their sum
+  is congruent to $4$ (mod $9$). $1 + 1 + 1$ is too small, so at least
+  one of the numbers has to be $8$. We check the possibilities:
+  \begin{align*}
+    0 + 1 + 8 = 9 &\equiv 0 \pmod 9, \\
+    1 + 1 + 8 = 10 &\equiv 1 \pmod 9, \\
+    0 + 8 + 8 = 16 &\equiv 7 \pmod 9, \\
+    1 + 8 + 8 = 17 &\equiv 8 \pmod 9, \\
+    8 + 8 + 8 = 24 &\equiv 7 \pmod 9.
+  \end{align*}
+  So, there is no such sum congruent to $4$. This shows that $n$
+  cannot be written as the sum of three cubes.
+\end{proof}
+
+\Problem{20} Show that for $k > 0$ and $m\geq1$, $x\equiv1\pmod{m^k}$
+implies $x^m\equiv1\pmod{m^{k+1}}$.
+\begin{proof}
+  Note that for each $m\geq1$,
+  \begin{equation}
+    \label{eq:congruences:factor-diff-powers}
+    x^m - 1 = (x - 1)(x^{m-1} + x^{m-2} + \cdots + x + 1).
+  \end{equation}
+  Also note that, since $m^k\mid(x-1)$, we also have $m\mid(x - 1)$ so
+  that
+  \begin{equation*}
+    x^{m-1} + x^{m-2} + \cdots + x + 1
+    \equiv \overbrace{1 + 1 + \cdots + 1 + 1}^{\text{$m$ terms}}
+    \equiv m\equiv0\pmod{m}.
+  \end{equation*}
+  Therefore $m\mid(x^{m-1} + x^{m-2} + \cdots + 1)$ and we can write
+  \begin{equation*}
+    x^{m-1} + x^{m-2} + \cdots + x + 1 = ms
+  \end{equation*}
+  for some integer $s$. And $m^k\mid(x - 1)$ so $x - 1 = m^kt$ for an
+  integer $t$. By \eqref{eq:congruences:factor-diff-powers}, we
+  therefore have
+  \begin{equation*}
+    x^m - 1 = (m^kt)(ms) = m^{k+1}st.
+  \end{equation*}
+  Hence $m^{k+1}\mid(x^m - 1)$ as required to complete the proof.
+\end{proof}
