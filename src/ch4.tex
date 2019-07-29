@@ -253,3 +253,38 @@ or $8$.
   possibilities for the last digit of a fourth power are $0$, $1$,
   $5$, or $6$.
 \end{solution}
+
+\Problem{14} Show that the difference of two consecutive cubes is
+never divisible by $3$.
+\begin{proof}
+  Let $n$ be an integer. We have
+  \begin{align*}
+    (n+1)^3 - n^3
+    &= n^3 + 3n^2 + 3n + 1 - n^3 \\
+    &= 3n^2 + 3n + 1 \\
+    &\equiv1\pmod3.
+  \end{align*}
+  Since $(n+1)^3 - n^3$ always has a remainder of $1$ when divided by
+  $3$, it cannot be divisible by $3$.
+\end{proof}
+
+\Problem{15} Show that the difference of two consecutive cubes is
+never divisible by $5$.
+\begin{proof}
+  Let $n$ be an integer. As in the previous problem,
+  \begin{equation*}
+    (n+1)^3 - n^3 = 3n^2 + 3n + 1.
+  \end{equation*}
+  We find that
+  \begin{align*}
+    3(0)^2 + 3(0) + 1 = 1 &\equiv1\pmod5, \\
+    3(1)^2 + 3(1) + 1 = 7 &\equiv2\pmod5, \\
+    3(2)^2 + 3(2) + 1 = 19 &\equiv4\pmod5, \\
+    3(3)^2 + 3(3) + 1 = 37 &\equiv2\pmod5, \\
+    \intertext{and}
+    3(4)^2 + 3(4) + 1 = 61 &\equiv1\pmod5.
+  \end{align*}
+  So, if $n$ is congruent (mod $5$) to $0$, $1$, $2$, $3$, or $4$,
+  then $(n+1)^3-n^3$ is not divisible by $5$. But $n$ must be
+  congruent to one of these, so we have checked every case.
+\end{proof}
