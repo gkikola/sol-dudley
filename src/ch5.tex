@@ -125,7 +125,7 @@ $x\equiv1\pmod3$, $x\equiv2\pmod5$, and $x\equiv3\pmod7$.
 
 \section{Problems}
 
-\Problem1 Solve each of the following.
+\Problem1 Solve each of the following:
 \begin{gather*}
   2x\equiv1\pmod{17}. \qquad\qquad 3x\equiv1\pmod{17}. \\
   3x\equiv6\pmod{18}. \qquad\qquad 40x\equiv777\pmod{1777}.
@@ -151,4 +151,26 @@ $x\equiv1\pmod3$, $x\equiv2\pmod5$, and $x\equiv3\pmod7$.
   \end{equation*}
   Therefore $x = 1752$ is the only least residue satisfying the
   congruence.
+\end{solution}
+
+\Problem2 Solve each of the following:
+\begin{gather*}
+  2x\equiv1\pmod{19}. \qquad\qquad 3x\equiv1\pmod{19}. \\
+  4x\equiv6\pmod{18}. \qquad\qquad 20x\equiv984\pmod{1984}.
+\end{gather*}
+\begin{solution}
+  For the first congruence, we have $2x\equiv1\equiv20\pmod{19}$ so
+  that $x\equiv10\pmod{19}$, and this is the only solution.
+
+  For the second, we have $3x\equiv1\equiv39\pmod{19}$ so
+  $x\equiv13\pmod{19}$, and this is again the only solution.
+
+  For the third, we get $2x\equiv3\equiv12\pmod9$ so that
+  $x\equiv6\pmod9$. The two solutions (mod $18$) are then $6$ and
+  $15$.
+
+  Finally, for the last congruence, we may divide by $4$ to get
+  $5x\equiv246\pmod{496}$. So $5x\equiv-250\pmod{496}$ and we get
+  $x\equiv-50\pmod{496}$. The four solutions modulo $1984$ are then
+  $x = 446$, $942$, $1438$, and $1934$.
 \end{solution}
