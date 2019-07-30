@@ -36,3 +36,89 @@ you guess a criterion for telling when a congruence has no solutions?
   $ax\equiv b\pmod{m}$ has no solutions is that $(a,m)$ does not
   divide $b$. This will be proven in Lemma~1 in the text.
 \end{solution}
+
+\Exercise4 Solve
+\begin{enumerate}
+\item $8x\equiv1\pmod{15}$
+  \begin{solution}
+    Since $(8,15) = 1$, there is only one solution (by Lemma~2). We
+    have $8x\equiv16\pmod{15}$ so that $x\equiv2\pmod{15}$.
+  \end{solution}
+\item $9x + 10y = 11$
+  \begin{solution}
+    From the equation we get the congruence
+    $9x\equiv11\pmod{10}$. Since $11\equiv81\pmod{10}$, we have
+    $9x\equiv81\pmod{10}$ from which we get $x\equiv9\pmod{10}$. This
+    is the only solution to the congruence. Thus
+    \begin{equation*}
+      x = 9 + 10t
+    \end{equation*}
+    gives all possible values for $x$. Substituting this back into the
+    equation, we get
+    \begin{equation*}
+      9(9 + 10t) + 10y = 11,
+    \end{equation*}
+    which gives
+    \begin{equation*}
+      y = -7 - 9t.
+    \end{equation*}
+    So the general solution is $x = 9 + 10t$ and $y = -7 - 9t$.
+  \end{solution}
+\end{enumerate}
+
+\Exercise5
+\label{exercise:lin-cong:sampler}
+Determine the number of solutions of each of the following
+congruences:
+\begin{gather*}
+  3x\equiv6\pmod{15},\qquad 4x\equiv8\pmod{15},\qquad 5x\equiv10\pmod{15}, \\
+  6x\equiv11\pmod{15},\qquad 7x\equiv14\pmod{15}.
+\end{gather*}
+\begin{solution}
+  We will use Lemma~3.
+
+  $(3,15) = 3$ and $3\mid6$, so $3x\equiv6\pmod{15}$ has $3$
+  solutions.
+
+  $(4,15) = 1$, so $4x\equiv8\pmod{15}$ has only one solution.
+
+  $(5,15) = 5$ and $5\mid{10}$, so $5x\equiv10\pmod{15}$ has $5$
+  solutions.
+
+  $(6,15) = 3$ but $3\nmid11$ so the congruence $6x\equiv11\pmod{15}$
+  has no solutions.
+
+  Finally, since $(7,15) = 1$, the congruence $7x\equiv14\pmod{15}$
+  has one solution.
+\end{solution}
+
+\Exercise6 Find all of the solutions of $5x\equiv10\pmod{15}$.
+\begin{solution}
+  Since $(5,10) = 5$, we may divide by $5$ to get $x\equiv2\pmod3$. So
+  the solutions modulo $15$ are $2$, $5$, $8$, $11$, and $14$.
+\end{solution}
+
+\Exercise7 Solve the rest of the congruences in
+Exercise~\ref{exercise:lin-cong:sampler}.
+\begin{solution}
+  From $3x\equiv6\pmod{15}$ we get $x\equiv2\pmod{5}$, so that the
+  three solutions modulo $15$ are $2$, $7$, and $12$.
+
+  For $4x\equiv8\pmod{15}$ we get the unique solution $x = 2$.
+
+  As we saw before, $6x\equiv11\pmod{15}$ has no solutions since
+  $(6,15)\nmid11$.
+
+  Lastly, for $7x\equiv14\pmod{15}$ we have the unique solution
+  $x = 2$.
+\end{solution}
+
+\Exercise8 Verify that $52$ satisfies each of the three congruences,
+$x\equiv1\pmod3$, $x\equiv2\pmod5$, and $x\equiv3\pmod7$.
+\begin{solution}
+  Since
+  \begin{equation*}
+    52 = 17\cdot3 + 1 = 10\cdot5 + 2 = 7\cdot7 + 3,
+  \end{equation*}
+  we see that each congruence is satisfied.
+\end{solution}
