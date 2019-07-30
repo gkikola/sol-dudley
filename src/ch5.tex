@@ -122,3 +122,33 @@ $x\equiv1\pmod3$, $x\equiv2\pmod5$, and $x\equiv3\pmod7$.
   \end{equation*}
   we see that each congruence is satisfied.
 \end{solution}
+
+\section{Problems}
+
+\Problem1 Solve each of the following.
+\begin{gather*}
+  2x\equiv1\pmod{17}. \qquad\qquad 3x\equiv1\pmod{17}. \\
+  3x\equiv6\pmod{18}. \qquad\qquad 40x\equiv777\pmod{1777}.
+\end{gather*}
+\begin{solution}
+  For the first congruence, we have $2x\equiv1\equiv18\pmod{17}$ so
+  $x\equiv9\pmod{17}$. This is the only solution, since $(2,17) = 1$.
+
+  For the second, we have $3x\equiv1\equiv18\pmod{17}$ so
+  $x\equiv6\pmod{17}$ and again, this solution is unique.
+
+  For the third congruence, we may divide by the greatest common
+  divisor to get $x\equiv2\pmod6$. So the $3$ solutions modulo $18$
+  are $2$, $8$, and $14$.
+
+  Lastly, $(40,1777) = 1$ so we do have a unique solution. Since
+  \begin{equation*}
+    40x\equiv777\equiv-1000\pmod{1777},
+  \end{equation*}
+  we may divide by $40$ to get
+  \begin{equation*}
+    x\equiv-25\pmod{1777}.
+  \end{equation*}
+  Therefore $x = 1752$ is the only least residue satisfying the
+  congruence.
+\end{solution}
