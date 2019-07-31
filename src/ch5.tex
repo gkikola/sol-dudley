@@ -174,3 +174,55 @@ $x\equiv1\pmod3$, $x\equiv2\pmod5$, and $x\equiv3\pmod7$.
   $x\equiv-50\pmod{496}$. The four solutions modulo $1984$ are then
   $x = 446$, $942$, $1438$, and $1934$.
 \end{solution}
+
+\Problem3 Solve the systems
+\begin{enumerate}
+\item $x\equiv1\pmod2$, $x\equiv1\pmod3$.
+  \begin{solution}
+    If $x\equiv1\pmod2$, then
+    \begin{equation*}
+      x = 1 + 2k_1
+      \quad\text{for some integer $k_1$}.
+    \end{equation*}
+    So if $x\equiv1\pmod3$ then $1 + 2k_1\equiv1\pmod3$ or
+    $k_1\equiv0\pmod3$. So $k_1 = 3k_2$ for some $k_2$. Therefore
+    \begin{equation*}
+      x = 1 + 6k_2,
+      \quad\text{or}\quad
+      x\equiv1\pmod6.
+    \end{equation*}
+    By the Chinese Remainder Theorem, this is the only solution modulo
+    $6$.
+  \end{solution}
+\item $x\equiv3\pmod5$, $x\equiv5\pmod7$, $x\equiv7\pmod{11}$.
+  \begin{solution}
+    From the first congruence we get
+    \begin{equation*}
+      x = 3 + 5k_1.
+    \end{equation*}
+    So by the second congruence we have $3 + 5k_1\equiv5\pmod7$ and
+    solving this gives $k_1\equiv6\pmod7$, so that
+    \begin{equation*}
+      x = 3 + 5(6 + 7k_2) = 33 + 35k_2.
+    \end{equation*}
+    Finally, using the last congruence we get
+    $33 + 35k_2\equiv7\pmod{11}$ or $2k_2\equiv7\pmod{11}$. Solving
+    this gives $k_2\equiv9\pmod{11}$, so we get
+    \begin{equation*}
+      x = 33 + 35(9 + 11k_3) = 348 + 385k_3.
+    \end{equation*}
+    So, $x\equiv348\pmod{385}$ and this solution is unique modulo
+    $385$.
+  \end{solution}
+\item $2x\equiv1\pmod5$, $3x\equiv2\pmod7$, $4x\equiv3\pmod{11}$.
+  \begin{solution}
+    The first congruence gives $x = 3 + 5k_1$ for some
+    $k_1$. Substituting this into the second congruence gives
+    $k_1 = 7k_2$, so that $x = 3 + 35k_2$. Using the third
+    congruence, we get $k_2 = 3 + 11k_3$. So
+    \begin{equation*}
+      x = 108 + 385k_3.
+    \end{equation*}
+    Therefore $x\equiv108\pmod{385}$.
+  \end{solution}
+\end{enumerate}
