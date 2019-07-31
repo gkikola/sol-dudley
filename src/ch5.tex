@@ -245,3 +245,24 @@ $x\equiv1\pmod3$, $x\equiv2\pmod5$, and $x\equiv3\pmod7$.
     $x\equiv605\pmod{1066}$.
   \end{solution}
 \end{enumerate}
+
+\Problem5 What possibilities are there for the number of solutions of
+a linear congruence (mod $20$)?
+\begin{solution}
+  By Theorem~1, the congruence $ax\equiv b\pmod{20}$ has $(20,a)$
+  solutions, provided that $(20,a)\mid b$. So every divisor of $20$,
+  along with $0$, is a possibility for the number of solutions: $0$,
+  $1$, $2$, $4$, $5$, $10$, and $20$.
+\end{solution}
+
+\Problem6 Construct linear congruences modulo $20$ with no solutions,
+just one solution, and more than one solution. Can you find one with
+$20$ solutions?
+\begin{solution}
+  The linear congruence $2x\equiv3\pmod{20}$ has no solutions since
+  $(2,20)\nmid3$. The congruence $3x\equiv1\pmod{20}$ has exactly one
+  solution, $x = 7$. The congruence $2x\equiv8\pmod{20}$ has more than
+  one solution: $x = 4$ and $x = 14$.
+
+  The linear congruence $0x\equiv0\pmod{20}$ has $20$ solutions.
+\end{solution}
