@@ -374,3 +374,34 @@ were $3$ left over. How large is the Department?
   $297$ people, or in general, $17 + 140t$ people for some integer
   $t\geq0$.
 \end{solution}
+
+\Problem{12} Find a multiple of $7$ that leaves the remainder $1$ when
+divided by $2$, $3$, $4$, $5$, or $6$.
+\begin{solution}
+  We want to find $x$ so that
+  \begin{align*}
+    x&\equiv1\pmod2, \\
+    x&\equiv1\pmod3, \\
+    x&\equiv1\pmod4, \\
+    x&\equiv1\pmod5, \\
+    x&\equiv1\pmod6, \\
+    x&\equiv0\pmod7.
+  \end{align*}
+  The moduli are not relatively prime, however some of these
+  congruences are redundant. For example, $x\equiv1\pmod2$ and
+  $x\equiv1\pmod3$ together imply that $x\equiv1\pmod6$. And
+  $x\equiv1\pmod4$ implies $x\equiv1\pmod2$. So the system reduces to
+  \begin{align*}
+    x&\equiv1\pmod3, \\
+    x&\equiv1\pmod4, \\
+    x&\equiv1\pmod5, \\
+    x&\equiv0\pmod7.
+  \end{align*}
+  Solving this, we find
+  \begin{equation*}
+    x\equiv301 \pmod{420},
+  \end{equation*}
+  and, by the Chinese Remainder Theorem, this gives all
+  solutions. Therefore any number of the form $x = 301 + 420t$ where
+  $t$ is an integer meets the requirements.
+\end{solution}
