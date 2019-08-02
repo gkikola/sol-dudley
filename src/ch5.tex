@@ -346,3 +346,31 @@ $20$ solutions?
     solutions.
   \end{solution}
 \end{enumerate}
+
+\Problem{11} When the marchers in the annual Mathematics Department
+Parade lined up $4$ abreast, there was $1$ odd person; when they tried
+$5$ in a line, there were $2$ left over; and when $7$ abreast, there
+were $3$ left over. How large is the Department?
+\begin{solution}
+  If $x$ is the size of the department, then we have the following
+  system of congruences:
+  \begin{align*}
+    x&\equiv1\pmod4, \\
+    x&\equiv2\pmod5, \\
+    x&\equiv3\pmod7.
+  \end{align*}
+  From the first congruence we have $x = 1 + 4k_1$ for some
+  $k_1$. Then $1 + 4k_1\equiv2\pmod5$ which gives $k_1\equiv4\pmod5$
+  or $k_1 = 4 + 5k_2$. Then
+  \begin{equation*}
+    x = 1 + 4(4 + 5k_2) = 17 + 20k_2.
+  \end{equation*}
+  Then $17 + 20k_2\equiv3\pmod7$, or $k_2\equiv0\pmod7$. Therefore
+  $k_2 = 7k_3$ and we have $x = 17 + 140k_3$. So the general solution is
+  \begin{equation*}
+    x \equiv 17\pmod{140}.
+  \end{equation*}
+  So the Department could consist of $17$ people, or $157$ people, or
+  $297$ people, or in general, $17 + 140t$ people for some integer
+  $t\geq0$.
+\end{solution}
