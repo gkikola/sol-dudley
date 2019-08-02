@@ -284,3 +284,65 @@ $20$ solutions?
   \end{equation*}
   This is the only solution.
 \end{solution}
+
+\Problem9 Solve for $x$ and $y$:
+\begin{enumerate}
+\item $x + 2y \equiv 3\pmod7$, $3x + y\equiv2\pmod7$.
+  \begin{solution}
+    The first congruence gives $x\equiv3 + 5y\pmod7$. Substituting
+    into the second congruence, we get
+    \begin{equation*}
+      3(3 + 5y) + y\equiv2\pmod7,
+    \end{equation*}
+    and simplifying gives
+    \begin{equation*}
+      y\equiv0\pmod7.
+    \end{equation*}
+    Therefore the solution to the system is
+    \begin{equation*}
+      x\equiv3 \quad\text{and}\quad y\equiv0\pmod7. \qedhere
+    \end{equation*}
+  \end{solution}
+\item $x + 2y \equiv 3\pmod6$, $3x + y\equiv2\pmod6$.
+  \begin{solution}
+    Solving for $x$ in the first congruence gives
+    $x\equiv3 + 4y\pmod6$. Substituting into the second gives
+    \begin{equation*}
+      3(3 + 4y) + y\equiv2\pmod6,
+    \end{equation*}
+    so
+    \begin{equation*}
+      y\equiv5\pmod6.
+    \end{equation*}
+    Therefore
+    \begin{equation*}
+      x\equiv5 \quad\text{and}\quad y\equiv5\pmod6. \qedhere
+    \end{equation*}
+  \end{solution}
+\end{enumerate}
+
+\Problem{10} Solve for $x$ and $y$:
+\begin{enumerate}
+\item $x+2y\equiv3\pmod9$, $3x+y\equiv2\pmod9$.
+  \begin{solution}
+    Using the same method as in the previous problem, we get
+    \begin{equation*}
+      x\equiv2\pmod9 \quad\text{and}\quad y\equiv5\pmod9. \qedhere
+    \end{equation*}
+  \end{solution}
+\item $x+2y\equiv3\pmod{10}$, $3x+y\equiv2\pmod{10}$.
+  \begin{solution}
+    The first congruence gives $x\equiv3 + 8y\pmod{10}$ and
+    substituting into the second produces
+    \begin{equation*}
+      3(3 + 8y) + y \equiv 2\pmod{10}
+    \end{equation*}
+    which simplifies to
+    \begin{equation*}
+      5y \equiv 3 \pmod{10}.
+    \end{equation*}
+    Since $(5,10) = 5$ and $5\nmid3$, this congruence has no
+    solutions. Therefore the original system of congruences has no
+    solutions.
+  \end{solution}
+\end{enumerate}
