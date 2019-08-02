@@ -405,3 +405,15 @@ divided by $2$, $3$, $4$, $5$, or $6$.
   solutions. Therefore any number of the form $x = 301 + 420t$ where
   $t$ is an integer meets the requirements.
 \end{solution}
+
+\Problem{13} Find the smallest odd $n$, $n > 3$, such that $3\mid n$,
+$5\mid n + 2$, and $7\mid n + 4$.
+\begin{solution}
+  We want $n\equiv0\pmod3$, $n\equiv-2\pmod5$, and
+  $n\equiv-4\pmod7$. Solving this gives
+  \begin{equation*}
+    n\equiv3\pmod{105}.
+  \end{equation*}
+  So the smallest such odd integer, bigger than $3$, is
+  $3 + 2\cdot105 = 213$.
+\end{solution}
