@@ -417,3 +417,29 @@ $5\mid n + 2$, and $7\mid n + 4$.
   So the smallest such odd integer, bigger than $3$, is
   $3 + 2\cdot105 = 213$.
 \end{solution}
+
+\Problem{14} Find the smallest integer $n$, $n > 2$, such that
+$2\mid n$, $3\mid n + 1$, $4\mid n + 2$, $5\mid n + 3$, and
+$6\mid n+4$.
+\begin{solution}
+  We have the following system of linear congruences:
+  \begin{align*}
+    n&\equiv0\pmod2, \\
+    n\equiv-1&\equiv2\pmod3, \\
+    n\equiv-2&\equiv2\pmod4, \\
+    n\equiv-3&\equiv2\pmod5, \\
+    n\equiv-4&\equiv2\pmod6.
+  \end{align*}
+  The first and last congruence are redundant, since they are implied
+  by the remaining congruences. So we need to solve
+  \begin{align*}
+    n&\equiv2\pmod3, \\
+    n&\equiv2\pmod4, \\
+    n&\equiv2\pmod5.
+  \end{align*}
+  Applying the Chinese Remainder Theorem, we find
+  \begin{equation*}
+    n\equiv2\pmod{60}.
+  \end{equation*}
+  The smallest integer $n>2$ that works is $62$.
+\end{solution}
