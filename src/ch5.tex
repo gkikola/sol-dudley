@@ -443,3 +443,28 @@ $6\mid n+4$.
   \end{equation*}
   The smallest integer $n>2$ that works is $62$.
 \end{solution}
+
+\Problem{15} Find a positive integer such that half of it is a square,
+a third of it is a cube, and a fifth of it is a fifth power.
+\begin{solution}
+  Call the integer $x$. We know that $2\mid x$, $3\mid x$, and
+  $5\mid x$. So we could try an integer of the form $x = 2^i3^j5^k$,
+  for some positive integers $i$, $j$, and $k$. Since $x/2$ is a
+  square, we must have $i\equiv1\pmod2$. Since $x/3$ is a cube,
+  $i\equiv0\pmod3$. And since $x/5$ is a fifth power, we have
+  $i\equiv0\pmod5$. Taking these three congruences together, we find
+  that $i\equiv15\pmod{30}$.
+
+  Similarly, for $j$ we must have $j\equiv0\pmod2$, $j\equiv1\pmod3$,
+  and $j\equiv0\pmod5$. This system of congruences admits the solution
+  $j\equiv10\pmod{30}$.
+
+  Finally, for $k$ we have $k\equiv0\pmod2$, $k\equiv0\pmod3$, and
+  $k\equiv1\pmod5$, which gives $k\equiv6\pmod{30}$.
+
+  So, one possible value for $x$ is
+  \begin{equation*}
+    2^{15}3^{10}5^6 = \text{30,233,088,000,000}.
+  \end{equation*}
+  This is in fact the smallest such number.
+\end{solution}
