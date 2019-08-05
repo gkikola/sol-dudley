@@ -468,3 +468,37 @@ a third of it is a cube, and a fifth of it is a fifth power.
   \end{equation*}
   This is in fact the smallest such number.
 \end{solution}
+
+\Problem{16} The three consecutive integers $48$, $49$, and $50$ each
+have a square factor.
+\begin{enumerate}
+\item Find $n$ such that $3^2\mid n$, $4^2\mid n+1$, and
+  $5^2\mid n+2$.
+  \begin{solution}
+    We want
+    \begin{align*}
+      n&\equiv0\pmod9, \\
+      n\equiv-1&\equiv15\pmod{16}, \\
+      n\equiv-2&\equiv23\pmod{25}.
+    \end{align*}
+    Applying the Chinese Remainder Theorem, we find
+    \begin{equation*}
+      n\equiv2223\pmod{3600}. \qedhere
+    \end{equation*}
+  \end{solution}
+\item Can you find $n$ such that $2^2\mid n$, $3^2\mid n+1$, and
+  $4^2\mid n+2$?
+  \begin{solution}
+    No. Suppose $4\mid n$ and $16\mid n+2$. Then $n = 4k$ and
+    $n+2 = 16\ell$ for some integers $k$ and $\ell$. Then
+    \begin{equation*}
+      4k = 16\ell - 2
+    \end{equation*}
+    or
+    \begin{equation*}
+      2 = 16\ell - 4k = 4(4\ell - k).
+    \end{equation*}
+    Therefore $4\mid 2$, which is absurd. This contradiction shows
+    that there is no such number $n$.
+  \end{solution}
+\end{enumerate}
