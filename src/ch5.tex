@@ -533,3 +533,26 @@ that
   Since $k - \ell$ is an integer, we have
   $x\equiv r(m + 1) - sm \pmod{m(m+1)}$.
 \end{proof}
+
+\Problem{18} What three positive integers, upon being multiplied by
+$3$, $5$, and $7$ respectively and the products divided by $20$, have
+remainders in arithmetic progression with common difference $1$ and
+quotients equal to remainders?
+\begin{solution}
+  Let the three positive integers be $x$, $y$, and $z$. Then there is
+  an integer $r$ such that
+  \begin{align*}
+    3x = 20r + r &= 21r, \\
+    5y = 20(r + 1) + (r + 1) &= 21(r + 1), \\
+    7z = 20(r + 2) + (r + 2) &= 21(r + 2),
+  \end{align*}
+  where $0\leq r < 18$ (since each remainder must be less than
+  $20$). Then $x = 7r$, $z = 3(r + 2)$, and we know that
+  $5\mid (r + 1)$. So the only possible values for $r$ are $4$, $9$,
+  or $14$. Therefore, we have three sets of solutions:
+  \begin{gather*}
+    x = 28, \quad y = 21, \quad\text{and}\quad z = 18; \\
+    x = 63, \quad y = 42, \quad\text{and}\quad z = 33; \\
+    x = 98, \quad y = 63, \quad\text{and}\quad z = 48. \qedhere
+  \end{gather*}
+\end{solution}
