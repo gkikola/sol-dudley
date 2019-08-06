@@ -502,3 +502,34 @@ have a square factor.
     that there is no such number $n$.
   \end{solution}
 \end{enumerate}
+
+\Problem{17} If $x\equiv r\pmod{m}$ and $x\equiv s\pmod{m+1}$, show
+that
+\begin{equation*}
+  x\equiv r(m + 1) - sm \pmod{m(m+1)}.
+\end{equation*}
+\begin{proof}
+  Since $x\equiv r\pmod{m}$ we have $x = r + km$ for some integer $k$,
+  and multiplying by $m + 1$ on both sides gives
+  \begin{equation*}
+    x(m + 1) = r(m + 1) + km(m + 1),
+  \end{equation*}
+  or
+  \begin{equation}
+    \label{eq:lin-cong:x-equals-r-m-plus-1}
+    x = r(m + 1) - xm + km(m + 1)
+  \end{equation}
+  And since $x\equiv s\pmod{m+1}$ we have $x = s + \ell(m + 1)$ for
+  some integer $\ell$. Then
+  \begin{equation}
+    \label{eq:lin-cong:xm-equals-sm}
+    xm = sm + \ell m(m + 1).
+  \end{equation}
+  Now substituting \eqref{eq:lin-cong:xm-equals-sm} into
+  \eqref{eq:lin-cong:x-equals-r-m-plus-1} gives
+  \begin{equation*}
+    x = r(m + 1) - sm + (k - \ell)m(m + 1).
+  \end{equation*}
+  Since $k - \ell$ is an integer, we have
+  $x\equiv r(m + 1) - sm \pmod{m(m+1)}$.
+\end{proof}
