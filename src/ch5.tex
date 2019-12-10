@@ -556,3 +556,37 @@ quotients equal to remainders?
     x = 98, \quad y = 63, \quad\text{and}\quad z = 48. \qedhere
   \end{gather*}
 \end{solution}
+
+\Problem{19} Suppose that the moduli in the system
+\begin{equation*}
+  x\equiv a_i\pmod{m_i},\quad i = 1, 2, \dots, k
+\end{equation*}
+are not relatively prime in pairs. Find a condition that the $a_i$
+must satisfy in order that the system have a solution.
+\begin{solution}
+  Assume that the system has a solution. Fix $i$ and $j$ with
+  $i\neq j$ and let $d = (m_i,m_j)$. Since
+  $x\equiv a_i\pmod{m_i}$, we have
+  \begin{equation}
+    \label{eq:lin-cong:x-in-terms-of-ai}
+    x = a_i + sm_i,\quad\text{for some integer $s$},
+  \end{equation}
+  and since $x\equiv a_j\pmod{m_j}$, we get
+  \begin{equation}
+    \label{eq:lin-cong:x-in-terms-of-aj}
+    x = a_j + tm_j,\quad\text{for some integer $t$}.
+  \end{equation}
+  Combining \eqref{eq:lin-cong:x-in-terms-of-ai} and
+  \eqref{eq:lin-cong:x-in-terms-of-aj} then gives
+  \begin{equation*}
+    a_i - a_j = tm_j - sm_i.
+  \end{equation*}
+  Since $d$ divides the right-hand side of this equation, we also know
+  that $d$ divides $a_i - a_j$. Therefore, the following condition is
+  necessary for the system to have a solution:
+  \begin{equation*}
+    (m_i, m_j) \mid a_i - a_j
+    \quad\text{for each $i$ and $j$ with $i\neq j$.}
+  \end{equation*}
+  In fact this condition is also sufficient, but we omit the proof.
+\end{solution}
