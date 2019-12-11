@@ -1,0 +1,52 @@
+\chapter{Fermat's and Wilson's Theorems}
+
+\section{Exercises}
+
+\Exercise1 Verify that Fermat's Theorem is true for $a = 2$ and $p = 5$.
+\begin{solution}
+  We have $a^{p-1} = 2^4 = 16 \equiv 1 \pmod 5$, so the theorem holds.
+\end{solution}
+
+\Exercise2 Calculate $2^2$ and $20^{10}\pmod{11}$.
+\begin{solution}
+  $2^2\equiv4\pmod{11}$. To find $20^{10}$, we note that
+  $20^2 = 400 \equiv 4\pmod{11}$. Squaring gives
+  $20^4\equiv16\equiv5\pmod{11}$. Squaring again gives
+  $20^8\equiv25\equiv3\pmod{11}$. So
+  \begin{equation*}
+    20^{10} = 20^8\cdot20^2 \equiv 3\cdot4 \equiv 1 \pmod{11}.\qedhere
+  \end{equation*}
+\end{solution}
+
+\Exercise3 In the proof of Wilson's Theorem, what are the pairs when
+$p = 11$?
+\begin{solution}
+  To find the multiplicative inverse of $2$, we look for the least
+  residue satisfying the congruence $2x\equiv1\pmod{11}$. Since
+  $1\equiv12\pmod{11}$, we may divide by $2$ to get
+  $x\equiv6\pmod{11}$. Hence $(2,6)$ is one such pair. In the same way
+  we can find the remaining pairs. The complete list of pairs follows:
+  \begin{equation*}
+    (2,6), (3,4), (5,9), (7,8). \qedhere
+  \end{equation*}
+\end{solution}
+
+\section{Problems}
+
+\Problem1 What is the least residue of
+\begin{equation*}
+  5^6\pmod7 \qquad 5^8\pmod7 \qquad 1945^8\pmod7?
+\end{equation*}
+\begin{solution}
+  $5^2 = 25 \equiv 4 \pmod7$, so $5^6 \equiv 4^3 = 64 \equiv 1\pmod7$.
+
+  $5^8 = 5^6\cdot5^2 \equiv 1\cdot4 \equiv 4\pmod7$.
+
+  For $1945^8$, note that $1945 = 5\cdot389$. Since
+  $389\equiv4\pmod7$, we have
+  \begin{equation*}
+    1945^8 = 5^8\cdot389^8 \equiv 4\cdot4^8 \equiv 4^9\pmod7.
+  \end{equation*}
+  Now, $4^3\equiv 1\pmod7$, so $4^9\equiv1^3\equiv1\pmod7$. Therefore
+  $1945^8\equiv1\pmod7$.
+\end{solution}
