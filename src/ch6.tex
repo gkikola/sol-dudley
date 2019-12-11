@@ -61,3 +61,25 @@ $p = 11$?
   By Fermat, $1945^{10}\equiv1\pmod{11}$, so
   $1945^{12}\equiv1945^2\equiv9^2\equiv4\pmod{11}$.
 \end{solution}
+
+\Problem3 What is the last digit of $7^{355}$?
+\begin{solution}
+  We wish to find the least residue of $7^{355}$ modulo $10$. Note
+  that $7^2 = 49 \equiv 9\pmod{10}$ and
+  $7^4\equiv81\equiv1\pmod{10}$. So we have
+  \begin{equation*}
+    7^{355} = (7^4)^{88}\cdot7^3 \equiv 7^3 \equiv 3 \pmod {10}.
+  \end{equation*}
+  Therefore the last digit of $7^{355}$ is $3$.
+\end{solution}
+
+\Problem4 What are the last two digits of $7^{355}$?
+\begin{solution}
+  This is handled similarly to the previous problem, except now we are
+  working modulo $100$. $7^3 = 343 \equiv 43\pmod{100}$, so
+  $7^4\equiv301\equiv1\pmod{100}$. We find
+  \begin{equation*}
+    7^{355} = (7^4)^{88}\cdot7^3 \equiv 7^3 \equiv 43\pmod{100}.
+  \end{equation*}
+  The last two digits are therefore $4$ and $3$.
+\end{solution}
