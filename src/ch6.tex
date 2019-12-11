@@ -83,3 +83,36 @@ $p = 11$?
   \end{equation*}
   The last two digits are therefore $4$ and $3$.
 \end{solution}
+
+\Problem5 What is the remainder when $314^{162}$ is divided by $163$?
+\begin{solution}
+  Since $314$ is not a multiple of $163$, which is prime, we may apply
+  Fermat's Theorem to see that $314^{162}\equiv1\pmod{163}$.
+\end{solution}
+
+\Problem6 What is the remainder when $314^{162}$ is divided by $7$?
+\begin{solution}
+  As in the previous problem, since we know $314$ is not a multiple of
+  $7$, we have by Fermat that $314^6\equiv1\pmod7$. Therefore
+  \begin{equation*}
+    314^{162} = (314^6)^{27} \equiv 1\pmod7. \qedhere
+  \end{equation*}
+\end{solution}
+
+\Problem7 What is the remainder when $314^{164}$ is divided by $165$?
+\begin{solution}
+  Note that $165 = 3\cdot5\cdot11$. And we have
+  \begin{align*}
+    314^{164}\equiv2^{164}\equiv(2^4)^{41} &\equiv 1\pmod3, \\
+    314^{164}\equiv4^{164}\equiv(4^4)^{41} &\equiv 1\pmod5, \\
+    \intertext{and}
+    314^{164}\equiv6^{164}\equiv(6^4)^{41} &\equiv 9\pmod{11}.
+  \end{align*}
+  We may now use the Chinese Remainder Theorem to solve the system of
+  congruences given by
+  \begin{equation*}
+    x \equiv 1\pmod{15} \qquad\text{and}\qquad x \equiv 9 \pmod{11}.
+  \end{equation*}
+  This system admits the unique solution
+  $x\equiv31\pmod{165}$. Therefore $31$ is the remainder we seek.
+\end{solution}
