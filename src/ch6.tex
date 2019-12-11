@@ -38,15 +38,26 @@ $p = 11$?
   5^6\pmod7 \qquad 5^8\pmod7 \qquad 1945^8\pmod7?
 \end{equation*}
 \begin{solution}
-  $5^2 = 25 \equiv 4 \pmod7$, so $5^6 \equiv 4^3 = 64 \equiv 1\pmod7$.
+  By Fermat's Theorem, $5^6\equiv1\pmod7$.
 
   $5^8 = 5^6\cdot5^2 \equiv 1\cdot4 \equiv 4\pmod7$.
 
-  For $1945^8$, note that $1945 = 5\cdot389$. Since
-  $389\equiv4\pmod7$, we have
+  Again by Fermat, $1945^6\equiv1\pmod7$. Therefore
   \begin{equation*}
-    1945^8 = 5^8\cdot389^8 \equiv 4\cdot4^8 \equiv 4^9\pmod7.
+    1945^8\equiv1945^2
+    = 5^2\cdot389^2 \equiv 4\cdot4^2 = 64\equiv1\pmod7.
+    \qedhere
   \end{equation*}
-  Now, $4^3\equiv 1\pmod7$, so $4^9\equiv1^3\equiv1\pmod7$. Therefore
-  $1945^8\equiv1\pmod7$.
+\end{solution}
+
+\Problem2 What is the least residue of
+\begin{equation*}
+  5^{10}\pmod{11} \qquad 5^{12}\pmod{11} \qquad 1945^{12}\pmod{11}?
+\end{equation*}
+\begin{solution}
+  $5^{10}\equiv1\pmod{11}$ by Fermat's Theorem. So
+  $5^{12} \equiv 5^2 \equiv 3\pmod{11}$.
+
+  By Fermat, $1945^{10}\equiv1\pmod{11}$, so
+  $1945^{12}\equiv1945^2\equiv9^2\equiv4\pmod{11}$.
 \end{solution}
