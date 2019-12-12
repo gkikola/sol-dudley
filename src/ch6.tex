@@ -336,3 +336,15 @@ it.
     of Section~1 to establish the result.
   \end{solution}
 \end{enumerate}
+
+\Problem{18} Show that if $p$ is an odd prime, then
+$2p\mid(2^{2p-1} - 2)$.
+\begin{proof}
+  Observe that
+  \begin{equation*}
+    2^{2p-1} - 2 = 2(2^{2p-2} - 1) = 2(4^{p-1} - 1).
+  \end{equation*}
+  Since $p$ is an odd prime, $(p,4) = 1$ and we may apply Fermat's
+  Theorem to see that $4^{p-1}\equiv1\pmod{p}$. This is enough to show
+  that $2p\mid(2^{2p-1} - 2)$.
+\end{proof}
