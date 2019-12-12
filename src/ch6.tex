@@ -116,3 +116,33 @@ $p = 11$?
   This system admits the unique solution
   $x\equiv31\pmod{165}$. Therefore $31$ is the remainder we seek.
 \end{solution}
+
+\Problem8 What is the remainder when $2001^{2001}$ is divided by $26$?
+\begin{solution}
+  Since $2001\equiv25\equiv-1\pmod{26}$ we have
+  \begin{equation*}
+    2001^{2001}\equiv(-1)^{2001}\equiv-1\equiv25\pmod{26}.
+  \end{equation*}
+  Therefore the remainder is $25$.
+\end{solution}
+
+\Problem9 Show that
+\begin{equation*}
+  (p - 1)(p - 2)\cdots(p - r) \equiv (-1)^rr!\pmod p,
+\end{equation*}
+for $r = 1, 2, \dots, p - 1$.
+\begin{proof}
+  Fix an integer $p > 1$. We will prove the statement for all positive
+  $r$ using induction on $r$. When $r = 1$, we have
+  $p - 1 \equiv -1 \pmod{p}$, and certainly $-1 = (-1)^1(1!)$, so the
+  statement holds in the base case.
+
+  Now, suppose the statement holds for $r = k$ with
+  $k\geq1$. Then $p - k - 1\equiv -(k + 1)\pmod{p}$ and we have
+  \begin{equation*}
+    (p - 1)\cdots(p - k)(p - k - 1)
+    \equiv-(-1)^kk!(k + 1) \equiv (-1)^{k+1}(k+1)!\pmod{p}.
+  \end{equation*}
+  Therefore the statement holds for $r = k + 1$, which completes the
+  proof.
+\end{proof}
