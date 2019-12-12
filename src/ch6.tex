@@ -197,3 +197,17 @@ for $r = 1, 2, \dots, p - 1$.
   But $(p - 1)(p - 2)\equiv(-1)(-2)\equiv2\pmod{p}$. This gives the
   desired result.
 \end{proof}
+
+\Problem{12} In 1732 Euler wrote: ``I derived [certain] results from
+the elegant theorem, of whose truth I am certain, although I have no
+proof: $a^n - b^n$ is divisible by the prime $n + 1$ if neither $a$
+nor $b$ is.'' Prove this theorem, using Fermat's Theorem.
+\begin{proof}
+  If $n + 1$ is prime, then Fermat's Theorem says that
+  \begin{equation*}
+    a^n\equiv b^n\equiv1\pmod{n+1},
+  \end{equation*}
+  provided that neither $a$ nor $b$ is a multiple of $n+1$. Therefore
+  $a^n - b^n\equiv1 - 1\equiv0\pmod{n+1}$, which is equivalent to the
+  statement that $n+1$ divides $a^n - b^n$.
+\end{proof}
