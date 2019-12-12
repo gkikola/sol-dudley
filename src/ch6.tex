@@ -146,3 +146,43 @@ for $r = 1, 2, \dots, p - 1$.
   Therefore the statement holds for $r = k + 1$, which completes the
   proof.
 \end{proof}
+
+\Problem{10}
+\begin{enumerate}
+\item Calculate $(n - 1)!\pmod{n}$ for $n = 10$, $12$, $14$, and $15$.
+  \begin{solution}
+    Since $9!$ contains both a factor of $2$ and a factor of $5$, it
+    follows that $9!\equiv0\pmod{10}$. For exactly the same reason, we
+    get
+    \begin{align*}
+      11!&\equiv0\pmod{12}, \\
+      13!&\equiv0\pmod{14}, \\
+      \intertext{and}
+      14!&\equiv0\pmod{15}. \qedhere
+    \end{align*}
+  \end{solution}
+\item Guess a theorem and prove it.
+  \begin{solution}
+    The above calculations seem to suggest that
+    $(n - 1)!\equiv0\pmod{n}$ when $n$ is composite, but we will have
+    to exclude $n = 4$ since it would otherwise be a counterexample.
+
+    So, we will show that
+    \begin{equation*}
+      (n - 1)!\equiv0\pmod{n}
+      \quad\text{if and only if $n > 4$ is composite}.
+    \end{equation*}
+    The left-to-right implication is a consequence of Wilson's
+    Theorem, so we will only need to prove the right-to-left
+    direction.
+
+    Assume that $n > 4$ and $n = ab$ where $1 < a < n$. There are two
+    cases. First, if $a$ and $b$ are distinct, then $(n-1)!$ must
+    contain both $a$ and $b$ as factors, so that $n\mid(n -
+    1)!$. Therefore $(n-1)!\equiv0\pmod{n}$ in this case. The other
+    possibility is that $a = b$, so that $n = a^2$. In this case,
+    since $n > 4$, we know $a > 2$. Both $a$ and $2a$ will occur as
+    separate factors in the expansion of $(n-1)!$, so again we have
+    $n\mid(n-1)!$. In either case, $(n-1)!\equiv0\pmod{n}$.
+  \end{solution}
+\end{enumerate}
