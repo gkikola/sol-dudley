@@ -348,3 +348,25 @@ $2p\mid(2^{2p-1} - 2)$.
   Theorem to see that $4^{p-1}\equiv1\pmod{p}$. This is enough to show
   that $2p\mid(2^{2p-1} - 2)$.
 \end{proof}
+
+\Problem{19} For what $n$ is it true that
+\begin{equation}
+  \label{eq:fermat-wilson:p-divides-geo}
+  p\mid(1 + n + n^2 + \cdots + n^{p-2})?
+\end{equation}
+\begin{solution}
+  If $n\equiv0$ or $n\equiv1\pmod{p}$ then
+  \eqref{eq:fermat-wilson:p-divides-geo} is certainly false. In every
+  other case, this sum forms a geometric progression:
+  \begin{equation*}
+    1 + n + n^2 + \cdots + n^{p-2} = \frac{n^{p-1} - 1}{n - 1}.
+  \end{equation*}
+  By Fermat's Theorem, we know that if $(n,p) = 1$ then $p$ divides
+  the numerator of this fraction. If we can show that $p$ does not
+  also divide the denominator, then it follows that $p$ must divide
+  the sum. But the only way $p\mid(n - 1)$ is if $n\equiv1\pmod{p}$.
+
+  Therefore the statement \eqref{eq:fermat-wilson:p-divides-geo} is
+  true for all integers $n$ such that $n\not\equiv0$ and
+  $n\not\equiv1\pmod{p}$.
+\end{solution}
