@@ -259,3 +259,38 @@ it.
   This shows that the statement holds for all $n$ with
   $n = 1, 2, \dots, (p+1)/2$.
 \end{solution}
+
+\Problem{15} Suppose that $p$ is an odd prime.
+\begin{enumerate}
+\item Show that
+  \begin{equation*}
+    1^{p-1} + 2^{p-1} + \cdots + (p - 1)^{p-1} \equiv -1 \pmod{p}.
+  \end{equation*}
+  \begin{proof}
+    By Fermat's Theorem, we have
+    \begin{align*}
+      1^{p-1} + 2^{p-1} + \cdots + (p - 1)^{p-1}
+      &\equiv \overbrace{1 + 1 + \cdots + 1}^{\text{$p - 1$ terms}} \pmod{p} \\
+      &\equiv p - 1 \pmod{p} \\
+      &\equiv -1 \pmod{p}. \qedhere
+    \end{align*}
+  \end{proof}
+
+\item Show that
+  \begin{equation*}
+    1^p + 2^p + \cdots + (p - 1)^p \equiv 0 \pmod{p}.
+  \end{equation*}
+  \begin{proof}
+    Again, by Fermat we have $a^p\equiv a\pmod{p}$ for all $a$. So
+    \begin{align*}
+      1^p + 2^p + \cdots + (p-1)^p
+      &\equiv 1 + 2 + \cdots + (p - 1) \pmod{p} \\
+      &\equiv \frac{p(p - 1)}2 \pmod{p}.
+    \end{align*}
+    But $(p - 1) / 2$ is an integer, so $p$ divides the right-hand
+    side. Hence
+    \begin{equation*}
+      1^p + \cdots + (p - 1)^p \equiv 0\pmod{p}. \qedhere
+    \end{equation*}
+  \end{proof}
+\end{enumerate}
