@@ -294,3 +294,16 @@ it.
     \end{equation*}
   \end{proof}
 \end{enumerate}
+
+\Problem{16} Show that the converse of Fermat's Theorem is false.
+\begin{solution}
+  We need to show that there exist integers $a$ and $n$ with
+  $(a,n) = 1$ and $a^{n-1}\equiv1\pmod{n}$, such that $n$ is
+  composite. Consider $a = 2$ and $n = 341$. Note that
+  $341 = 11\cdot31$, and $(2,341) = 1$. Since
+  $2^{10} = 1024 \equiv 1\pmod{341}$, we have
+  \begin{equation*}
+    2^{340} = (2^{10})^{34} \equiv 1\pmod{341}.
+  \end{equation*}
+  This gives us a counterexample for the converse of Fermat's Theorem.
+\end{solution}
