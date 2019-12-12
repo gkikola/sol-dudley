@@ -307,3 +307,32 @@ it.
   \end{equation*}
   This gives us a counterexample for the converse of Fermat's Theorem.
 \end{solution}
+
+\Problem{17} Show that for any two different primes $p$, $q$,
+\begin{enumerate}
+\item $pq\mid(a^{p+q} - a^{p+1} - a^{q+1} + a^2)$ for all $a$.
+  \begin{solution}
+    We have
+    \begin{align*}
+      a^{p+q} - a^{p+1} - a^{q+1} + a^2
+      &= a^p(a^q - a) - a(a^q - a) \\
+      &= (a^p - a)(a^q - a).
+    \end{align*}
+    By Fermat's Theorem, we know $p\mid(a^p - a)$ and
+    $q\mid(a^q - a)$, so $pq$ divides the product.
+  \end{solution}
+\item $pq\mid(a^{pq} - a^p - a^q + a)$ for all $a$.
+  \begin{solution}
+    By Fermat's Theorem, we know $a^p\equiv a\pmod{p}$. Therefore
+    \begin{align*}
+      a^{pq} - a^p - a^q + a
+      &= (a^p)^q - a^p - a^q + a \\
+      &\equiv a^q - a - a^q + a \pmod{p} \\
+      &\equiv 0 \pmod{p}.
+    \end{align*}
+    So $p\mid(a^{pq} - a^p - a^q + a)$. By the same argument, we also
+    have that $q\mid(a^{pq} - a^p - a^q + a)$. Since $p$ and $q$ are
+    distinct primes, we have $(p,q) = 1$ and we may apply Corollary~3
+    of Section~1 to establish the result.
+  \end{solution}
+\end{enumerate}
