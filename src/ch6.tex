@@ -186,3 +186,14 @@ for $r = 1, 2, \dots, p - 1$.
     $n\mid(n-1)!$. In either case, $(n-1)!\equiv0\pmod{n}$.
   \end{solution}
 \end{enumerate}
+
+\Problem{11} Show that $2(p - 3)! + 1 \equiv 0 \pmod p$.
+\begin{proof}
+  We will suppose that $p$ is an odd prime. By Wilson's Theorem, we
+  know that $(p - 1)!\equiv-1\pmod{p}$. Therefore
+  \begin{equation*}
+    (p - 1)(p - 2)(p - 3)! + 1 \equiv 0 \pmod{p}.
+  \end{equation*}
+  But $(p - 1)(p - 2)\equiv(-1)(-2)\equiv2\pmod{p}$. This gives the
+  desired result.
+\end{proof}
