@@ -211,3 +211,51 @@ nor $b$ is.'' Prove this theorem, using Fermat's Theorem.
   $a^n - b^n\equiv1 - 1\equiv0\pmod{n+1}$, which is equivalent to the
   statement that $n+1$ divides $a^n - b^n$.
 \end{proof}
+
+\Problem{13} Note that
+\begin{align*}
+  6! &\equiv -1 \pmod7, \\
+  5!1! &\equiv \phantom{-}1 \pmod7, \\
+  4!2! &\equiv -1 \pmod7, \\
+  3!3! &\equiv \phantom{-}1 \pmod7.
+\end{align*}
+Try the same sort of calculation (mod $11$).
+\begin{solution}
+  Doing the calculations, we get
+  \begin{align*}
+    10! &\equiv -1\pmod{11}, \\
+    9!1! &\equiv \phantom{-}1\pmod{11}, \\
+    8!2! &\equiv -1\pmod{11}, \\
+    7!3! &\equiv \phantom{-}1\pmod{11}, \\
+    6!4! &\equiv -1\pmod{11}, \\
+    5!5! &\equiv \phantom{-}1\pmod{11}. \qedhere
+  \end{align*}
+\end{solution}
+
+\Problem{14} Guess a theorem from the data of Problem~13, and prove
+it.
+\begin{solution}
+  The calculations seem to suggest that, for any odd prime $p$,
+  \begin{equation*}
+    (p - n)!(n - 1)! \equiv (-1)^n \pmod{p},
+    \quad\text{for}\quad
+    1\leq n\leq\frac{p+1}2.
+  \end{equation*}
+  For the proof, we use an inductive argument. The case where $n = 1$
+  is simply Wilson's Theorem. So assume it holds for $n = k$, where
+  $1\leq k<(p+1)/2$. Then
+  \begin{equation*}
+    (p - k)!(k - 1)! \equiv (-1)^k \pmod{p}.
+  \end{equation*}
+  Rewriting the left-hand side, we get
+  \begin{equation*}
+    (p - k)(p - k - 1)!(k - 1)! \equiv (-1)^k\pmod{p}.
+  \end{equation*}
+  Finally, since $p - k \equiv -k\pmod{p}$, we may multiply both sides
+  by $-1$ to get
+  \begin{equation*}
+    (p - k - 1)!k! \equiv (-1)^{k+1}\pmod{p}.
+  \end{equation*}
+  This shows that the statement holds for all $n$ with
+  $n = 1, 2, \dots, (p+1)/2$.
+\end{solution}
