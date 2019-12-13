@@ -46,3 +46,30 @@ $n = 4, 5, \dots$.
     d(p^nq) = 2(n + 1) = 2n + 2. \qedhere
   \end{equation*}
 \end{solution}
+
+\Exercise4 Calculate $d(240)$.
+\begin{solution}
+  Using Theorem~1, we have
+  \begin{align*}
+    d(240) &= d(2^4\cdot3\cdot5) \\
+           &= d(2^4)d(3)d(5) \\
+           &= 5\cdot2\cdot2 \\
+           &= 20. \qedhere
+  \end{align*}
+\end{solution}
+
+\Exercise5 Verify the table of values for $\sigma(n)$ is correct as
+far as it goes, and complete it.
+\begin{solution}
+  To compute $\sigma(n)$, we can list out the divisors of $n$ and then
+  add them up. For example, for $\sigma(9)$ we compute $1 + 3 + 9$ and
+  get a value of $13$. The completed table follows.
+  \begin{center}
+    \begin{tabular}{r|rrrrrrrrrrrrrr}
+      $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10
+      & 11 & 12 & 13 & 14 \\
+      $\sigma(n)$ & 1 & 3 & 4 & 7 & 6 & 12 & 8 & 15 & 13 & 18
+      & 12 & 28 & 14 & 24
+    \end{tabular}
+  \end{center}
+\end{solution}
