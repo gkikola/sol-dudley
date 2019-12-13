@@ -102,12 +102,13 @@ $p = 11$?
 
 \Problem7 What is the remainder when $314^{164}$ is divided by $165$?
 \begin{solution}
-  Note that $165 = 3\cdot5\cdot11$. And we have
+  Note that $165 = 3\cdot5\cdot11$. And, after some brief computation,
+  we find
   \begin{align*}
-    314^{164}\equiv2^{164}\equiv(2^4)^{41} &\equiv 1\pmod3, \\
-    314^{164}\equiv4^{164}\equiv(4^4)^{41} &\equiv 1\pmod5, \\
+    314^{164}&\equiv 1\pmod3, \\
+    314^{164}&\equiv 1\pmod5, \\
     \intertext{and}
-    314^{164}\equiv6^{164}\equiv(6^4)^{41} &\equiv 9\pmod{11}.
+    314^{164}&\equiv 9\pmod{11}.
   \end{align*}
   We may now use the Chinese Remainder Theorem to solve the system of
   congruences given by
