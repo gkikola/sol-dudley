@@ -73,3 +73,38 @@ far as it goes, and complete it.
     \end{tabular}
   \end{center}
 \end{solution}
+
+\Exercise6 What is $\sigma(p^3)$? $\sigma(pq)$, where $p$ and $q$ are
+different primes?
+\begin{solution}
+  For $p^3$ we get
+  \begin{equation*}
+    \sigma(p^3) = 1 + p + p^2 + p^3 = \frac{p^4 - 1}{p - 1}.
+  \end{equation*}
+
+  If $p$ and $q$ are distinct primes, then the divisors are $1$, $p$,
+  $q$, and $pq$. So
+  \begin{equation*}
+    \sigma(pq) = 1 + p + q + pq = (1 + p) + q(1 + p) = (1 + p)(1 + q).
+    \qedhere
+  \end{equation*}
+\end{solution}
+
+\Exercise7 Show that $\sigma(2^n) = 2^{n+1} - 1$.
+\begin{solution}
+  The divisors of $2^n$ are $1$, $2$, $2^2$, $\dots$, $2^n$. The sum
+  of these divisors forms a finite geometric series:
+  \begin{equation*}
+    \sigma(2^n) = \sum_{k=0}^n2^k = \frac{2^{n+1} - 1}{2 - 1} = 2^{n+1} - 1.
+    \qedhere
+  \end{equation*}
+\end{solution}
+
+\Exercise8 What is $\sigma(p^n)$, $n = 1, 2, \dots$?
+\begin{solution}
+  Again, we have a geometric series:
+  \begin{equation*}
+    \sigma(p^n) = \sum_{k=0}^np^k = \frac{p^{n+1} - 1}{p - 1}.
+    \qedhere
+  \end{equation*}
+\end{solution}
