@@ -32,3 +32,17 @@ $n = 4, 5, \dots$.
   that the only divisors of $p^n$ have the form $p^i$, where
   $i = 0, 1, \dots, n$.
 \end{solution}
+
+\Exercise3 What is $d(p^3q)$? What is $d(p^nq)$ for any positive $n$?
+\begin{solution}
+  $p^3q$ has as its divisors $1$, $p$, $p^2$, and $p^3$, and also $q$,
+  $pq$, $p^2q$, and $p^3q$, for a total of $8$ divisors.
+
+  In general, every divisor of $p^n$ will be a divisor of $p^nq$, and
+  for each such divisor, multiplying by $q$ will produce a new
+  divisor. So the factor of $q$ effectively doubles the number of
+  divisors. Consequently, we have
+  \begin{equation*}
+    d(p^nq) = 2(n + 1) = 2n + 2. \qedhere
+  \end{equation*}
+\end{solution}
