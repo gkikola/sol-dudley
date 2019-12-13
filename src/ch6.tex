@@ -14,8 +14,9 @@
   $20^4\equiv16\equiv5\pmod{11}$. Squaring again gives
   $20^8\equiv25\equiv3\pmod{11}$. So
   \begin{equation*}
-    20^{10} = 20^8\cdot20^2 \equiv 3\cdot4 \equiv 1 \pmod{11}.\qedhere
+    20^{10} = 20^8\cdot20^2 \equiv 3\cdot4 \equiv 1 \pmod{11}.
   \end{equation*}
+  Of course, this result is also guaranteed by Fermat's Theorem.
 \end{solution}
 
 \Exercise3 In the proof of Wilson's Theorem, what are the pairs when
@@ -64,9 +65,9 @@ $p = 11$?
 
 \Problem3 What is the last digit of $7^{355}$?
 \begin{solution}
-  We wish to find the least residue of $7^{355}$ modulo $10$. Note
-  that $7^2 = 49 \equiv 9\pmod{10}$ and
-  $7^4\equiv81\equiv1\pmod{10}$. So we have
+  We want the least residue of $7^{355} \pmod{10}$. Note that
+  $7^2 = 49 \equiv 9\pmod{10}$ and $7^4\equiv81\equiv1\pmod{10}$. So
+  we have
   \begin{equation*}
     7^{355} = (7^4)^{88}\cdot7^3 \equiv 7^3 \equiv 3 \pmod {10}.
   \end{equation*}
@@ -163,9 +164,9 @@ for $r = 1, 2, \dots, p - 1$.
   \end{solution}
 \item Guess a theorem and prove it.
   \begin{solution}
-    The above calculations seem to suggest that
-    $(n - 1)!\equiv0\pmod{n}$ when $n$ is composite, but we will have
-    to exclude $n = 4$ since it would otherwise be a counterexample.
+    The above calculations suggest that $(n - 1)!\equiv0\pmod{n}$ when
+    $n$ is composite, but we will have to exclude $n = 4$ since it
+    would otherwise be a counterexample.
 
     So, we will show that
     \begin{equation*}
