@@ -349,7 +349,9 @@ $2p\mid(2^{2p-1} - 2)$.
   that $2p\mid(2^{2p-1} - 2)$.
 \end{proof}
 
-\Problem{19} For what $n$ is it true that
+\Problem{19}
+\label{problem:fermat-wilson:p-divides-geo}
+For what $n$ is it true that
 \begin{equation}
   \label{eq:fermat-wilson:p-divides-geo}
   p\mid(1 + n + n^2 + \cdots + n^{p-2})?
@@ -370,3 +372,18 @@ $2p\mid(2^{2p-1} - 2)$.
   true for all integers $n$ such that $n\not\equiv0$ and
   $n\not\equiv1\pmod{p}$.
 \end{solution}
+
+\Problem{20} Show that every odd prime except $5$ divides some number
+of the form $111\dots11$ ($k$ digits, all ones).
+\begin{proof}
+  Fix a prime $p > 5$ (the case where $p = 3$ is handled by observing
+  that $3\mid111$). Then $(10, p) = 1$ so $10\not\equiv0\pmod{p}$. And
+  certainly $10\not\equiv1\pmod{p}$ since, aside from $p = 7$, we are
+  only considering primes larger than $10$. Therefore, we may apply
+  the result from Problem~\ref{problem:fermat-wilson:p-divides-geo} to
+  establish that
+  \begin{equation*}
+    p\mid(1 + 10 + 10^2 + 10^3 + \cdots + 10^{p-2}).
+  \end{equation*}
+  This completes the proof.
+\end{proof}
