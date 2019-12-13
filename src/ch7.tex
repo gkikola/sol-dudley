@@ -108,3 +108,30 @@ different primes?
     \qedhere
   \end{equation*}
 \end{solution}
+
+\Exercise9 Calculate $\sigma(240)$.
+\begin{solution}
+  From Theorem~2, we get
+  \begin{align*}
+    \sigma(240) &= \sigma(2^4\cdot3\cdot5) \\
+                &= \sigma(2^4)\sigma(3)\sigma(5) \\
+                &= (2^5 - 1)\cdot4\cdot6 \\
+                &= 31\cdot24 \\
+                &= 744. \qedhere
+  \end{align*}
+\end{solution}
+
+\Exercise{10} Compute $f(n)$ for $n = 13, 14, \dots, 24$.
+\begin{solution}
+  We know that $f(n) = 1$ if $n$ is any square-free integer (that is,
+  if each prime in the factorization of $n$ occurs only to the first
+  power). Other values can be found using multiplicativity together
+  with the defining formula $f(p^e) = ep^{e-1}$. The values are as
+  follows.
+  \begin{center}
+    \begin{tabular}{r|rrrrrrrrrrrr}
+      $n$ & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 & 24 \\
+      $f(n)$ & 1 & 1 & 1 & 32 & 1 & 6 & 1 & 4 & 1 & 1 & 1 & 12
+    \end{tabular}
+  \end{center}
+\end{solution}
