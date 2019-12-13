@@ -16,3 +16,19 @@ far as it goes, and complete it.
     \end{tabular}
   \end{center}
 \end{solution}
+
+\Exercise2 What is $d(p^3)$? Generalize to $d(p^n)$,
+$n = 4, 5, \dots$.
+\begin{solution}
+  For any prime $p$, the divisors of $p^3$ are $1$, $p$, $p^2$, and
+  $p^3$. These are the only divisors, so $d(p^3) = 4$.
+
+  In general, $d(p^n) = n + 1$. For, if $p^n$ has a divisor $a$ that
+  is not of the form $p^i$ for some nonnegative $i$, then this divisor
+  $a$ must contain some prime factor $q$ distinct from $p$. But if
+  $q\mid a$ then $q\mid p^n$. By Lemma~6 of Section~2, it follows that
+  $q\mid p$ as well. Therefore $p$ is a prime which contains a smaller
+  prime as a factor, which is impossible. This contradiction shows
+  that the only divisors of $p^n$ have the form $p^i$, where
+  $i = 0, 1, \dots, n$.
+\end{solution}
