@@ -397,3 +397,31 @@ $\sigma(n) \leq \sigma(n - 1)$.
   \end{align*}
   as desired.
 \end{solution}
+
+\Problem{17} If $N$ is odd, how many solutions does $x^2 - y^2 = N$
+have?
+\begin{solution}
+  For any odd $N$, the equation has exactly $2d(N)$ distinct integer
+  solutions, as we will now show.
+
+  Suppose $(x,y)$ is a solution. Let $a = x + y$ and $b = x - y$ so
+  that $N = ab$. Solving this system of equations for $x$ and $y$
+  gives
+  \begin{equation*}
+    x = \frac12(a + b) \quad\text{and}\quad y = \frac12(a - b).
+  \end{equation*}
+  Since $N$ is odd, both $a$ and $b$ must be odd, so all integer
+  choices of $a$ and $b$ produce integer solutions for $x$ and
+  $y$. Since $a$ could take positive or negative values, we have
+  $2d(N)$ possible choices for $a$.
+
+  To show that all $2d(N)$ possibilities produce distinct pairs of $x$
+  and $y$, assume that $a_1$ and $a_2$ both divide $N$ so that
+  $N = a_1b_1$ and $N = a_2b_2$. Now if
+  \begin{equation*}
+    \frac12(a_1 + b_1) = \frac12(a_2 + b_2)
+    \quad\text{and}\quad
+    \frac12(a_1 - b_1) = \frac12(a_2 - b_2)
+  \end{equation*}
+  then adding these two equations together gives $a_1 = a_2$.
+\end{solution}
