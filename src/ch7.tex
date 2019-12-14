@@ -301,3 +301,34 @@ divisors. Find one smaller than 10,000.
   distinct primes. Different factorizations of $60$ will lead to
   different choices of $n$, as will different choices of the primes.
 \end{solution}
+
+\Problem{11} If $p$ is an odd prime, for which $k$ is
+$1 + p + \cdots + p^k$ odd?
+\begin{solution}
+  Let $p$ be an odd prime. Then $p\equiv1\pmod{2}$, so
+  \begin{equation*}
+    1 + p + p^2 + \cdots + p^k \equiv 1 + 1 + 1^2 + \cdots + 1^k
+    \equiv k+1 \pmod{2}.
+  \end{equation*}
+  It follows that $1 + p + \cdots + p^k$ is odd if and only if $k$ is
+  even.
+\end{solution}
+
+\Problem{12} For which $n$ is $\sigma(n)$ odd?
+\begin{solution}
+  Take any prime factor $p$ dividing $n$. First suppose $p$ is an odd
+  prime. If $e$ is the exponent of $p$ in the prime-power
+  decomposition of $n$ ($e\geq1$), then we know by the previous
+  problem that $\sigma(p^e)$ is odd if and only if $e$ is even. On the
+  other hand, if $p = 2$ then $\sigma(2^e) = 2^{e+1} - 1$ is always
+  odd. So the exponent on $2$ makes no difference.
+
+  Since $\sigma$ is multiplicative, we can therefore see that
+  $\sigma(n)$ will be odd if and only if every odd prime factor of $n$
+  occurs with an even exponent in the prime-power decomposition of
+  $n$. In other words, if $n$ can be written in the form
+  \begin{equation*}
+    n = 2^km^2, \quad\text{where $k\geq0$ and $m$ is odd},
+  \end{equation*}
+  then (and only then) will $\sigma(n)$ be odd.
+\end{solution}
