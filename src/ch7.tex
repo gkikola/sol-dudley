@@ -259,3 +259,33 @@ that $d(n) = 10$?
     \text{the smallest $n$ such that $d(n) = 10$ is $48$.} \qedhere
   \end{equation*}
 \end{solution}
+
+\Problem8 Does $d(n) = k$ have a solution $n$ for each $k$?
+\begin{solution}
+  Yes. One possible choice is $n = 2^{k-1}$, though this is not
+  necessarily the smallest such $n$.
+\end{solution}
+
+\Problem9 In 1644, Mersenne asked for a number with $60$
+divisors. Find one smaller than 10,000.
+\begin{solution}
+  Our solution to the previous problem isn't quite helpful, since
+  $2^{59}$ is considerably larger than 10000. But, by using more prime
+  factors, each with smaller exponents, we are likely to make the
+  product much smaller. So let us attempt to find a smaller $n$ with
+  $d(n) = 60$.
+
+  The prime factorization of $60$ is $2^2\cdot3\cdot5$. In order to
+  get a factor of $5$ in $d(n)$, we will need an exponent of at least
+  $4$. Likewise, to get a factor of $3$, we will need an exponent of
+  at least $2$. The remaining factors of $2$ can be obtained using
+  exponents of $1$. This suggests that we choose
+  \begin{equation*}
+    n = 2^4\cdot3^2\cdot5\cdot7 = 5040,
+  \end{equation*}
+  so that
+  \begin{equation*}
+    d(5040) = 5\cdot3\cdot2\cdot2 = 60.
+  \end{equation*}
+  Therefore $5040$ fits our criteria.
+\end{solution}
