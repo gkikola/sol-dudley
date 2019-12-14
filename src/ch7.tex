@@ -332,3 +332,24 @@ $1 + p + \cdots + p^k$ odd?
   \end{equation*}
   then (and only then) will $\sigma(n)$ be odd.
 \end{solution}
+
+\Problem{13} If $n$ is a square, show that $d(n)$ is odd.
+\begin{proof}
+  Let $n = k^2$ where $k$ is a positive integer. If
+  $k = p_1^{e_1}\cdots p_r^{e_r}$ is the prime-power decomposition of
+  $k$, then
+  \begin{align*}
+    d(n) = d(k^2) &= d(p_1^{2e_1})\cdots d(p_r^{2e_r}) \\
+                  &= (2e_1 + 1)\cdots(2e_r + 1),
+  \end{align*}
+  and since each factor $2e_i + 1$ is odd, we see that $d(n)$ must be
+  odd.
+\end{proof}
+
+\Problem{14} If $d(n)$ is odd, show that $n$ is a square.
+\begin{proof}
+  If $n$ is not a square, then some exponent $e$ in its prime-power
+  decomposition is odd. Then $e + 1$ is even, and therefore $d(n)$
+  contains an even factor and is thus also even. By the
+  contrapositive, this completes the proof.
+\end{proof}
