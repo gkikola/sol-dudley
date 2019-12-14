@@ -384,3 +384,16 @@ $1 + 1/2 + 1/4 + 1/8 = 15/8$. Guess and prove a theorem.
   \end{equation*}
   This completes the proof.
 \end{solution}
+
+\Problem{16} Find infinitely many $n$ such that
+$\sigma(n) \leq \sigma(n - 1)$.
+\begin{solution}
+  Let $n$ be any odd prime except $3$. Then $n - 1$ is even and must
+  have at least three distinct factors, namely $1$, $2$, and $n-1$. So
+  \begin{align*}
+    \sigma(n) = 1 + n &= 2 + (n - 1) \\
+                      &< 1 + 2 + (n - 1) \\
+                      &\leq \sigma(n - 1)
+  \end{align*}
+  as desired.
+\end{solution}
