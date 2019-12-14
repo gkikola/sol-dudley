@@ -90,7 +90,9 @@ different primes?
   \end{equation*}
 \end{solution}
 
-\Exercise7 Show that $\sigma(2^n) = 2^{n+1} - 1$.
+\Exercise7
+\label{exercise:divisors:sigma-2-to-n}
+Show that $\sigma(2^n) = 2^{n+1} - 1$.
 \begin{solution}
   The divisors of $2^n$ are $1$, $2$, $2^2$, $\dots$, $2^n$. The sum
   of these divisors forms a finite geometric series:
@@ -210,3 +212,25 @@ and $100116 = 2^2\cdot3^5\cdot103$.
                    &= 264992. \qedhere
   \end{align*}
 \end{solution}
+
+\Problem5 Show that $\sigma(n)$ is odd if $n$ is a power of two.
+\begin{proof}
+  This is immediate from
+  Exercise~\ref{exercise:divisors:sigma-2-to-n}.
+\end{proof}
+
+\Problem6 Prove that if $f(n)$ is multiplicative, then so is $f(n)/n$.
+\begin{proof}
+  Let $s$ and $t$ be positive integers with $(s,t) = 1$. Since $f$ is
+  multiplicative, we know $f(st) = f(s)f(t)$. Define the function $g$
+  on the positive integers by
+  \begin{equation*}
+    g(n) = \frac{f(n)}n.
+  \end{equation*}
+  Then
+  \begin{equation*}
+    g(st) = \frac{f(st)}{st} = \frac{f(s)f(t)}{st}
+    = \frac{f(s)}s\cdot\frac{f(t)}t = g(s)g(t),
+  \end{equation*}
+  so $g$ is multiplicative as well.
+\end{proof}
