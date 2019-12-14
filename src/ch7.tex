@@ -234,3 +234,28 @@ and $100116 = 2^2\cdot3^5\cdot103$.
   \end{equation*}
   so $g$ is multiplicative as well.
 \end{proof}
+
+\Problem7 What is the smallest integer $n$ such that $d(n) = 8$? Such
+that $d(n) = 10$?
+\begin{solution}
+  If $d(n) = 8$, then $n$ has at most three distinct prime factors. If
+  there are three distinct prime divisors, then the smallest value
+  would be $n = 2\cdot3\cdot5 = 30$. If there are exactly two distinct
+  prime divisors, one would have to have an exponent of $3$, making
+  the smallest value $n = 2^3\cdot3 = 24$. Lastly, if $n$ has only a
+  single prime factor, it would have to be raised to the $7$th power,
+  giving $n = 2^7 = 128$. From these three possibilities, we see that
+  \begin{equation*}
+    \text{the smallest $n$ such that $d(n) = 8$ is $24$.}
+  \end{equation*}
+
+  For $d(n) = 10$, the reasoning is similar. We either have two
+  distinct prime factors, one raised to the first power and the other
+  raised to the fourth power, or only one prime factor, raised to the
+  $9$th power. In the first case, the smallest such $n$ would be
+  $n = 2^4\cdot3 = 48$, and in the second, $n = 2^9 = 512$. Clearly
+  $48$ is the smaller of the two, so
+  \begin{equation*}
+    \text{the smallest $n$ such that $d(n) = 10$ is $48$.} \qedhere
+  \end{equation*}
+\end{solution}
