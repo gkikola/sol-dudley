@@ -123,7 +123,9 @@ Show that $\sigma(2^n) = 2^{n+1} - 1$.
   \end{align*}
 \end{solution}
 
-\Exercise{10} Compute $f(n)$ for $n = 13, 14, \dots, 24$.
+\Exercise{10} Let $f$ be a multiplicative function defined by
+$f(p^e) = ep^{e-1}$, where $p$ is prime and $e\geq1$. Compute $f(n)$
+for $n = 13, 14, \dots, 24$.
 \begin{solution}
   We know that $f(n) = 1$ if $n$ is any square-free integer (that is,
   if each prime in the factorization of $n$ occurs only to the first
@@ -328,7 +330,8 @@ $1 + p + \cdots + p^k$ odd?
   occurs with an even exponent in the prime-power decomposition of
   $n$. In other words, if $n$ can be written in the form
   \begin{equation*}
-    n = 2^km^2, \quad\text{where $k\geq0$ and $m$ is odd},
+    n = 2^km^2,
+    \quad\text{where $k\geq0$, $m\geq1$, and $m$ is odd},
   \end{equation*}
   then (and only then) will $\sigma(n)$ be odd.
 \end{solution}
@@ -346,7 +349,9 @@ $1 + p + \cdots + p^k$ odd?
   odd.
 \end{proof}
 
-\Problem{14} If $d(n)$ is odd, show that $n$ is a square.
+\Problem{14}
+\label{problem:divisors:d-n-is-odd-implies-n-is-square}
+If $d(n)$ is odd, show that $n$ is a square.
 \begin{proof}
   If $n$ is not a square, then some exponent $e$ in its prime-power
   decomposition is odd. Then $e + 1$ is even, and therefore $d(n)$
@@ -424,4 +429,145 @@ have?
     \frac12(a_1 - b_1) = \frac12(a_2 - b_2)
   \end{equation*}
   then adding these two equations together gives $a_1 = a_2$.
+\end{solution}
+
+\Problem{18} Develop a formula for $\sigma_2(n)$, the sum of the
+squares of the positive divisors of $n$.
+\begin{solution}
+  The first ten values of $\sigma_2$ are
+  \begin{center}
+    \begin{tabular}{r|rrrrrrrrrr}
+      $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+      $\sigma_2(n)$ & 1 & 5 & 10 & 21 & 26 & 50 & 50 & 85 & 91 & 130
+    \end{tabular}.
+  \end{center}
+  Certainly if $p$ is prime then $\sigma_2(p) = 1 + p^2$. Since the
+  divisors of $p^k$ are $1, p, \dots, p^k$, it follows that
+  \begin{equation*}
+    \sigma_2(p^k) = 1 + p^2 + p^4 + \cdots + p^{2k}
+    = \frac{p^{2(k+1)} - 1}{p^2 - 1}.
+  \end{equation*}
+  Assuming $\sigma_2$ is multiplicative, this suggests a general
+  formula. We will now prove that for all positive integers $n$, if
+  the prime-power decomposition of $n$ is
+  $n = p_1^{e_1}p_2^{e_2}\cdots p_r^{e_r}$, then
+  \begin{equation*}
+    \sigma_2(n)
+    = \sigma_2(p_1^{e_1})\sigma_2(p_2^{e_2})\cdots\sigma_2(p_r^{e_r}).
+  \end{equation*}
+  Our proof will mimic the proof of Theorem~2 in the text, using
+  induction on $r$. For $r = 1$ the statement is trivial, so suppose
+  it is true for $r = k$, $k\geq1$. Let $n$ be any integer having
+  $k+1$ distinct prime factors:
+  \begin{equation*}
+    n = p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}p_{k+1}^{e_{k+1}}.
+  \end{equation*}
+  Let $N = p_1^{e_1}\cdots p_k^{e_k}$, let $p = p_{k+1}$ and let
+  $e = e_{k+1}$ so that $n = Np^e$. If $1, d_1, \dots, d_t$ are the
+  positive divisors of $N$, then the divisors of $n$ can be arranged
+  \begin{equation*}
+    \begin{matrix}
+      1 & d_1 & d_2 & \cdots & d_t \\
+      p & d_1p & d_2p & \cdots & d_tp \\
+      p^2 & d_1p^2 & d_2p^2 & \cdots & d_tp^2 \\
+      \vdots & \vdots & \vdots & \ddots & \vdots \\
+      p^e & d_1p^e & d_2p^e & \cdots & d_tp^e.
+    \end{matrix}
+  \end{equation*}
+  Summing the squares of these divisors gives
+  \begin{align*}
+    \sigma_2(n) &= (1 + d_1^2 + d_2^2 + \cdots + d_t^2)
+                  (1 + p^2 + p^4 + \cdots + p^{2e}) \\
+                &= \sigma_2(N)\sigma_2(p^e).
+  \end{align*}
+  Now, using the inductive hypothesis, the above becomes
+  \begin{equation*}
+    \sigma_2(n)
+    = \sigma_2(p_1^{e_1})\sigma_2(p_2^{e_2})
+    \cdots\sigma_2(p_ke^k)\sigma_2(p_{k+1}e^{k+1})
+  \end{equation*}
+  as required to complete the proof.
+\end{solution}
+
+\Problem{19} Guess a formula for
+\begin{equation*}
+  \sigma_k(n) = \sum_{d\mid n}d^k,
+\end{equation*}
+where $k$ is a positive integer.
+\begin{solution}
+  The previous problem suggests (and indeed a similar proof will show)
+  that if $n$ has prime-power decomposition
+  $n = p_1^{e_1}\cdots p_r^{e_r}$, then
+  \begin{equation*}
+    \sigma_k(n) = \sigma_k(p_1^{e_1})\cdots\sigma_k(p_r^{e_r}),
+  \end{equation*}
+  where
+  \begin{equation*}
+    \sigma_k(p_i^{e_i})
+    = 1 + p_i^k + p_i^{2k} + \cdots + p_i^{e_ik}
+    = \frac{p_i^{k(e_i+1)} - 1}{p_i^k - 1},
+  \end{equation*}
+  for each $i = 1, 2, \dots, r$.
+\end{solution}
+
+\Problem{20} Show that the product of the positive divisors of $n$ is
+$n^{d(n)/2}$.
+\begin{solution}
+  Define the arithmetic function $f$ by
+  \begin{equation*}
+    f(n) = \prod_{d\mid n}d.
+  \end{equation*}
+  For prime powers $n = p^e$, we have
+  \begin{align*}
+    f(p^e) &= 1(p)(p^2)\cdots(p^e) \\
+           &= p^{1+2+\cdots+e} \\
+           &= p^{e(e+1)/2} \\
+           &= (p^e)^{(e+1)/2} \\
+           &= n^{d(n)/2}.
+  \end{align*}
+  Note that $n^{d(n)/2}$ is always an integer, since $d(n)$ is only
+  odd when $n$ is a perfect square (shown in
+  Problem~\ref{problem:divisors:d-n-is-odd-implies-n-is-square}).
+
+  Now, let $n$ have $r$ distinct prime factors. We will use induction
+  on $r$ to show that $f(n) = n^{d(n)/2}$. We have already shown
+  (above) that this is true when $r = 1$. Assume that it is true when
+  $r = k$, for some $k\geq1$. If $n$ has $k + 1$ distinct prime
+  factors, then $n$ can be written in prime-power form as
+  \begin{equation*}
+    n = p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}p_{k+1}^{e_{k+1}}.
+  \end{equation*}
+  Now let $N = p_1^{e_1}\cdots p_k^{e_k}$, let $p = p_{k+1}$, and let
+  $e = e_{k+1}$. Then $n = Np^e$. If $1, d_1, d_2, \dots, d_t$ are the
+  positive divisors of $N$, then we may list the positive divisors of
+  $n$ as follows.
+  \begin{equation*}
+    \begin{matrix}
+      1 & d_1 & d_2 & \cdots & d_t \\
+      p & d_1p & d_2p & \cdots & d_tp \\
+      p^2 & d_1p^2 & d_2p^2 & \cdots & d_tp^2 \\
+      \vdots & \vdots & \vdots & \ddots & \vdots \\
+      p^e & d_1p^e & d_2p^e & \cdots & d_tp^e
+    \end{matrix}
+  \end{equation*}
+  The product of line $i$ above is
+  \begin{align*}
+    p^{i-1}(d_1p^{i-1})(d_2p^{i-1})\cdots(d_tp^{i-1})
+    &= (p^{i-1})^{t+1}(d_1d_2\cdots d_t) \\
+    &= (p^{i-1})^{d(N)}f(N).
+  \end{align*}
+  Taking the product of all $e+1$ lines gives
+  \begin{align*}
+    f(n) &= \big(1^{d(N)}f(N)\big)\cdot\big(p^{d(N)}f(N)\big)
+    \cdots\big(p^{ed(N)}f(N)\big) \\
+         &= \big(p\cdot p^2\cdots p^e\big)^{d(N)}\big(f(N)\big)^{e+1} \\
+         &= \big(f(p^e)\big)^{d(N)}\big(f(N)\big)^{d(p^e)}.
+  \end{align*}
+  Applying the inductive hypothesis then gives
+  \begin{align*}
+    f(n) &= (p^e)^{d(N)d(p^e)/2}N^{d(N)d(p^e)/2} \\
+         &= (p^e)^{d(n)/2}N^{d(n)/2} \\
+         &= n^{d(n)/2}.
+  \end{align*}
+  By induction, the formula works for all positive integers $n$.
 \end{solution}
