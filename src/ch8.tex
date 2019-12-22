@@ -71,3 +71,25 @@ $2^{17} - 1$ both end in $6$.
   In both cases, we see that the corresponding perfect numbers end in
   $6$.
 \end{proof}
+
+\Problem3 Classify the integers $2,3,\dots,21$ as abundant, deficient,
+or perfect.
+\begin{solution}
+  The values of $\sigma(n)$ for $n = 1,\dots,14$ are listed in the
+  table from Exercise~\ref{exercise:divisors:sigma-table}. The
+  remaining values are as follows:
+  \begin{align*}
+    \sigma(15) &= \sigma(3)\sigma(5) = 4\cdot6 = 24, \\
+    \sigma(16) &= \sigma(2^4) = 2^5 - 1 = 31, \\
+    \sigma(17) &= 18, \\
+    \sigma(18) &= \sigma(2)\sigma(3^2) = 3\cdot(1 + 3 + 9) = 39, \\
+    \sigma(19) &= 20, \\
+    \sigma(20) &= \sigma(2^2)\sigma(5) = (2^3 - 1)\cdot6 = 42, \\
+    \sigma(21) &= \sigma(3)\sigma(7) = 4\cdot8 = 32.
+  \end{align*}
+
+  From these values, we determine that the only perfect number between
+  $2$ and $21$ is $6$. The only abundant numbers between $2$ and $21$
+  are $12$, $18$, and $20$. And the remaining values are all
+  deficient.
+\end{solution}
