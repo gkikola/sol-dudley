@@ -209,3 +209,46 @@ Can this go on?
   \end{equation*}
   This is easy to prove by induction.
 \end{solution}
+
+\Problem{11} Let
+\begin{align*}
+  p &= 3\cdot2^e - 1, \\
+  q &= 3\cdot2^{e-1} - 1, \\
+  r &= 3^2\cdot2^{2e-1} - 1,
+\end{align*}
+where $e$ is a positive integer. If $p$, $q$, and $r$ are all prime,
+show that $2^epq$ and $2^er$ are amicable.
+\begin{proof}
+  We will actually need to assume $e\geq2$ so that $p,q,r$ are odd
+  primes ($e = 1$ produces $20$ and $34$, which are not
+  amicable). Let $m = 2^epq$ and $n = 2^er$.
+
+  Note that $p$, $q$, and $r$ must be distinct primes, and all are
+  odd, so the four numbers $2^e$, $p$, $q$, and $r$ are all pairwise
+  coprime. Then we may compute
+  \begin{align*}
+    \sigma(m)
+    &= \sigma(2^e)\sigma(p)\sigma(q) \\
+    &= (2^{e+1} - 1)(p + 1)(q + 1) \\
+    &= (2^{e+1} - 1)(3\cdot2^e)(3\cdot2^{e-1}) \\
+    &= 9\cdot2^{2e-1}(2^{e+1} - 1),
+  \end{align*}
+  and
+  \begin{align*}
+    \sigma(n)
+    &= \sigma(2^e)\sigma(r) \\
+    &= (2^{e+1} - 1)(r + 1) \\
+    &= 9\cdot2^{2e-1}(2^{e+1} - 1).
+  \end{align*}
+  Since
+  \begin{align*}
+    m + n
+    &= 2^e(pq + r) \\
+    &= 2^e((3\cdot2^e - 1)(3\cdot2^{e-1} - 1) + (9\cdot2^{2e-1} - 1)) \\
+    &= 2^e(2\cdot9\cdot2^{2e-1} - 3(2^e + 2^{e-1})) \\
+    &= 2^e(9\cdot2^{2e} - 9\cdot2^{e-1}) \\
+    &= 9\cdot2^{2e-1}(2^{e+1} - 1),
+  \end{align*}
+  we see that $\sigma(m) = \sigma(n) = m + n$ and the two numbers $m$
+  and $n$ form an amicable pair.
+\end{proof}
