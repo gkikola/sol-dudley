@@ -1,0 +1,47 @@
+\chapter{Perfect Numbers}
+
+\section{Exercises}
+
+\Exercise1 Verify that $1184$ and $1210$ are amicable.
+\begin{solution}
+  $1184 = 2^5\cdot37$ and $1210 = 2\cdot5\cdot11^2$, so
+  \begin{equation*}
+    \sigma(1184) = \sigma(2^5)\sigma(37)
+    = (2^6 - 1)(38) = 63\cdot38 = 2394
+  \end{equation*}
+  and
+  \begin{equation*}
+    \sigma(1210) = \sigma(2)\sigma(5)\sigma(11^2)
+    = 3\cdot6\cdot(1 + 11 + 121) = 18\cdot133
+    = 2394.
+  \end{equation*}
+  Since $1184 + 1210 = 2394$, we see that the two numbers form an
+  amicable pair.
+\end{solution}
+
+\section{Problems}
+
+\Problem1 Verify that $2620, 2924$ and $17296,18416$ are amicable pairs.
+\begin{solution}
+  $2620 = 2^2\cdot5\cdot131$ and $2924 = 2^2\cdot17\cdot43$. We get
+  \begin{equation*}
+    \sigma(2620) = 7\cdot6\cdot132 = 5544
+  \end{equation*}
+  and
+  \begin{equation*}
+    \sigma(2924) = 7\cdot18\cdot44 = 5544,
+  \end{equation*}
+  and $2620 + 2924 = 5544$, so the two are amicable.
+
+  For $17296$ we have
+  \begin{equation*}
+    \sigma(17296) = \sigma(2^4\cdot23\cdot47)
+    = 31\cdot24\cdot48 = 35712
+  \end{equation*}
+  and for $18416$ we have
+  \begin{equation*}
+    \sigma(18416) = \sigma(2^4\cdot1151)
+    = 31\cdot1152 = 35712,
+  \end{equation*}
+  and $17296 + 18416 = 35712$, so these two are also amicable.
+\end{solution}
