@@ -143,3 +143,16 @@ $4$-perfect.
   $2 + 3 - 1 = 4$. This contradiction shows that no such $n$ is
   $3$-perfect.
 \end{proof}
+
+\Problem7 Let us say that $n$ is {\em superperfect}\/ if and only if
+$\sigma(\sigma(n)) = 2n$. Show that if $n = 2^k$ and $2^{k+1} - 1$ is
+prime, then $n$ is superperfect.
+\begin{proof}
+  Let $n = 2^k$ for some positive integer $k$ and suppose
+  $2^{k+1} - 1$ is prime. Then
+  \begin{equation*}
+    \sigma(\sigma(n)) = \sigma(2^{k+1} - 1) = (2^{k+1} - 1) + 1
+    = 2^{k+1} = 2n
+  \end{equation*}
+  and $n$ is superperfect.
+\end{proof}
