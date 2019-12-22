@@ -177,3 +177,35 @@ the form $3^a\cdot5\cdot7$.
     \sigma(2835) = 5808 > 2\cdot2835 = 5670. \qedhere
   \end{equation*}
 \end{solution}
+
+\Problem9 In 1575, it was observed that every even perfect number is a
+triangular number. Show that this is so.
+\begin{proof}
+  Let $n$ be a perfect number, so that $n = 2^{p-1}(2^p - 1)$ where
+  $p$ and $2^p-1$ are prime. Then we may write
+  \begin{equation*}
+    n = \frac{2^p(2^p - 1)}2 = \frac{k(k + 1)}2,
+  \end{equation*}
+  where $k = 2^p - 1$ is an integer. This shows that $n$ is triangular.
+\end{proof}
+
+\Problem{10} In 1652, it was observed that
+\begin{align*}
+  6 &= 1 + 2 + 3, \\
+  28 &= 1 + 2 + 3 + 4 + 5 + 6 + 7, \\
+  496 &= 1 + 2 + 3 + \cdots + 31.
+\end{align*}
+Can this go on?
+\begin{solution}
+  Yes, every perfect number $n$ can be written as the sum
+  \begin{equation*}
+    n = 1 + 2 + 3 + \cdots + k
+  \end{equation*}
+  for some positive integer $k$. The reason for this is because every
+  perfect number is triangular, as was shown in the previous problem,
+  and every triangular number can be written in the form
+  \begin{equation*}
+    \sum_{k=1}^nk = \frac{n(n+1)}2.
+  \end{equation*}
+  This is easy to prove by induction.
+\end{solution}
