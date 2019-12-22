@@ -45,3 +45,29 @@
   \end{equation*}
   and $17296 + 18416 = 35712$, so these two are also amicable.
 \end{solution}
+
+\Problem2 It was long thought that even perfect numbers ended
+alternately in $6$ and $8$. Show that this is wrong by verifying that
+the perfect numbers corresponding to the primes $2^{13} - 1$ and
+$2^{17} - 1$ both end in $6$.
+\begin{proof}
+  First note that $2^8 = 256\equiv6\pmod{10}$ so
+  $2^{16}\equiv6^2\equiv6\pmod{10}$, and
+  $2^{12} = 2^8\cdot2^4\equiv6\cdot6\equiv6\pmod{10}$.
+
+  For $p = 13$, we have
+  \begin{equation*}
+    2^{p-1}(2^p - 1)
+    = 2^{12}(2^{13} - 1)
+    \equiv 6\cdot(6\cdot2 - 1)
+    \equiv6\pmod{10}
+  \end{equation*}
+  and for $p = 17$ we have
+  \begin{equation*}
+    2^{16}(2^{17} - 1)
+    = 6\cdot(6\cdot2 - 1)
+    \equiv6\pmod{10}.
+  \end{equation*}
+  In both cases, we see that the corresponding perfect numbers end in
+  $6$.
+\end{proof}
