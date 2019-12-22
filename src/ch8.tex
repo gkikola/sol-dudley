@@ -102,3 +102,44 @@ deficient, or perfect.
   numbers and the only abundant numbers are $402$, $408$, $414$,
   $416$, and $420$. The remaining numbers are deficient.
 \end{solution}
+
+\Problem5 If $\sigma(n) = kn$, then $n$ is called a {\em $k$-perfect
+  number}. Verify that $672$ is $3$-perfect, and
+$\text{2,178,540} = 2^2\cdot3^2\cdot5\cdot7^2\cdot13\cdot19$ is
+$4$-perfect.
+\begin{solution}
+  We compute
+  \begin{equation*}
+    \sigma(672) = \sigma(2^5)\sigma(3)\sigma(7)
+    = 63\cdot4\cdot8
+    = 2016 = 3\cdot672,
+  \end{equation*}
+  showing that $672$ is $3$-perfect. For 2,178,540 we get
+  \begin{align*}
+    \sigma(2\,178\,540)
+    &= \sigma(2^2)\sigma(3^2)\sigma(5)\sigma(7^2)\sigma(13)\sigma(19) \\
+    &= 7\cdot13\cdot6\cdot57\cdot14\cdot20 \\
+    &= 8\,714\,160 \\
+    &= 4\cdot2\,178\,540,
+  \end{align*}
+  showing that it is $4$-perfect.
+\end{solution}
+
+\Problem6 Show that no number of the form $2^a3^b$ is $3$-perfect.
+\begin{proof}
+  Let $n = 2^a3^b$ for some nonnegative integers $a$ and $b$. Then
+  \begin{align*}
+    \sigma(n) = \sigma(2^a)\sigma(3^b)
+    &= (2^{a+1} - 1)\cdot\frac{3^{b+1} - 1}2 \\
+    &= \frac12(2^{a+1}3^{b+1} - 2^{a+1} - 3^{b+1} + 1) \\
+    &= \frac12(6n - 2^{a+1} - 3^{b+1} + 1) \\
+    &= 3n - \frac12(2^{a+1} + 3^{b+1} - 1).
+  \end{align*}
+  Now suppose $n$ is $3$-perfect. Then $\sigma(n) = 3n$ and we get
+  \begin{equation*}
+    2^{a+1} + 3^{b+1} - 1 = 0.
+  \end{equation*}
+  But $a,b\geq0$, so the left-hand side has to be at least
+  $2 + 3 - 1 = 4$. This contradiction shows that no such $n$ is
+  $3$-perfect.
+\end{proof}
