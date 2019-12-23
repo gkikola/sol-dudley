@@ -252,3 +252,124 @@ show that $2^epq$ and $2^er$ are amicable.
   we see that $\sigma(m) = \sigma(n) = m + n$ and the two numbers $m$
   and $n$ form an amicable pair.
 \end{proof}
+
+\Problem{12} Show that if $p > 3$ and $2p + 1$ is prime, then
+$2p(2p+1)$ is deficient.
+\begin{proof}
+  Let $n = 2p(2p+1)$, where $p$ and $2p + 1$ are prime, and $p >
+  3$. We compute
+  \begin{align*}
+    \sigma(n)
+    &= \sigma(2)\sigma(p)\sigma(2p+1) \\
+    &= 3(p+1)(2p+2) \\
+    &= 3p(2p+2) + 3(2p+2) \\
+    &= 3p(2p+1) + 3p + 3(2p+2) \\
+    &= 4p(2p+1) - p(2p+1) + 3p + 3(2p+2) \\
+    &= 2n - 2(p^2 - 4p - 3).
+  \end{align*}
+  Now, since $p\geq5$, it is easy to check that $p^2 - 4p - 3 >
+  0$. Therefore $\sigma(n) < 2n$ and we conclude that $n$ is
+  deficient.
+\end{proof}
+
+\Problem{13} Show that all even perfect numbers end in $6$ or $8$.
+\begin{proof}
+  Let $n$ be an even perfect number. We know that
+  \begin{equation*}
+    n = 2^{p-1}(2^p - 1),
+    \quad\text{where $p$ and $2^p-1$ are prime}.
+  \end{equation*}
+
+  Note that
+  \begin{align*}
+    p\equiv1\pmod4
+    &\quad\Rightarrow\quad
+      2^{p-1} = 2^{4k} = 16^k \equiv 6\pmod{10}, \\
+    p\equiv2\pmod4
+    &\quad\Rightarrow\quad
+      2^{p-1} = 2^{4k+1} \equiv 2\cdot6 \equiv 2\pmod{10}, \\
+    p\equiv3\pmod4
+    &\quad\Rightarrow\quad
+      2^{p-1} = 2^{4k+2} \equiv 4\cdot6 \equiv 4\pmod{10}.
+  \end{align*}
+  We do not need to consider the case where $p\equiv0\pmod4$ since no
+  prime can be divisible by $4$.
+
+  Let us consider the three cases. First, if $p\equiv1\pmod4$, then we
+  get
+  \begin{equation}
+    \label{eq:perfect:even-perfect-mod-10-case1}
+    n \equiv 6(2\cdot6 - 1) \equiv 6\pmod{10}.
+  \end{equation}
+  Second, if $p\equiv2\pmod{4}$ then we get
+  \begin{equation}
+    \label{eq:perfect:even-perfect-mod-10-case2}
+    n \equiv 2(2\cdot2 - 1) \equiv 6\pmod{10}.
+  \end{equation}
+  Finally, if $p\equiv3\pmod{4}$ then
+  \begin{equation}
+    \label{eq:perfect:even-perfect-mod-10-case3}
+    n \equiv 4(2\cdot4 - 1) \equiv 8\pmod{10}.
+  \end{equation}
+  Together, \ref{eq:perfect:even-perfect-mod-10-case1},
+  \ref{eq:perfect:even-perfect-mod-10-case2}, and
+  \ref{eq:perfect:even-perfect-mod-10-case3} show that every even
+  perfect number must end in $6$ or $8$, when written in decimal
+  notation.
+\end{proof}
+
+\Problem{14} If $n$ is an even perfect number and $n > 6$, show that
+the sum of its digits is congruent to $1$ (mod $9$).
+\begin{proof}
+  Let $n = 2^{p-1}(2^p - 1)$ be an even perfect number. We proceed in
+  a similar fashion as in the previous problem. Since $n > 6$, we have
+  $p\geq3$. The case where $p = 3$ is easily handled since
+  $28\equiv1\pmod9$. So assume $p\geq5$.
+
+  Since the powers of $2$ (mod $9$) cycle through six different
+  residues, we will consider the congruence class of $p$ modulo
+  $6$. There are only two cases: either $p\equiv1\pmod6$ or
+  $p\equiv5\pmod6$. All other cases require that $p$ be either
+  composite or less than $5$.
+
+  In the first case, $p\equiv1\pmod6$ so
+  \begin{equation*}
+    2^{p-1} = 2^{6k} = (2^6)^k\equiv1\pmod9
+    \quad\text{and}\quad
+    2^p \equiv 2\pmod9.
+  \end{equation*}
+  Therefore
+  \begin{equation*}
+    n = 2^{p-1}(2^p-1) \equiv 1(2 - 1) \equiv 1\pmod9.
+  \end{equation*}
+
+  In the second case, $p\equiv5\pmod6$ which gives
+  \begin{equation*}
+    2^{p-1} = 2^{6k + 4} = (2^6)^k\cdot2^4 \equiv 1\cdot16 \equiv 7\pmod9
+  \end{equation*}
+  and
+  \begin{equation*}
+    2^p \equiv 14\equiv 5\pmod 9.
+  \end{equation*}
+  Therefore
+  \begin{equation*}
+    n = 2^{p-1}(2^p-1) \equiv 7(5 - 1) \equiv 28 \equiv 1\pmod9.
+  \end{equation*}
+
+  In both cases, we get $n\equiv1\pmod9$ as required.
+\end{proof}
+
+\Problem{15} If $p$ is odd, show that
+$2^{p-1}(2^p - 1)\equiv1 + 9p(p-1)/2\pmod{81}$.
+\begin{proof}
+  Note that $2^{54}\equiv1\pmod{81}$ (this can be determined simply by
+  repeatedly multiplying by $2$ and reducing modulo $81$). So the
+  left-hand side of the congruence is completely determined by the
+  congruence class of $p$ modulo $54$. The right-hand side will depend
+  on the congruence class of $p$ modulo $9$. Since $9\mid54$, it will
+  suffice to check each odd residue between $1$ and $53$. This is
+  tedious, but not difficult.
+
+  In each case, we see that the congruence holds. In fact, it holds
+  even when $p$ is not prime, so long as $p$ is odd.
+\end{proof}
