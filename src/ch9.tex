@@ -34,3 +34,68 @@ prime to $14$.
   And, certainly, $(5,1,11,3,13,9)$ is a permutation of
   $\{1,3,5,9,11,13\}$.
 \end{solution}
+
+\Exercise3 Verify that the entries in the following table are correct.
+\begin{center}
+  \begin{tabular}{r|rrrrrrrrr}
+    $n$ & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+    $\phi(n)$ & 1 & 2 & 2 & 4 & 2 & 6 & 4 & 6 & 4
+  \end{tabular}
+\end{center}
+\begin{solution}
+  The verification is straightforward. We simply count the number of
+  positive integers that are relatively prime to $n$ and less than or
+  equal to $n$. For example, when $n = 8$ the relatively prime
+  residues are $1$, $3$, $5$, and $7$, so $\phi(8) = 4$. The other
+  values are checked in the same way.
+\end{solution}
+
+\Exercise4 Verify that $3^{\phi(8)}\equiv1\pmod8$.
+\begin{solution}
+  Since $\phi(8) = 4$, we have $3^4 = 9^2 \equiv 1^2 \equiv 1\pmod8$.
+\end{solution}
+
+\Exercise5 Which positive integers are less than $4$ and relatively
+prime to it? What is the answer if $4$ is replaced by $8$? By $16$?
+Can you induce a formula for $\phi(2^n)$, $n = 1,2,\dots$?
+\begin{solution}
+  For $4$ the numbers are $1$ and $3$. For $8$ they are $1$, $3$, $5$,
+  and $7$. For $16$, they are $1$, $3$, $5$, $7$, $9$, $11$, $13$, and
+  $15$. So we have $\phi(4) = 2$, $\phi(8) = 4$, and $\phi(16) = 8$.
+
+  In general, it looks like $\phi(2^n) = 2^{n-1}$ for each positive
+  $n$. To prove this, note that there are $2^n$ positive integers less
+  than or equal to $2^n$. Exactly half of these numbers will be even
+  and thus not relatively prime to $2^n$. So
+  \begin{equation*}
+    \phi(2^n) = \frac12(2^n) = 2^{n-1}. \qedhere
+  \end{equation*}
+\end{solution}
+
+\Exercise6 Verify that the formula of Lemma~2 is correct for $p = 5$
+and $n = 2$.
+\begin{solution}
+  According to Lemma~2, $\phi(5^2) = 5^1(5 - 1) = 20$. The positive
+  integers less than or equal to $5^2$ that are not relatively prime
+  to it are $5$, $10$, $15$, $20$, and $25$, so
+  $\phi(5^2) = 25 - 5 = 20$ and the formula works in this case.
+\end{solution}
+
+\Exercise7 In the proof of Theorem~2, how many rows are there whose
+first element is relatively prime to $m$?
+\begin{solution}
+  There are exactly $\phi(m)$ such rows.
+\end{solution}
+
+\Exercise8 Calculate $\phi(74)$, $\phi(76)$, and $\phi(78)$.
+\begin{solution}
+  Using Theorem~3, we get
+  \begin{align*}
+    \phi(74) &= \phi(2)\phi(37) = (1\cdot1)(1\cdot36) = 36, \\
+    \phi(76) &= \phi(2^2)\phi(19)
+               = (2\cdot1)(1\cdot18) = 36, \\
+    \intertext{and}
+    \phi(78) &= \phi(2)\phi(3)\phi(13)
+               = (1\cdot1)(1\cdot2)(1\cdot12) = 24. \qedhere
+  \end{align*}
+\end{solution}
