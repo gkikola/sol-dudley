@@ -174,3 +174,30 @@ $\phi(n/d)$ for $n = 12$ and $n = 14$.
   $\phi(2) = 1$, and $\phi(1) = 1$, and we see that these numbers
   match the size of the sets found in the previous exercise.
 \end{solution}
+
+\section{Problems}
+
+\Problem1 Calculate $\phi(42)$, $\phi(420)$, and $\phi(4200)$.
+\begin{solution}
+  We have
+  \begin{align*}
+    \phi(42) &= \phi(2)\phi(3)\phi(7) = 1\cdot2\cdot6 = 12 \\
+    \phi(420) &= \phi(2^2)\phi(3)\phi(5)\phi(7)
+                = 2\cdot2\cdot4\cdot6 = 96 \\
+    \intertext{and}
+    \phi(4200) &= \phi(2^3)\phi(3)\phi(5^2)\phi(7)
+                 = 4\cdot2\cdot20\cdot6 = 960. \qedhere
+  \end{align*}
+\end{solution}
+
+\Problem2 Calculate $\phi(54)$, $\phi(540)$, and $\phi(5400)$.
+\begin{solution}
+  \begin{align*}
+    \phi(54) &= \phi(2)\phi(3^3) = 1\cdot18 = 18, \\
+    \phi(540) &= \phi(2^2)\phi(3^3)\phi(5)
+                = 2\cdot18\cdot4 = 144, \\
+    \intertext{and}
+    \phi(5400) &= \phi(2^3)\phi(3^3)\phi(5^2)
+                 = 4\cdot18\cdot20 = 1440. \qedhere
+  \end{align*}
+\end{solution}
