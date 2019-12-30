@@ -494,3 +494,33 @@ have a common factor greater than $1$.
   \end{align*}
   By induction, the result holds for all positive integers $k$.
 \end{proof}
+
+\Exercise{17} Show that $(m,n) = 2$ implies $\phi(mn) = 2\phi(m)\phi(n)$.
+\begin{proof}
+  Suppose $(m,n) = 2$. Then both $m$ and $n$ are even, but one of $m$
+  or $n$ contains only one factor of $2$. Without loss of generality,
+  let it be $m$, so that $m = 2k$ where $k$ is odd. Then $n = 2^e\ell$
+  for some positive integer $e$ and odd integer $\ell$, where
+  $(k,\ell) = 1$. Note that $\phi(m) = \phi(2)\phi(k) = \phi(k)$. So
+  we get
+  \begin{align*}
+    \phi(mn) &= \phi(2^{e+1}k\ell) \\
+             &= \phi(2^{e+1})\phi(k)\phi(\ell) \\
+             &= 2^e\phi(m)\phi(\ell) \\
+             &= 2\cdot2^{e-1}\phi(m)\phi(\ell) \\
+             &= 2\phi(2^e)\phi(m)\phi(\ell) \\
+             &= 2\phi(m)\phi(n). \qedhere
+  \end{align*}
+\end{proof}
+
+\Exercise{18} Show that $\phi(n) = n/2$ if and only if $n = 2^k$ for
+some positive integer $k$.
+\begin{proof}
+  Suppose $2\phi(n) = n$. Write $n = 2^km$, where $m$ is
+  odd. Then
+  \begin{equation*}
+    2^km = 2\phi(2^km) = 2\phi(2^k)\phi(m) = 2^k\phi(m).
+  \end{equation*}
+  But this can be true if and only if $m = \phi(m)$, which can only be
+  the case when $m = 1$.
+\end{proof}
