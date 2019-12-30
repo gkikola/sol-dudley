@@ -347,3 +347,20 @@ integers $r$ and $s$ such that $ar + ms = 1$.
   which implies that $br + km = 1$ for some integer $k$. This is
   enough to show that $(b,m) = 1$.
 \end{proof}
+
+\Problem{12} If $(a,m) = 1$, show that any $x$ such that
+\begin{equation}
+  \label{eq:euler:x-equiv-ca-to-phi-m-minus-1}
+  x\equiv ca^{\phi(m)-1}\pmod{m}
+\end{equation}
+satisfies $ax\equiv c\pmod{m}$.
+\begin{proof}
+  Let $x$ satisfy
+  \eqref{eq:euler:x-equiv-ca-to-phi-m-minus-1}. Multiplying both sides
+  of this congruence by $a$ gives
+  \begin{equation*}
+    ax \equiv ca^{\phi(m)}\pmod{m},
+  \end{equation*}
+  and since $(a,m) = 1$, we have $ca^{\phi(m)}\equiv c\pmod{m}$ by
+  Euler's Theorem.
+\end{proof}
