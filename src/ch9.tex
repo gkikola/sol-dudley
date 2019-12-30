@@ -335,3 +335,15 @@ where each sum is over the primes less than or equal to $x$.
     &= \sum_{p\leq x}d(p). \qedhere
   \end{align*}
 \end{proof}
+
+\Problem{11} Prove Lemma~3 by starting with the fact that there are
+integers $r$ and $s$ such that $ar + ms = 1$.
+\begin{proof}
+  We want to show that if $(a,m) = 1$ and $a\equiv b\pmod{m}$, then
+  $(b,m) = 1$. Since $ar + ms = 1$, we have
+  \begin{equation*}
+    1 \equiv ar \equiv br \pmod{m},
+  \end{equation*}
+  which implies that $br + km = 1$ for some integer $k$. This is
+  enough to show that $(b,m) = 1$.
+\end{proof}
