@@ -235,3 +235,27 @@ $100116 = 2^2\cdot3^5\cdot103$.
                  &= 33048. \qedhere
   \end{align*}
 \end{solution}
+
+\Problem5 Calculate $a^8\pmod{15}$ for $a = 1,2,\dots,14$.
+\begin{solution}
+  Since $\phi(15) = \phi(3)\phi(5) = 2\cdot4 = 8$, we know
+  $a^8\equiv1\pmod{15}$ for each $a$ such that $(a,15) = 1$. For the
+  remaining values, we have
+  \begin{align*}
+    3^8 &= (3^4)^2 \equiv 6^2 \equiv 6\pmod{15}, \\
+    5^8 &= (5^2)^4 \equiv 10^4 \equiv 10^2 \equiv 10\pmod{15}, \\
+    6^8 &= 2^83^8 \equiv 6\cdot16^4 \equiv 6\pmod{15}, \\
+    9^8 &= (3^8)^2 \equiv 36 \equiv 6 \pmod{15}, \\
+    10^8 &= (10^4)^2 \equiv 10^2 \equiv 10\pmod{15}, \\
+    \intertext{and}
+    12^8 &= 3^84^8 \equiv 6\cdot(2^4)^4 \equiv 6\pmod{15}. \qedhere
+  \end{align*}
+\end{solution}
+
+\Problem6 Calculate $a^8\pmod{16}$ for $a = 1,2,\dots,15$.
+\begin{solution}
+  $\phi(16) = 8$, so $a^8\equiv1\pmod{16}$ for all $a$ such that
+  $(a,16) = 1$. The remaining values are all even, and since $2^8$
+  contains a factor of $16$, we will get $a^8\equiv0\pmod{16}$ for
+  each $a$ such that $(a,16) > 1$.
+\end{solution}
