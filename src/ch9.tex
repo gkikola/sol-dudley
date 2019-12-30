@@ -441,3 +441,56 @@ are no more.
   As we have ruled out all other possibilities, these are the only
   solutions.
 \end{solution}
+
+\Exercise{16} Show that $\phi(mn) > \phi(m)\phi(n)$ if $m$ and $n$
+have a common factor greater than $1$.
+\begin{proof}
+  Let $p$ be a prime. Then for all positive integers $e$ and $f$,
+  \begin{equation}
+    \label{eq:euler:prime-ineq}
+    p^{e+f-1}(p - 1) = p^{e+f-2}p(p - 1) > p^{e+f-2}(p - 1)^2.
+  \end{equation}
+
+  Now suppose $(m,n) = d > 1$ and let $k$ be the number of distinct
+  prime factors of $d$. We will use induction on $k$ to show that
+  $\phi(mn) > \phi(m)\phi(n)$.
+
+  First, if $k = 1$, then we can write $m = ap^e$ and $n = bp^f$ for
+  some positive integers $e$ and $f$, with
+  $(a,b) = (a,p) = (b,p) = 1$. Then \eqref{eq:euler:prime-ineq}
+  implies
+  \begin{align*}
+    \phi(mn) &= \phi(a)\phi(b)\phi(p^{e+f}) \\
+             &= \phi(a)\phi(b)p^{e+f-1}(p-1) \\
+             &> \phi(a)\phi(b)p^{e+f-2}(p-1)^2 \\
+             &= \left(\phi(a)p^{e-1}(p-1)\right)
+               \left(\phi(b)p^{f-1}(p-1)\right) \\
+             &= \phi(a)\phi(p^e)\phi(b)\phi(p^f) \\
+             &= \phi(m)\phi(n),
+  \end{align*}
+  so $\phi(mn) > \phi(m)\phi(n)$ in the case where $k = 1$.
+
+  Now suppose $\phi(mn) > \phi(m)\phi(n)$ whenever the common factor
+  $d$ has $k$ distinct prime factors for some particular
+  $k\geq1$. Then suppose $d$ has $k+1$ distinct prime factors, and let
+  one of the factors be $p$. Then we can write
+  \begin{equation*}
+    m = ap^e
+    \quad\text{and}\quad
+    n = bp^f
+  \end{equation*}
+  for some positive integers $e$ and $f$ with $(a,p) = (b,p) = 1$. If
+  $(a,b) = c$, then we know that $c$ has at most $k$ distinct prime
+  factors, so the induction hypothesis tells us that
+  $\phi(ab)\geq\phi(a)\phi(b)$ (with equality in the case where
+  $c = 1$). Then, again making use of \eqref{eq:euler:prime-ineq}, we
+  have
+  \begin{align*}
+    \phi(mn) &= \phi(ab)\phi(p^{e+f}) \\
+             &= \phi(ab)p^{e+f-1}(p-1) \\
+             &> \phi(ab)p^{e+f-2}(p-1)^2 \\
+             &\geq \phi(a)p^{e-1}(p-1)\phi(b)p^{f-1}(p-1) \\
+             &= \phi(m)\phi(n).
+  \end{align*}
+  By induction, the result holds for all positive integers $k$.
+\end{proof}
