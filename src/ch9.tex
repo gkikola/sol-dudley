@@ -259,3 +259,20 @@ $100116 = 2^2\cdot3^5\cdot103$.
   contains a factor of $16$, we will get $a^8\equiv0\pmod{16}$ for
   each $a$ such that $(a,16) > 1$.
 \end{solution}
+
+\Problem7 Show that if $n$ is odd, then $\phi(4n) = 2\phi(n)$.
+\begin{proof}
+  Since $n$ is odd, we know $(4,n) = 1$, so the multiplicativity of
+  $\phi$ gives
+  \begin{equation*}
+    \phi(4n) = \phi(4)\phi(n) = 2\phi(n). \qedhere
+  \end{equation*}
+\end{proof}
+
+\Problem8 Perfect numbers satisfy $\sigma(n) = 2n$. Which $n$ satisfy
+$\phi(n) = 2n$?
+\begin{solution}
+  There are no positive integers $n$ with $\phi(n) = 2n$, for the
+  simple reason that there are only $n$ positive integers less than or
+  equal to $n$ in the first place. So $\phi(n) \leq n$ for all $n$.
+\end{solution}
