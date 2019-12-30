@@ -276,3 +276,46 @@ $\phi(n) = 2n$?
   simple reason that there are only $n$ positive integers less than or
   equal to $n$ in the first place. So $\phi(n) \leq n$ for all $n$.
 \end{solution}
+
+\Problem9 $1 + 2 = (3/2)\phi(3)$, $1 + 3 = (4/2)\phi(4)$,
+$1 + 2 + 3 + 4 = (5/2)\phi(5)$, $1 + 5 = (6/2)\phi(6)$,
+$1 + 2 + 3 + 4 + 5 + 6 = (7/2)\phi(7)$, and
+$1 + 3 + 5 + 7 = (8/2)\phi(8)$. Guess a theorem.
+\begin{solution}
+  For each positive integer $n > 1$, the sum of the positive integers
+  less than or equal to $n$ which are relatively prime to $n$ is
+  $(n/2)\phi(n)$.
+
+  To prove this, let $T$ be the set of positive integers less than or
+  equal to $n$ and relatively prime to it, so that
+  $T = \{t_1,t_2,t_3,\dots,t_{\phi(n)}\}$.
+
+  Take the number $t_i$ for some $i$. Then $(t_i,n) = 1$ and, by
+  Theorem~4 of Section~1, there are integers $x$ and $y$ with
+  \begin{equation*}
+    t_ix + ny = 1.
+  \end{equation*}
+  But by setting $a = -x$ and $b = x + y$, this equation becomes
+  \begin{equation*}
+    a(n - t_i) + bn = 1,
+  \end{equation*}
+  so that $(n - t_i, n) = 1$ and $(n - t_i)\in T$. We see that
+  $t_i\in T$ if and only if $n - t_i\in T$.
+
+  Now let $S$ be the sum of the members of $T$. Then
+  \begin{equation}
+    \label{eq:euler:sum-of-totatives1}
+    S = t_1 + t_2 + t_3 + \cdots + t_{\phi(n)}.
+  \end{equation}
+  On the other hand, we can also write
+  \begin{equation}
+    \label{eq:euler:sum-of-totatives2}
+    S = (n - t_1) + (n - t_2) + (n - t_3) + \cdots + (n - t_{\phi(n)}).
+  \end{equation}
+  Adding equations \eqref{eq:euler:sum-of-totatives1} and
+  \eqref{eq:euler:sum-of-totatives2} together then gives
+  \begin{equation*}
+    2S = n\phi(n)
+  \end{equation*}
+  and dividing by $2$ gives the desired result.
+\end{solution}
