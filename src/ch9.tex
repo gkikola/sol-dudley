@@ -391,13 +391,15 @@ $f(f(n)) = \phi(n)$ if $n = 2^k$, $k = 3, 4, 5, \dots$.
 
 \Problem{14} Find four solutions of $\phi(n) = 16$.
 \begin{solution}
-  Since $3 - 1 = 2$ and $5 - 1 = 4$, it is not hard to see that all
-  solutions will have the form $2^a3^b5^c$ for some nonnegative
-  integers $a,b,c$. By inspection, we find
+  Since $3 - 1 = 2$, $5 - 1 = 4$, and $17 - 1 = 16$, solutions should
+  have the form $2^a3^b5^c17^d$ for some nonnegative integers
+  $a,b,c,d$. By inspection, we find
   \begin{align*}
+    \phi(17) &= 16, \\
     \phi(32) &= \phi(2^5) = 16, \\
-    \phi(48) &= \phi(2^4)\phi(3) = 8\cdot2 = 16, \\
+    \phi(34) &= \phi(2)\phi(17) = 1\cdot16 = 16, \\
     \phi(40) &= \phi(2^3)\phi(5) = 4\cdot4 = 16, \\
+    \phi(48) &= \phi(2^4)\phi(3) = 8\cdot2 = 16, \\
     \intertext{and}
     \phi(60) &= \phi(2^2)\phi(3)\phi(5) = 2\cdot2\cdot4 = 16. \qedhere
   \end{align*}
