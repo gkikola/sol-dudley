@@ -364,3 +364,27 @@ satisfies $ax\equiv c\pmod{m}$.
   and since $(a,m) = 1$, we have $ca^{\phi(m)}\equiv c\pmod{m}$ by
   Euler's Theorem.
 \end{proof}
+
+\Problem{13} Let $f(n) = (n + \phi(n))/2$. Show that
+$f(f(n)) = \phi(n)$ if $n = 2^k$, $k = 3, 4, 5, \dots$.
+\begin{proof}
+  We compute
+  \begin{align*}
+    f(2^k) &= \frac{2^k + \phi(2^k)}2 \\
+           &= \frac{2^k + 2^{k-1}}2 \\
+           &= 2^{k-1} + 2^{k-2} \\
+           &= 2^{k-2}(2 + 1) \\
+           &= 2^{k-2}\cdot3.
+  \end{align*}
+  So,
+  \begin{align*}
+    f(f(2^k)) &= f(2^{k-2}\cdot3) \\
+              &= \frac{2^{k-2}\cdot3 + \phi(2^{k-2})\phi(3)}2 \\
+              &= \frac{2^{k-2}\cdot3 + 2^{k-3}\cdot2}2 \\
+              &= 2^{k-3}\cdot3 + 2^{k-3} \\
+              &= 2^{k-3}(3 + 1) \\
+              &= 2^{k-1} \\
+              &= \phi(2^k).
+  \end{align*}
+  We see that $f(f(2^k)) = \phi(2^k)$ for all $k\geq3$.
+\end{proof}
