@@ -404,3 +404,40 @@ $f(f(n)) = \phi(n)$ if $n = 2^k$, $k = 3, 4, 5, \dots$.
     \phi(60) &= \phi(2^2)\phi(3)\phi(5) = 2\cdot2\cdot4 = 16. \qedhere
   \end{align*}
 \end{solution}
+
+\Problem{15} Find all solutions of $\phi(n) = 4$ and prove that there
+are no more.
+\begin{solution}
+  Let $n$ be a solution, and let
+  $n = p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$ be the prime-power
+  decomposition of $n$. Then
+  \begin{equation*}
+    \phi(n) = p_1^{e_1 - 1}(p_1 - 1)p_2^{e_2 - 1}(p_2 - 1)
+    \cdots p_k^{e_k - 1}(p_k - 1) = 4.
+  \end{equation*}
+  Each factor in this expression must be either $1$, $2$, or $4$. If
+  \begin{equation*}
+    p_i^{e_i - 1}(p_i - 1) = 1,
+  \end{equation*}
+  then $p_i = 2$ and $e_i = 1$. If
+  \begin{equation*}
+    p_i^{e_i - 1}(p_i - 1) = 2,
+  \end{equation*}
+  then either $p_i = 2$ and $e_i = 2$ or $p_i = 3$ and $e_i = 1$. And
+  if
+  \begin{equation*}
+    p_i^{e_i - 1}(p_i - 1) = 4,
+  \end{equation*}
+  then either $p_i = 2$ and $e_i = 3$ or $p_i = 5$ and $e_i = 1$. We
+  can see that these are the only possibilities. Thus we have the
+  following solutions.
+  \begin{align*}
+    \phi(5) &= 4, \\
+    \phi(8) &= \phi(2^3) = 2^2 = 4, \\
+    \phi(10) &= \phi(2)\phi(5) = 1\cdot4 = 4, \\
+    \intertext{and}
+    \phi(12) &= \phi(2^2)\phi(3) = 2\cdot2 = 4.
+  \end{align*}
+  As we have ruled out all other possibilities, these are the only
+  solutions.
+\end{solution}
