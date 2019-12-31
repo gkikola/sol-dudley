@@ -539,3 +539,19 @@ $n > 4$, then $\phi(n) \leq n/3$.
   \end{align*}
   So $\phi(n) \leq n/3$.
 \end{proof}
+
+\Problem{20} Show that $\phi(n) = 14$ is impossible.
+\begin{proof}
+  Suppose $\phi(n) = 14$ for some $n$. Then
+  \begin{equation*}
+    \phi(n) = p_1^{e_1-1}(p_1 - 1)\cdots p_k^{e_k-1}(p_k - 1),
+  \end{equation*}
+  where $n = p_1^{e_1}\cdots p_k^{e_k}$ is the prime-power
+  decomposition of $n$.
+
+  We know that $7\mid\phi(n)$, so one of the factors $p_i^{e_i-1}$ or
+  $(p_i-1)$ must be $7$. Since $8$ is not a prime, we cannot have
+  $p_i - 1 = 7$, so $p_i^{e_i - 1} = 7$ for some $i$. But then
+  $p_i - 1 = 6$ so that $3$ divides $\phi(n)$, which is clearly
+  impossible. Therefore there is no $n$ with $\phi(n) = 14$.
+\end{proof}
