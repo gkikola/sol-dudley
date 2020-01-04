@@ -28,3 +28,24 @@ possible prime divisor of $2^{19} - 1$?
   prime divisor is therefore $191$. ($191$ is not a divisor, however,
   as $2^{19} - 1$ happens to be prime).
 \end{solution}
+
+\Exercise4 Show that $3$ is a primitive root of $7$.
+\begin{solution}
+  We get
+  \begin{align*}
+    3^1 &\equiv 3\pmod7, \\
+    3^2 &\equiv 2\pmod7, \\
+    3^3 &\equiv 6\pmod7, \\
+    3^4 &\equiv 4\pmod7, \\
+    3^5 &\equiv 5\pmod7, \\
+    3^6 &\equiv 1\pmod7.
+  \end{align*}
+  Since $\phi(7) = 6$, $3$ is a primitive root of $7$.
+\end{solution}
+
+\Exercise5 Find, by trial, a primitive root of $10$.
+\begin{solution}
+  $\phi(10) = 4$. The powers of $3$ (mod $10$) are, respectively, $3$,
+  $9$, $7$, and $1$, so $3$ is a primitive root of $10$. $7$ is also a
+  primitive root.
+\end{solution}
