@@ -131,3 +131,21 @@ $19$ (mod $20$)? Does $20$ have primitive roots?
 \begin{solution}
   $11$ has order $6$, so $11^5\equiv27\pmod{37}$ also has order $6$.
 \end{solution}
+
+\Problem9 If $a$, $a\neq1$, has order $t$ (mod $p$), show that
+\begin{equation*}
+  a^{t-1} + a^{t-2} + \cdots + 1 \equiv 0\pmod{p}.
+\end{equation*}
+\begin{proof}
+  Since $a$ has order $t$, $a^t-1\equiv0\pmod{p}$. Then
+  \begin{equation*}
+    0\equiv a^t - 1 \equiv
+    (a - 1)(a^{t-1} + a^{t-2} + \cdots + 1)\pmod{p}.
+  \end{equation*}
+  Since $p$ is prime and $a - 1\not\equiv0\pmod{p}$, we know $a - 1$
+  has a multiplicative inverse (mod $p$), so we can multiply both
+  sides of the congruence by this inverse to get
+  \begin{equation*}
+    a^{t-1} + a^{t-2} + \cdots + 1 \equiv 0\pmod{p}. \qedhere
+  \end{equation*}
+\end{proof}
