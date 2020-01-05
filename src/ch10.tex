@@ -149,3 +149,32 @@ $19$ (mod $20$)? Does $20$ have primitive roots?
     a^{t-1} + a^{t-2} + \cdots + 1 \equiv 0\pmod{p}. \qedhere
   \end{equation*}
 \end{proof}
+
+\Problem{10} If $g$ and $h$ are primitive roots of an odd prime $p$,
+then $g \equiv h^k\pmod{p}$ for some integer $k$. Show that $k$ is
+odd.
+\begin{proof}
+  This follows from Lemma~1. $h$ has order $p - 1$, so $h^k$ has the
+  same order if and only if $(k,p-1) = 1$. But since $p$ is an odd
+  prime, if $k$ is even then $(k,p-1)\geq2$ and $g$ would not be a
+  primitive root. Therefore $k$ must be odd.
+\end{proof}
+
+\Problem{11} Show that if $g$ and $h$ are primitive roots of an odd
+prime $p$, then the least residue of $gh$ is not a primitive root of
+$p$.
+\begin{proof}
+  Since $g$ and $h$ are both primitive roots, $h = g^k$ for some
+  integer $k$. By the previous problem we know that $k$ must be
+  odd. Then $gh = g^{k+1}$ cannot be a primitive root, because $k+1$
+  is even.
+\end{proof}
+
+\Problem{12} If $g$, $h$, and $k$ are primitive roots of $p$, is the
+least residue of $ghk$ always a primitive root of $p$?
+\begin{solution}
+  This is not true in general. For example, for $p = 23$, one can
+  verify that $5$, $10$, and $17$ are primitive roots, but
+  $5\cdot10\cdot17\equiv22\pmod{23}$ and $22$ is not a primitive root
+  of $23$.
+\end{solution}
