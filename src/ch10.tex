@@ -178,3 +178,32 @@ least residue of $ghk$ always a primitive root of $p$?
   $5\cdot10\cdot17\equiv22\pmod{23}$ and $22$ is not a primitive root
   of $23$.
 \end{solution}
+
+\Problem{13} Show that if $a$ has order $3$ (mod $p$), then $a + 1$
+has order $6$ (mod $p$).
+\begin{proof}
+  Rewriting $a^3 - 1\equiv0\pmod{p}$, we get
+  $(a - 1)(a^2 + a + 1) \equiv 0\pmod{p}$, and since
+  $a\not\equiv1\pmod{p}$, we get $a^2 + a + 1\equiv0\pmod{p}$. Then
+  \begin{align*}
+    (a + 1)^3
+    &= a^3 + 3a^2 + 3a + 1 \\
+    &\equiv 1 + 3a^2 + 3a + 1 \pmod{p} \\
+    &\equiv 3(a^2 + a + 1) - 1 \pmod{p} \\
+    &\equiv -1 \pmod{p}.
+  \end{align*}
+  Since $p > 2$ (because $a$ has order greater than $2$),
+  $1\not\equiv-1\pmod{p}$ and we see that the order of $a+1$ is not
+  $3$. But $(a+1)^6\equiv1\pmod{p}$ so the order of $a$ must divide
+  $6$.
+
+  The proof will be complete if we can show that $a+1$ does not have
+  order $2$. Since
+  \begin{align*}
+    (a + 1)^2 &= a^2 + 2a + 1 \\
+              &= (a^2 + a + 1) + a \\
+              &\equiv a\pmod{p},
+  \end{align*}
+  we see that $a+1$ does not have order $2$. Therefore $a+1$ has order
+  $6$.
+\end{proof}
