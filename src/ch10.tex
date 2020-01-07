@@ -205,3 +205,17 @@ has order $6$ (mod $p$).
   we see that $a+1$ does not have order $2$. Therefore $a+1$ has order
   $6$.
 \end{proof}
+
+\Problem{14} If $p$ and $q$ are odd primes and $q\mid a^p + 1$, show
+that either $q\mid a + 1$ or $q = 2kp + 1$ for some integer $k$.
+\begin{proof}
+  We know that $a^p\equiv-1\pmod{q}$, so the order of $a$ (mod $q$)
+  cannot be $1$ or $p$. And since $a^{2p}\equiv1\pmod{q}$, the order
+  of $a$ (mod $q$) is either $2$ or $2p$.
+
+  If the order of $a$ is $2$, then $a\equiv-1\pmod{q}$ so
+  $q\mid a + 1$.
+
+  On the other hand, if the order of $a$ is $2p$, then
+  $2p\mid\phi(q) = q - 1$ so that $q = 2kp + 1$.
+\end{proof}
