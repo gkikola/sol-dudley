@@ -255,3 +255,14 @@ least residue of $(a + 1)^4\pmod{p}$?
   bigger than $\sqrt{p}$. Since none of these are divisors, $p$ must
   be prime.
 \end{solution}
+
+\Problem{18} If $g$ is a primitive root of $p$, show that two
+consecutive powers of $g$ have consecutive least residues. That is,
+show that there exists $k$ such that $g^{k+1}\equiv g^k+1\pmod{p}$.
+\begin{proof}
+  We want to show that $g^k(g - 1)\equiv1\pmod{p}$ for some integer
+  $k$. The linear congruence $x(g - 1)\equiv1\pmod{p}$ has a solution
+  in $x$ since $(g-1,p) = 1$. But every least residue (mod $p$) can be
+  written in the form $g^k$ for some $k$ by Theorem~5. Thus a solution
+  exists (and is, in fact, unique modulo $p$).
+\end{proof}
