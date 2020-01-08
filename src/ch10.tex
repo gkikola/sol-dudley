@@ -283,3 +283,44 @@ for any $k$.
   $g^k\equiv g^{k+1}\pmod{p}$. But then $g^k(g - 1)\equiv0\pmod{p}$,
   which is a contradiction.
 \end{proof}
+
+\Problem{20}
+\begin{enumerate}
+\item Show that if $m$ is a number having primitive roots, then the
+  product of the positive integers less than or equal to $m$ and
+  relatively prime to it is congruent to $-1$ (mod $m$).
+  \begin{proof}
+    The case for $m = 2$ is easy to check, so we will assume that
+    $m > 2$. Let $g$ be a primitive root of $m$. By Theorem~5, the
+    positive integers less than or equal to $m$ and relatively prime
+    to it are given by the powers of $g$. That is,
+    \begin{equation*}
+      g, g^2, g^3, \dots, g^{\phi(m)}
+    \end{equation*}
+    is a permutation of these relatively prime integers. Therefore
+    \begin{align*}
+      \prod_{\substack{1\leq i\leq m \\ (i,m) = 1}}i
+      &= \prod_{1\leq j\leq\phi(m)}g^j \\
+      &= g\cdot g^2\cdot g^3\cdots g^{\phi(m)}\\
+      &= g^{1+2+\cdots+\phi(m)} \\
+      &= g^{\phi(m)(\phi(m)+1)/2}.
+    \end{align*}
+    Since $\phi(m)$ is even ($m > 2$), we can write
+    \begin{align*}
+      g^{\phi(m)(\phi(m)+1)/2}
+      &= (g^{\phi(m)+1})^{\phi(m)/2} \\
+      &\equiv g^{\phi(m)/2}\pmod{m} \\
+      &\equiv -1 \pmod{m}.
+    \end{align*}
+    Therefore the product of the positive integers less than or equal
+    to $m$ and relatively prime to it is congruent to $-1$ (mod $m$).
+  \end{proof}
+\item Show that the result in (a) is not always true if $m$ does not
+  have primitive roots.
+  \begin{solution}
+    For example, $8$ does not have primitive roots, and
+    \begin{equation*}
+      1\cdot3\cdot5\cdot7\equiv1\not\equiv-1\pmod{8}. \qedhere
+    \end{equation*}
+  \end{solution}
+\end{enumerate}
