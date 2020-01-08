@@ -233,3 +233,12 @@ least residue of $(a + 1)^4\pmod{p}$?
   \end{align*}
   Therefore the least residue of $(a + 1)^4$ is $p - 4$.
 \end{solution}
+
+\Problem{16} Show that $131071 = 2^{17} - 1$ is prime.
+\begin{proof}
+  Suppose $2^{17} - 1$ is not prime, and let $q$ be the smallest
+  positive prime divisor. From Theorem~3, we must have $q = 34k + 1$
+  for some integer $k$. The only possibilities are $q = 103$, $137$,
+  $239$, and $307$ (since $\sqrt{131071}<363$). One can easily check
+  that none of these divide $131071$. Therefore it is prime.
+\end{proof}
