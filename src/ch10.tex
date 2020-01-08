@@ -266,3 +266,20 @@ show that there exists $k$ such that $g^{k+1}\equiv g^k+1\pmod{p}$.
   written in the form $g^k$ for some $k$ by Theorem~5. Thus a solution
   exists (and is, in fact, unique modulo $p$).
 \end{proof}
+
+\Problem{19} If $g$ is a primitive root of $p$, show that no three
+consecutive powers of $g$ have consecutive least residues. That is,
+show that $g^{k+2}\equiv g^{k+1}+1\equiv g^k+2\pmod{p}$ is impossible
+for any $k$.
+\begin{proof}
+  In order for this to be true, we would need
+  \begin{equation*}
+    g^k(g - 1)\equiv1\pmod{p}
+    \quad\text{and}\quad
+    g^{k+1}(g - 1)\equiv1\pmod{p}.
+  \end{equation*}
+  But, as mentioned in the previous problem, $x(g - 1)\equiv1\pmod{p}$
+  has exactly one solution since $(g - 1, p) = 1$. So we must have
+  $g^k\equiv g^{k+1}\pmod{p}$. But then $g^k(g - 1)\equiv0\pmod{p}$,
+  which is a contradiction.
+\end{proof}
