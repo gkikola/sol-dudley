@@ -39,3 +39,25 @@ Exercise~\ref{exercise:quad-cong:2-3-1-cong-0-complete-sq}.
   \end{equation*}
   has solutions $x\equiv2$ and $x\equiv4\pmod5$.
 \end{solution}
+
+\Exercise4 If $p > 3$, what are the two solutions of
+$x^2\equiv4\pmod{p}$?
+\begin{solution}
+  We have $p\mid(x-2)(x+2)$ so $p\mid(x-2)$ or $p\mid(x+2)$. Then
+  $x\equiv2$ or $x\equiv p-2$ (mod $p$). By Theorem~1, these are the
+  only solutions.
+\end{solution}
+
+\Exercise5 For what values of $a$ does $x^2\equiv a\pmod7$ have two
+solutions?
+\begin{solution}
+  We find the values of $x^2$, reduced modulo $7$:
+  \begin{center}
+    \begin{tabular}{r|cccccc}
+      $x$ & 1 & 2 & 3 & 4 & 5 & 6 \\
+      $x^2\pmod7$ & 1 & 4 & 2 & 2 & 4 & 1
+    \end{tabular}
+  \end{center}
+  From these values, we see that $x^2\equiv a\pmod7$ has two solutions
+  when and only when $a = 1$, $2$, or $4$.
+\end{solution}
