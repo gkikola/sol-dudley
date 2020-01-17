@@ -92,7 +92,9 @@ $(1/p)$?
   $(1/p) = 1$.
 \end{solution}
 
-\Exercise8 What is $(4/5)$? $(4/7)$? $(4/p)$ for any odd prime $p$?
+\Exercise8
+\label{exercise:quad-cong:leg-sym-4-over-p}
+What is $(4/5)$? $(4/7)$? $(4/p)$ for any odd prime $p$?
 \begin{solution}
   It is easy to see by Euler's Criterion that $(4/5) = (4/7) = 1$. And
   in fact, $2$ and $p - 2$ are always solutions to the quadratic
@@ -122,3 +124,36 @@ $(1/p)$?
   $x^2\equiv a\pmod{p}$ must have the same solution, which gives a
   contradiction. Therefore $(b/p) = -1$.
 \end{proof}
+
+\Exercise{11} Prove that if $p\nmid a$, then $(a^2/p) = 1$, using the
+fact that $(a/p)\equiv a^{(p-1)/2}\pmod{p}$.
+\begin{proof}
+  From the above, and by Fermat's Theorem, we have that
+  \begin{equation*}
+    (a^2/p) \equiv (a^2)^{(p-1)/2} \equiv a^{p-1} \equiv 1\pmod{p}.
+  \end{equation*}
+  Since the Legendre symbol on the left is either $1$ or $-1$, the
+  congruence implies equality.
+\end{proof}
+
+\Exercise{12} Prove that $(4a/p) = (a/p)$.
+\begin{proof}
+  In Exercise~\ref{exercise:quad-cong:leg-sym-4-over-p} we saw that
+  $(4/p) = 1$. So, by Theorem~3 (C), we have
+  \begin{equation*}
+    (4a/p) = (4/p)(a/p) = (a/p). \qedhere
+  \end{equation*}
+\end{proof}
+
+\Exercise{13} Evaluate $(19/5)$ and $(-9/13)$ by using (A) and (B) of
+Theorem~3.
+\begin{solution}
+  We have
+  \begin{equation*}
+    (19/5) = (4/5) = (2^2/5) = 1
+  \end{equation*}
+  and
+  \begin{equation*}
+    (-9/13) = (4/13) = (2^2/13) = 1. \qedhere
+  \end{equation*}
+\end{solution}
