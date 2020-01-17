@@ -82,3 +82,27 @@ solutions?
     x\equiv16\pmod{31}. \qedhere
   \end{equation*}
 \end{solution}
+
+\Exercise7 What is $(1/3)$? $(1/7)$? $(1/11)$? In general, what is
+$(1/p)$?
+\begin{solution}
+  Since $1$ is a quadratic residue mod $3$, the Legendre symbol
+  $(1/3) = 1$. Similarly, $(1/7) = (1/11) = 1$. In general, for any
+  odd prime $p$, $1$ satisfies Euler's Criterion so we have
+  $(1/p) = 1$.
+\end{solution}
+
+\Exercise8 What is $(4/5)$? $(4/7)$? $(4/p)$ for any odd prime $p$?
+\begin{solution}
+  It is easy to see by Euler's Criterion that $(4/5) = (4/7) = 1$. And
+  in fact, $2$ and $p - 2$ are always solutions to the quadratic
+  congruence $x^2\equiv4\pmod{p}$ for any odd prime $p$. Hence
+  $(4/p) = 1$.
+\end{solution}
+
+\Exercise9 Induce a theorem from the two preceding exercises.
+\begin{solution}
+  It seems that $(a^2/p) = 1$ for any $a$, provided $p\nmid
+  a$. Indeed, this is easily seen to be true since $a$ itself is a
+  solution to the congruence $x^2\equiv a^2\pmod{p}$.
+\end{solution}
