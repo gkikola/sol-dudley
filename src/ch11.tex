@@ -61,3 +61,24 @@ solutions?
   From these values, we see that $x^2\equiv a\pmod7$ has two solutions
   when and only when $a = 1$, $2$, or $4$.
 \end{solution}
+
+\Exercise6 Find the solutions of $x^2\equiv8\pmod{31}$.
+\begin{solution}
+  One may check that this congruence satisfies Euler's Criterion. We
+  have
+  \begin{equation*}
+    8\equiv39\equiv70\equiv101\equiv132
+    \equiv2^2\cdot33\pmod{31},
+  \end{equation*}
+  and
+  \begin{equation*}
+    33\equiv64\equiv8^2\pmod{31}.
+  \end{equation*}
+  Therefore $8\equiv16^2\pmod{31}$ and we see that the quadratic
+  congruence $x^2\equiv8\pmod{31}$ has the two solutions
+  \begin{equation*}
+    x\equiv-16\equiv15\pmod{31}
+    \quad\text{and}\quad
+    x\equiv16\pmod{31}. \qedhere
+  \end{equation*}
+\end{solution}
