@@ -106,3 +106,19 @@ $(1/p)$?
   a$. Indeed, this is easily seen to be true since $a$ itself is a
   solution to the congruence $x^2\equiv a^2\pmod{p}$.
 \end{solution}
+
+\Exercise{10} Verify that
+\begin{equation*}
+  \text{if}\quad
+  (a/p) = -1
+  \quad\text{and}\quad
+  a\equiv b\pmod{p},
+  \quad\text{then}\quad
+  (b/p) = -1.
+\end{equation*}
+\begin{proof}
+  Suppose $(a/p) = -1$ and $a\equiv b\pmod{p}$, but that $(b/p) =
+  1$. Then $x^2\equiv b\pmod{p}$ has a solution. But now
+  $x^2\equiv a\pmod{p}$ must have the same solution, which gives a
+  contradiction. Therefore $(b/p) = -1$.
+\end{proof}
