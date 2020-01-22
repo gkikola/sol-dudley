@@ -355,3 +355,69 @@ Problem~\ref{problem:quad-cong:sample2} that have them.
     (36/73) &= 1. \qedhere
   \end{align*}
 \end{solution}
+
+\Problem7 Solve $2x^2 + 3x + 1\equiv0\pmod7$ and
+$2x^2 + 3x + 1\equiv0\pmod{101}$.
+\begin{solution}
+  Since $2\cdot4\equiv1\pmod7$ we may multiply the first congruence by
+  $4$ to get
+  \begin{equation*}
+    x^2 + 5x + 4\equiv0\pmod7.
+  \end{equation*}
+  Note that $5\equiv-2\pmod7$, so
+  \begin{equation*}
+    x^2 - 2x + 4\equiv0\pmod7.
+  \end{equation*}
+  Completing the square now gives
+  \begin{equation*}
+    (x - 1)^2\equiv-3\pmod7.
+  \end{equation*}
+  So $(x-1)^2\equiv4\pmod7$ and we get $x\equiv3\pmod7$ or
+  $x\equiv6\pmod7$.
+
+  For the second congruence, we have $2\cdot51\equiv1\pmod{101}$, so
+  multiplying by $51$ gives
+  \begin{equation*}
+    x^2 + 52x + 51\equiv0\pmod{101}.
+  \end{equation*}
+  Note that $26^2 = 676\equiv70\pmod{101}$, so we can rearrange to get
+  \begin{equation*}
+    x^2 + 52x + 70 \equiv 19\pmod{101}
+  \end{equation*}
+  or
+  \begin{equation*}
+    (x + 26)^2\equiv19\pmod{101}.
+  \end{equation*}
+  Note that $19\equiv625\pmod{101}$, so $x +
+  26\equiv\pm25\pmod{101}$. The two solutions of the second congruence
+  are therefore
+  \begin{equation*}
+    x\equiv50\pmod{101}
+    \quad\text{and}\quad
+    x\equiv100\pmod{101}. \qedhere
+  \end{equation*}
+\end{solution}
+
+\Problem8 Solve $3x^2 + x + 8\equiv0\pmod{11}$ and
+$3x^2 + x + 52\equiv0\pmod{11}$.
+\begin{solution}
+  Note that both congruences are the same, since
+  $52\equiv8\pmod{11}$. Now, because $4$ is the multiplicative inverse
+  of $3$ (mod $11$), we have
+  \begin{equation*}
+    x^2 + 4x + 10 \equiv 0\pmod{11}.
+  \end{equation*}
+  Rearranging, we get
+  \begin{equation*}
+    x^2 + 4x + 4 \equiv5\pmod{11}
+  \end{equation*}
+  or
+  \begin{equation*}
+    (x + 2)^2 \equiv 5\pmod{11}.
+  \end{equation*}
+  Since $5\equiv16\pmod{11}$, we get
+  \begin{equation*}
+    x + 2 \equiv \pm4\pmod{11}
+  \end{equation*}
+  so that $x\equiv2$ or $x\equiv5\pmod{11}$.
+\end{solution}
