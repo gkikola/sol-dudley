@@ -421,3 +421,57 @@ $3x^2 + x + 52\equiv0\pmod{11}$.
   \end{equation*}
   so that $x\equiv2$ or $x\equiv5\pmod{11}$.
 \end{solution}
+
+\Problem9 Calculate $(1234/4567)$ and $(4321/4567)$.
+\begin{solution}
+  We have $(1234/4567) = (2/4567)(617/4567)$. Since
+  $4567\equiv7\pmod8$, we know $(2/4567) = 1$ by Theorem~6. And since
+  $617\equiv1\pmod4$, we may apply Quadratic Reciprocity to get
+  \begin{equation*}
+    (617/4567) = (4567/617) = (248/617) = (8/617)(31/617).
+  \end{equation*}
+  Now $617\equiv1\pmod8$, so $(8/617) = (2/617) = 1$. Again, using
+  Quadratic Reciprocity, we get
+  \begin{multline*}
+    (31/617) = (617/31) = (28/31) = (4/31)(7/31) \\
+    = -(31/7) = -(3/7) = (7/3) = (1/3) = 1.
+  \end{multline*}
+  Therefore
+  \begin{equation*}
+    (1234/4567) = 1.
+  \end{equation*}
+
+  Next,
+  \begin{align*}
+    (4321/4567) &= (29/4567)(149/4567) \\
+                &= (4567/29)(4567/149) \\
+                &= (14/29)(97/149) \\
+                &= (2/29)(7/29)(97/149).
+  \end{align*}
+  Now $(2/29) = -1$ by Theorem~6. For $(7/29)$, we get
+  \begin{equation*}
+    (7/29) = (29/7) = (1/7) = 1.
+  \end{equation*}
+  For $(97/149)$, we get
+  \begin{align*}
+    (97/149) &= (149/97) = (52/97) \\
+             &= (4/97)(13/97) \\
+             &= (97/13) = (6/13) \\
+             &= (2/13)(3/13).
+  \end{align*}
+  $(2/13) = -1$ by Theorem~6 and $(3/13) = (13/3) = (1/3) =
+  1$. Putting everything together, we get
+  \begin{equation*}
+    (4321/4567) = -1\cdot1\cdot-1\cdot1 = 1. \qedhere
+  \end{equation*}
+\end{solution}
+
+\Problem{10} Calculate $(1356/2467)$ and $(6531/2467)$.
+\begin{solution}
+  In the same fashion as the previous exercise, we may determine that
+  \begin{equation*}
+    (1356/2467) = 1
+    \quad\text{and}\quad
+    (6531/2467) = -1. \qedhere
+  \end{equation*}
+\end{solution}
