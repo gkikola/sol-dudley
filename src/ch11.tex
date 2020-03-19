@@ -574,7 +574,9 @@ quickly?
   impossible to find.
 \end{solution}
 
-\Problem{16} Show that if $a$ is a quadratic residue (mod $p$) and
+\Problem{16}
+\label{exercise:quad-cong:ab-cong-1-condition-for-b-over-p}
+Show that if $a$ is a quadratic residue (mod $p$) and
 $ab\equiv1\pmod{p}$ then $b$ is a quadratic residue (mod $p$).
 \begin{proof}
   Suppose $(a/p) = 1$ and $ab\equiv1\pmod{p}$. Then
@@ -615,4 +617,45 @@ then $(p-1)/2$ is a quadratic residue (mod $p$).
   $(p/q) = (1/q) = 1$. So, by the result in the preceding paragraph,
   $(q/p) = 1$ and we see that $q = (p-1)/2$ is a quadratic residue
   (mod $p$).
+\end{proof}
+
+\Problem{19} Generalize
+Problem~\ref{exercise:quad-cong:ab-cong-1-condition-for-b-over-p} by
+finding what condition on $r$ will guarantee that if $a$ is a
+quadratic residue (mod $p$) and $ab\equiv r\pmod{p}$, then $b$ is a
+quadratic residue (mod $p$).
+\begin{solution}
+  Since $(a/p) = 1$, we get
+  \begin{equation*}
+    1 = (b/p) = (a/p)(b/p) = (ab/p) = (r/p).
+  \end{equation*}
+  We see that the desired condition on $r$ is that $r$ is itself a
+  quadratic residue (mod $p$).
+\end{solution}
+
+\Problem{20} Suppose that $p = q + 4a$, where $p$ and $q$ are odd
+primes. Show that $(a/p) = (a/q)$.
+\begin{proof}
+  Note that $p\equiv q\pmod4$, $p\equiv4a\pmod{q}$, and
+  $q\equiv-4a\pmod{p}$.
+
+  There are two cases. First, if $p\equiv q\equiv1\pmod4$, then
+  \begin{equation*}
+    (a/p) = (-1/p)(4/p)(a/p) = (-4a/p) = (q/p)
+  \end{equation*}
+  and
+  \begin{equation*}
+    (a/q) = (4/q)(a/q) = (4a/q) = (p/q).
+  \end{equation*}
+  The Quadratic Reciprocity Theorem then shows that $(a/p) = (a/q)$.
+
+  On the other hand, if $p\equiv q\equiv3\pmod4$, then
+  \begin{equation*}
+    (a/p) = -(-1/p)(4/p)(a/p) = -(-4a/p) = -(q/p)
+  \end{equation*}
+  and
+  \begin{equation*}
+    (a/q) = (4a/q) = (p/q).
+  \end{equation*}
+  Again, Quadratic Reciprocity proves the result.
 \end{proof}
