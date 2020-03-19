@@ -570,6 +570,28 @@ quickly?
 \begin{solution}
   A is looking for $n$ such that $n^2\equiv-1\pmod7$. But we know from
   Theorem~5 that $(-1/7) = -1$ (since $7\equiv3\pmod4$). This shows
-  that $-1$ is a quadratic nonresidue modulo $7$, so what A seeks is
+  that $-1$ is a quadratic nonresidue (mod $7$), so what A seeks is
   impossible to find.
+\end{solution}
+
+\Problem{16} Show that if $a$ is a quadratic residue (mod $p$) and
+$ab\equiv1\pmod{p}$ then $b$ is a quadratic residue (mod $p$).
+\begin{proof}
+  Suppose $(a/p) = 1$ and $ab\equiv1\pmod{p}$. Then
+  \begin{equation*}
+    (b/p) = (a/p)(b/p) = (ab/p) = (1/p) = 1.
+  \end{equation*}
+  Therefore $b$ is a quadratic residue (mod $p$).
+\end{proof}
+
+\Problem{17} Does $x^2\equiv211\pmod{159}$ have a solution? Note that
+$159$ is not prime.
+\begin{solution}
+  Since $211\equiv529\equiv23^2\pmod{159}$, we see that the congruence
+  does have solutions. In particular, $x\equiv23$ and
+  $x\equiv136\pmod{159}$ are solutions.
+
+  These are not the only solutions, however. We also have
+  $211\equiv5776\equiv76^2\pmod{159}$, giving $x\equiv76$ and
+  $x\equiv83\pmod{159}$ as additional solutions.
 \end{solution}
