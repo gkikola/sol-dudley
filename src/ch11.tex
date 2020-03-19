@@ -561,3 +561,15 @@ for odd primes $p$ and $q$.
 
   In every case, $(p/q)(q/p) = (-1)^{(p-1)(q-1)/4}$.
 \end{proof}
+
+\Problem{15} Student A says, ``I've checked all the way up to $100$
+and I still haven't found $n$ so that $n^2 + 1$ is divisible by
+$7$. I'm tired now---I'll find one tomorrow.'' Student B says, after a
+few seconds of reflection, ``No you won't.'' How did B know so
+quickly?
+\begin{solution}
+  A is looking for $n$ such that $n^2\equiv-1\pmod7$. But we know from
+  Theorem~5 that $(-1/7) = -1$ (since $7\equiv3\pmod4$). This shows
+  that $-1$ is a quadratic nonresidue modulo $7$, so what A seeks is
+  impossible to find.
+\end{solution}
