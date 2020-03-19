@@ -595,3 +595,24 @@ $159$ is not prime.
   $211\equiv5776\equiv76^2\pmod{159}$, giving $x\equiv76$ and
   $x\equiv83\pmod{159}$ as additional solutions.
 \end{solution}
+
+\Problem{18} Prove that if $p\equiv3\pmod8$ and $(p-1)/2$ is prime,
+then $(p-1)/2$ is a quadratic residue (mod $p$).
+\begin{proof}
+  Let $q = (p-1)/2$ be prime. Since $p\equiv3\pmod8$, we have
+  $p = 8k + 3$ for some integer $k$. Then
+  \begin{equation*}
+    q = \frac{p-1}2 = \frac{8k + 2}2 = 4k + 1.
+  \end{equation*}
+  Hence $q\equiv1\pmod4$ and $q$ is an odd prime. By Quadratic
+  Reciprocity, we have that $(q/p) = (p/q)$.
+
+  Now observe that
+  \begin{equation*}
+    p = 1 + 2\cdot\frac{p-1}2 = 1 + 2q,
+  \end{equation*}
+  which can be rewritten as $p\equiv1\pmod{q}$. Therefore
+  $(p/q) = (1/q) = 1$. So, by the result in the preceding paragraph,
+  $(q/p) = 1$ and we see that $q = (p-1)/2$ is a quadratic residue
+  (mod $p$).
+\end{proof}
