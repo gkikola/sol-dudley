@@ -16,7 +16,7 @@ Download
 --------
 
 This solution guide is available as a
-[PDF file](https://www.gregkikola.com/guides/dudleysol.pdf).
+[PDF file](https://www.gregkikola.com/dl/guides/dudleysol.pdf).
 
 
 Building from Source
